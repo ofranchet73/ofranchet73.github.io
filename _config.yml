@@ -1,0 +1,11 @@
+title: "Portfolio Professionnel - Ton Nom"
+description: "Portfolio et blog professionnel"
+theme: minima
+markdown: kramdown
+
+header_pages:
+  - index.md
+  - projets.md
+  - formation.md
+  - blog.md
+  - about.md
