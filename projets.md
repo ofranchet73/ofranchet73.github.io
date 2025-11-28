@@ -5,21 +5,17 @@ title: "Projets"
 
 # Mes projets et études de cas
 
-Cette page présente mes travaux : études de cas, analyses, conceptions pédagogiques, etc.
+Cette page présente mon projet d'analyse de risques, basé sur le fonctionnement d'un cabinet d'ophtalmologie
+- des données de santé critiques
+- un système d'information modeste mais exposé
+- des enjeux humains, techniques, réglementaires
 
----
-
-## Étude de cas : Exemple de titre
-Résumé de 3–5 lignes de ton étude de cas.
-
-**Compétences mobilisées :**
-- Analyse
-- Conception pédagogique
-- Structuration de contenu
+J'y ai appliqué la méthode ISO 27005, avec une logique de scénario :
+- identification des actifs
+- cartographie des menaces
+- élaboration de mesures
 
 ➡️ [Télécharger le PDF](#)  
 *(Quand on aura uploadé tes PDF, je remplacerai le lien.)*
 
 ---
-
-Tu pourras ajouter autant de projets que tu veux.
