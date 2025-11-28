@@ -7,18 +7,17 @@ title: "Formation"
 
 Sur cette page, je présente la formation que j’ai développée.
 
-## Titre de la formation
+## Introduction à la cybersécurité
 Une courte description de la formation, sa cible, et ses objectifs pédagogiques.
 
 ### Objectifs
-- Objectif 1
-- Objectif 2
-- Objectif 3
+- Comprendre ce qu'est la cybersécurité et pourquoi elle est essentielle
+- Identifier les principales menaces numériques (phishing, malware, erreurs humaines…)
+- Adopter les bons réflexes pour se protéger au quotidien
+- Savoir réagir efficacement en cas d'incident
 
-### Format
-- Présentiel / Distanciel
-- Durée
-- Outils utilisés
+### Durée
+- 1 jour
 
-➡️ [Télécharger le PDF](#)  
+➡️  
 *(On mettra le vrai lien une fois les fichiers PDF ajoutés.)*
