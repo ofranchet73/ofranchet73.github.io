@@ -15,7 +15,7 @@ J'y ai appliqué la méthode ISO 27005, avec une logique de scénario :
 - cartographie des menaces
 - élaboration de mesures
 
-➡️ [Télécharger le PDF](#)  
-*(Quand on aura uploadé tes PDF, je remplacerai le lien.)*
+➡️ /OdileFranchet_EtudeCas_Analyse_Risques_Complet_Ophtalmo(#)  
+
 
 ---
