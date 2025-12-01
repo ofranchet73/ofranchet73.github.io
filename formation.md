@@ -43,4 +43,4 @@ Une formation d'une journée pour donner à chaque collaborateur les bases et le
 
 ---
 
-### *d'autres modules à venir prochainement*
+### *D'autres modules à venir prochainement*
