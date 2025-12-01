@@ -3,7 +3,7 @@ layout: page
 title: "Projets"
 ---
 
-### Études de cas & Réalisations
+### 💼Études de cas & Réalisations
 
 #### Analyse de risques - Cabinet d'ophtalmologie
 
