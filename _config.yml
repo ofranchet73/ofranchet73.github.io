@@ -1,6 +1,6 @@
 title: "Portfolio Professionnel - Odile FRANCHET"
 description: "Portfolio et blog professionnel"
-theme: minima
+theme: jekyll-theme-cayman
 markdown: kramdown
 
 header_pages:
