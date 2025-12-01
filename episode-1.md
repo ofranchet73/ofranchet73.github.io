@@ -27,13 +27,11 @@ Ce que je ne savais pas, c'est qu'à ce moment précis, **le serveur principal c
 
 ---
 
-### 🧠 **Ce qu'on ne voit pas, c'est souvent ce qui coûte le plus cher.**
+#### 🧠 **Ce qu'on ne voit pas, c'est souvent ce qui coûte le plus cher.**
 Dans une PME, tout semble fonctionner… jusqu’à ce que ça casse. Un mail piégé, une pièce jointe anodine, une session RDP ouverte trop longtemps — et la machine est lancée.
 Silencieusement.
 
----
-
-### 💭 En cybersécurité, **l'absence de signe n'est pas un signe de sécurité**.
+#### 💭 En cybersécurité, **l'absence de signe n'est pas un signe de sécurité**.
 Les signaux faibles existent — encore faut-il savoir les lire.
 
 ---
