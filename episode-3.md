@@ -29,7 +29,7 @@ Tout seul.
 
 Le stress devient humain.
 L’erreur peut coûter cher.
-Trop cher."
+Trop cher.
 
 ---
 
