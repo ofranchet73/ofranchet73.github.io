@@ -35,10 +35,10 @@ qui font avancer les projets et les équipes.
 
 | Domaine | Expertise |
 |---------|-----------|
-| ** Ingénierie pédagogique** | Analyse de besoins • Architecture de parcours • Conception de supports |
-| ** Cybersécurité** | Sensibilisation • Analyse de risques ISO 27005 • Bonnes pratiques |
-| ** Gestion de projet** | Suivi Qualiopi • Amélioration continue • Structuration de démarches |
-| ** Rédaction** | Vulgarisation technique • Guides opérationnels • Documentation |
+| Ingénierie pédagogique | Analyse de besoins • Architecture de parcours • Conception de supports |
+| Cybersécurité | Sensibilisation • Analyse de risques ISO 27005 • Bonnes pratiques |
+| Gestion de projet | Suivi Qualiopi • Amélioration continue • Structuration de démarches |
+| Rédaction | Vulgarisation technique • Guides opérationnels • Documentation |
 
 
 
