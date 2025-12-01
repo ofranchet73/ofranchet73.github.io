@@ -3,7 +3,6 @@ layout: page
 title: "Accueil"
 ---
 
-Odile FRANCHET
 
 ## 👋 Bienvenue sur mon site !
 
@@ -37,4 +36,4 @@ qui font avancer les projets et les équipes.
 ---
 
 *"La complexité bien expliquée devient une évidence."*  
-**— Odile**
+
