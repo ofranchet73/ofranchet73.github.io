@@ -1,9 +1,8 @@
 ---
 layout: page
-title: "Mes Projets et études de cas"
+title: "Projets"
 ---
 
-# 
 
 Cette page présente mon projet d'analyse de risques, basé sur le fonctionnement d'un cabinet d'ophtalmologie
 - des données de santé critiques
