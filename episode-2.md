@@ -10,7 +10,7 @@ title: "Épisode 2 - Le message d'erreur"
 
 ---
 
-**"Je viens à peine de poser ma tasse que le comptable repasse la tête par la porte, le visage un peu trop blanc.**
+Je viens à peine de poser ma tasse que le comptable repasse la tête par la porte, le visage un peu trop blanc.
 
 *— 'Heu… on a un fichier bizarre sur le serveur. Ça s'appelle README_FOR_HELP.txt. Tu peux regarder ?'*
 
@@ -28,17 +28,12 @@ Et le pire ? Je ne sais pas encore si nos sauvegardes sont indemnes."
 
 ---
 
-### 🧠 
+#### 🧠 **Le point qu'on oublie** :  Les ransomwares ne préviennent pas.
+Ils commencent par un **petit fichier .txt** posé discrètement au milieu des dossiers du quotidien.
+Sans supervision, sans alerte en temps réel, sans EDR… La découverte se fait **trop tard**, toujours trop tard.
 
-**Les ransomwares ne préviennent pas.**
-Ils commencent par un petit fichier `.txt` posé discrètement au milieu des dossiers du quotidien. Sans supervision, sans alerte en temps réel, sans outils de détection… la découverte se fait **trop tard, toujours trop tard**.
-
-### 💭 
-
-> "Un fichier 'README' peut changer une journée ordinaire en début de cauchemar. La détection précoce vaut plus que tous les plans de crise réunis."
-
-**En d'autres termes :**
-Mieux vaut détecter une attaque au moment où elle commence que d'avoir un plan parfait pour y répondre une fois qu'elle a réussi.
+#### 💭 Un fichier 'README' peut changer une journée ordinaire en début de cauchemar.
+La détection précoce vaut plus que tous les plans de crise réunis.
 
 ---
 
