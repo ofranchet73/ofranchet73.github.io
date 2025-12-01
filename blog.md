@@ -3,7 +3,7 @@ layout: page
 title: "Blog"
 ---
 
-### Mon Blog
+## 📝 Mon Blog
 
 Bienvenue sur mon blog !
 
