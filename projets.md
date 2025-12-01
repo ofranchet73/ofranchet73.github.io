@@ -3,9 +3,9 @@ layout: page
 title: "Projets"
 ---
 
-### 💼Études de cas & Réalisations
+## 💼Études de cas & Réalisations
 
-#### Analyse de risques - Cabinet d'ophtalmologie
+### Analyse de risques - Cabinet d'ophtalmologie
 
 Cette page présente mon projet d'analyse de risques, basé sur le fonctionnement d'un cabinet d'ophtalmologie
 - des données de santé critiques
@@ -24,7 +24,7 @@ J'y ai appliqué la méthode ISO 27005, avec une logique de scénario :
 
 ---
 
-#### Autres projets en préparation
+### Autres projets en préparation
 
 *D'autres projets seront bientôt publiés ici.*
 
