@@ -4,10 +4,12 @@ title: "Accueil"
 ---
 
 
+
 ## Bienvenue sur mon site !
 
 Spécialisée en **ingénierie pédagogique** et **cybersécurité humaine**  
 J'aime transformer des sujets complexes en expériences d'apprentissage claires et engageantes.
+
 
 
 
@@ -24,7 +26,9 @@ Structurer, simplifier, rendre lisible : mes maîtres-mots pour des livrables
 qui font avancer les projets et les équipes.
 
 
+
 ---
+
 
 
 ## Ce que je fais
@@ -37,7 +41,9 @@ qui font avancer les projets et les équipes.
 | ** Rédaction** | Vulgarisation technique • Guides opérationnels • Documentation |
 
 
+
 ---
+
 
 
 *"La complexité bien expliquée devient une évidence."*  
