@@ -19,12 +19,9 @@ Une formation d'une journée pour donner à chaque collaborateur les bases et le
 
 #### Objectifs pédagogiques
 À l'issue de cette formation, les participants seront capables de :
-
-**Identifier les risques**
-
-**Adopter les bonnes pratiques**
-
-**Réagir efficacement**
+- Identifier les risques**
+- Adopter les bonnes pratiques
+- Réagir efficacement
 
 
 #### Format
@@ -46,4 +43,4 @@ Une formation d'une journée pour donner à chaque collaborateur les bases et le
 
 ---
 
-### *Autres modules à venir prochainement*
+### *d'autres modules à venir prochainement*
