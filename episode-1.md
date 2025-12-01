@@ -10,6 +10,9 @@ title: "Épisode 1 - Tout semblait normal"
 
 ---
 
+Je suis le DSI d’un petit cabinet comptable d’une cinquantaine de personnes. Quand je dis “DSI”, c’est un grand mot.
+Dans une PME comme la nôtre, ça veut dire : gérer les serveurs, dépanner les imprimantes, négocier avec les fournisseurs, sécuriser les accès… et parfois redémarrer la box quand plus rien ne marche.
+
 **Lundi matin, 8h42.**
 
 Mon café fume encore sur mon bureau, les équipes arrivent petit à petit.
@@ -24,16 +27,14 @@ Ce que je ne savais pas, c'est qu'à ce moment précis, **le serveur principal c
 
 ---
 
-### 🧠 
+### 🧠 **Ce qu'on ne voit pas, c'est souvent ce qui coûte le plus cher.**
+Dans une PME, tout semble fonctionner… jusqu’à ce que ça casse. Un mail piégé, une pièce jointe anodine, une session RDP ouverte trop longtemps — et la machine est lancée.
+Silencieusement.
 
-Les attaques commencent souvent de façon invisible.  
-Pas d'alarme, pas de message d'erreur.  
-Juste un "ralentissement" anodin.  
-**La détection précoce est cruciale.**
+---
 
-### 💭 
-
-> "En cybersécurité, l'absence de signe n'est pas un signe de sécurité. Les premiers indicateurs sont souvent subtils : un système plus lent qu'à l'habitude. Apprenons à écouter ces signaux faibles."
+### 💭 En cybersécurité, **l'absence de signe n'est pas un signe de sécurité**.
+Les signaux faibles existent — encore faut-il savoir les lire.
 
 ---
 
