@@ -22,10 +22,13 @@ Je vous partage ici mes analyses, mes retours d'expérience et mes réflexions s
 📖 **[Épisode 2 - Le message d'erreur](/episode-2)**  
 *La découverte du fichier README_FOR_HELP.txt change tout.*
 
-📖 **[Épisode 3 - L'urgence](/episode-3)**  
-*9h55. Le téléphone explose. Les clients veulent des réponses.*
+📖 **[Épisode 3 - Panique et improvisation](/episode-3)**  
+*9h55. Le téléphone explose. Les clients veulent leurs bilans... et on n'a plus accès à rien.*
 
-📖 **Épisode 4 - À venir...**  
+📖 **[Épisode 4 - L'enquête commence](/episode-4)**  
+*11h03. Le téléphone sonne encore. Les équipes attendent. Que s'est-il passé ?*
+
+📖 **Épisode 5 - À venir...**  
 *La suite de l'histoire arrive bientôt.*
 
 
