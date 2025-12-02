@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Épisode 3 - À venir"
+title: "Épisode 3 - Panique et improvisation"
 ---
 
 ## Le jour où tout a basculé
