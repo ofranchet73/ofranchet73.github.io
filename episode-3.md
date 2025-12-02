@@ -47,4 +47,4 @@ Pas seulement des outils.
 
 ---
 
-[← Lire l'épisode 2](/episode-2) | [Retour au blog](/blog)
+[← Lire l'épisode 4](/episode-4) | [Retour au blog](/blog)
