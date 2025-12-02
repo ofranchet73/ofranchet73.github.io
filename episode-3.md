@@ -41,10 +41,4 @@ Pas seulement des outils.
 
 ---
 
-#### 📅 Prochainement
-
-**Épisode 4 : "L'enquête commence"**  
-
----
-
 [← Lire l'épisode 4](/episode-4) | [Retour au blog](/blog)
