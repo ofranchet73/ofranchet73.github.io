@@ -28,7 +28,10 @@ Je vous partage ici mes analyses, mes retours d'expérience et mes réflexions s
 📖 **[Épisode 4 - L'enquête commence](/episode-4)**  
 *11h03. Le téléphone sonne encore. Les équipes attendent. Que s'est-il passé ?*
 
-📖 **Épisode 5 - À venir...**  
+📖 **[Épisode 5 - Le verdict de la direction](/episode-5)**  
+*12h15. Il est temps de parler avec la direction*
+
+📖 **Épisode 6 - À venir...**  
 *La suite de l'histoire arrive bientôt.*
 
 
