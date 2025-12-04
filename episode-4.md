@@ -46,10 +46,4 @@ La comprendre, c’est **la première étape pour reprendre le contrôle**.
 
  ---
 
-#### 📅 Prochainement
-
-**Épisode 5 : "Le verdict de la direction"**  
-
----
-
-[← Lire l'épisode 3](/episode-3) | [Retour au blog](/blog)
+[← Lire l'épisode 5](/episode-5) | [Retour au blog](/blog)
