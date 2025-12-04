@@ -4,7 +4,7 @@ title: "Épisode 5 - Le verdict de la direction"
 ---
 
 ## Le jour où tout a basculé
-### Épisode 1 – "Le verdict de la direction"⚖️💬
+### Épisode 5 – "Le verdict de la direction"⚖️💬
 
 *Une fiction pédagogique sur les cyberattaques en PME*
 
@@ -51,5 +51,11 @@ Observer, analyser, décider : c’est ce qui transforme la panique en action ef
 
 ---
 
-[← Retour au blog](/blog) | [Lire l'épisode 4 →](/episode-4)
+#### 📅 Prochainement
+
+**Épisode 6 : "Leçons et résilience"**  
+
+---
+
+[← Lire l'épisode 4](/episode-4) | [Retour au blog](/blog)
 
