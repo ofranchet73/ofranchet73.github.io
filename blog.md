@@ -31,8 +31,13 @@ Je vous partage ici mes analyses, mes retours d'expérience et mes réflexions s
 📖 **[Épisode 5 - Le verdict de la direction](/episode-5)**  
 *12h15. Il est temps de parler avec la direction*
 
-📖 **Épisode 6 - À venir...**  
-*La suite de l'histoire arrive bientôt.*
+📖 **[Épisode 6 - Leçons & résilience](/episode-6)**  
+*12h17. la panique s'éloigne*
 
+📖 **[Épisode 7 - La transformation](/episode-7)**  
+*Nous avons eu de la chance, cela peut ne pas durer*
 
-*N'hésitez pas à partager ces épisodes si vous trouvez qu'ils peuvent aider à sensibiliser votre entourage.*
+📖 **[Épisode 8 - La culture prend racine](/episode-8)**  
+*la cybersécurité n'est plus vue que comme un centre de coût*
+
+*N'hésitez pas à partager ces épisodes.*
