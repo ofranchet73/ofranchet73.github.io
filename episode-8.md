@@ -23,3 +23,7 @@ Elle se joue dans **les comportements, la communication et la prise de conscienc
 
 💬 La vraie résilience, ce n’est pas rebondir après une crise.
 **C'est changer durablement la façon dont on pense et agit face au risque**.
+
+ ---
+
+[Retour au blog](/blog)
