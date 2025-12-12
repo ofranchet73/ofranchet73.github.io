@@ -3,6 +3,9 @@ layout: default
 title: "Episode 7 - La transformation 🔥🔄"
 ---
 
+## Le jour où tout a basculé
+### Épisode 7 – "La transformation" 🔥🔄
+
 *Une fiction pédagogique sur les cyberattaques en PME*
 
 ---
