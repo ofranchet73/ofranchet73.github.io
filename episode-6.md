@@ -3,6 +3,10 @@ layout: default
 title: "Episode 6 - Leçons & Résilience 🔧🧩"
 ---
 
+
+## Le jour où tout a basculé
+### Épisode 6 – "Leçons & Résilience" 🔧🧩
+
 *Une fiction pédagogique sur les cyberattaques en PME*
 
 ---
