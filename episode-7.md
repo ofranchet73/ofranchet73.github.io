@@ -32,6 +32,8 @@ Un argument commercial.
 
 **La cybersécurité, ce n'est plus seulement "pour éviter le pire". C'est pour rassurern fidéliser et gagner**.
 
+---
+
 🧠 La clé de la transformation ?
  Parler cybersécurité dans un langage qui résonne dans les salles de réunion.
 
