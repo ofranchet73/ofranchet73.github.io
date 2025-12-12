@@ -20,9 +20,9 @@ Les clients peuvent être rappelés.
 On souffle. Un peu.
 
 Avec la direction, on prépare la communication :
- 👉 ce qu’on dit aux interne,
- 👉 ce qu’on dit aux clients,
- 👉 et surtout comment **on reste transparents sans affoler**.
+- ce qu’on dit aux interne,
+- ce qu’on dit aux clients,
+- et surtout comment **on reste transparents sans affoler**.
 
 Dans les bureaux, les discussions changent de tonalité :
  « Comment ça a pu arriver ? »
@@ -32,8 +32,8 @@ Dans les bureaux, les discussions changent de tonalité :
 Je note tout : les erreurs, les manques, les coups de chance, les points qui, malgré tout, ont tenu bon.
 
 Parce qu’au milieu du chaos, une évidence s’impose :
-👉 Ce ne sont pas seulement les machines qu’il faut renforcer.
-👉 C’est nous. Les réflexes. Les habitudes. La culture.
+- Ce ne sont pas seulement les machines qu’il faut renforcer.
+- C’est nous. Les réflexes. Les habitudes. La culture.
 
 🧠 La résilience, ce n’est pas “se relever vite”.
  **C’est comprendre pourquoi on est tombé** - et comment éviter que la chute se répète.
