@@ -16,10 +16,10 @@ Alors je prépare la discussion la plus importante avec les dirigeants. Parce qu
 
 Je dois **les convaincre**. Pas avec des mots techniques. Pas avec la peur.
 Mais avec leur langage à eux :
- 👉 confiance des clients
- 👉 image du cabinet
- 👉 avantage concurrentiel
- 👉 pérennité de l’activité
+- confiance des clients
+- image du cabinet
+- avantage concurrentiel
+- pérennité de l’activité
 
 Ce n’est pas un coût.
 C’est un investissement.
@@ -33,3 +33,7 @@ Un argument commercial.
  Parler cybersécurité dans un langage qui résonne dans les salles de réunion.
 
 💬 **La maturité cyber commence quand l'entreprise comprend que protéger, c'est aussi se développer**.
+
+ ---
+
+[← Lire l'épisode 8](/episode-8) | [Retour au blog](/blog)
