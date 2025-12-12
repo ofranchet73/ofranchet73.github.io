@@ -39,6 +39,8 @@ Parce qu’au milieu du chaos, une évidence s’impose :
 - Ce ne sont pas seulement les machines qu’il faut renforcer.
 - C’est nous. Les réflexes. Les habitudes. La culture.
 
+---
+
 🧠 La résilience, ce n’est pas “se relever vite”.
  **C’est comprendre pourquoi on est tombé** - et comment éviter que la chute se répète.
 
