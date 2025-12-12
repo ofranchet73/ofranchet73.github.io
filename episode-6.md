@@ -40,3 +40,7 @@ Parce qu’au milieu du chaos, une évidence s’impose :
 
 💬 Après une attaque, la technique compte.
 **Mais l'apprentissage collectif compte encore plus**.
+
+ ---
+
+[← Lire l'épisode 7](/episode-7) | [Retour au blog](/blog)
