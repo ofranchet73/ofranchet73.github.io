@@ -21,6 +21,8 @@ Ce ne sera pas parfait dès le premier coup, car la mise en œuvre d’un systè
 
 Mais c’est un premier pas : **la culture de la sécurité va s'installer, pas seulement dans les machines, mais dans les esprits**.
 
+---
+
 🧠 La transformation ne se joue pas sur les serveurs.
 Elle se joue dans **les comportements, la communication et la prise de conscience collective**.
 
