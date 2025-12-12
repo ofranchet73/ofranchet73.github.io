@@ -51,11 +51,5 @@ Observer, analyser, décider : c’est ce qui transforme la panique en action ef
 
 ---
 
-#### 📅 Prochainement
-
-**Épisode 6 : "Leçons et résilience"**  
-
----
-
-[← Lire l'épisode 4](/episode-4) | [Retour au blog](/blog)
+[← Lire l'épisode 6](/episode-6) | [Retour au blog](/blog)
 
