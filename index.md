@@ -1,47 +1,31 @@
 ---
 layout: page
-title: "Accueil"
+title: "Odile Franchet — Consultante en Sensibilisation Cybersécurité"
 ---
 
+## Construire une vraie culture cyber dans votre organisation
 
+80% des incidents de sécurité ont une origine humaine. Pourtant, la réponse habituelle reste le même e-learning obligatoire que personne ne retient.
 
-### Bienvenue sur mon site !
-
-Spécialisée en **ingénierie pédagogique** et **cybersécurité humaine**  
-J'aime transformer des sujets complexes en expériences d'apprentissage claires et engageantes.
-
-
-
-
-### Mon approche  
-
-- Pédagogie sur mesure : je conçois des parcours de formation qui répondent aux besoins des apprenants, en alliant **technique** et **vulgarisation**.
-
-- Sécurité accessible : je vulgarise la cybersécurité pour la rendre compréhensible par tous
-
-- Rigueur et clarté : structurer, simplifier, rendre lisible : mes maîtres-mots pour des livrables  
-qui font avancer les projets et les équipes.
-
-
+J'accompagne les organisations pour que la cybersécurité devienne un réflexe concret pour leurs collaborateurs — pas une contrainte subie.
 
 ---
 
+### Ce que je fais concrètement
 
-
-### Ce que je fais
-
-| Domaine | Expertise |
-|---------|-----------|
-| Ingénierie pédagogique | Analyse de besoins • Architecture de parcours • Conception de supports |
-| Cybersécurité | Sensibilisation • Analyse de risques ISO 27005 • Bonnes pratiques |
-| Gestion de projet | Suivi Qualiopi • Amélioration continue • Structuration de démarches |
-| Rédaction | Vulgarisation technique • Guides opérationnels • Documentation |
-
-
+| Domaine | Ce que j'apporte |
+|---------|-----------------|
+| Sensibilisation cybersécurité | Programmes sur-mesure, ateliers interactifs, quiz jalonnés, études de cas |
+| Protection des données | Vulgarisation RGPD et NIS2 pour équipes non techniques |
+| IA & cybersécurité | Sensibilisation aux risques liés aux usages de l'IA en entreprise |
+| Ingénierie pédagogique | Analyse de besoins, conception de parcours, supports variés |
 
 ---
 
+### Mes réalisations
+Découvrez mes projets, modules de formation et publications sur les pages
+[Projets](/projets.html), [Formations](/formation.html) et [Blog](/blog.html).
 
+---
 
-*"La complexité bien expliquée devient une évidence."*  
-
+**Certifications** : ISO 27001 Lead Implementer (RS7498) • ISO 27005 Risk Manager • CompTIA Security+
