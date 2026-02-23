@@ -15,8 +15,8 @@ J'accompagne les organisations pour que la cybersécurité devienne un réflexe 
 
 | Domaine | Ce que j'apporte |
 |---------|-----------------|
-| Sensibilisation cybersécurité | Programmes sur-mesure, ateliers interactifs, quiz jalonnés, études de cas |
-| Protection des données | Vulgarisation RGPD et NIS2 pour équipes non techniques |
+| Sensibilisation cybersécurité | Programmes sur-mesure, ateliers interactifs, quiz, études de cas |
+| Protection des données | Vulgarisation RGPD pour des équipes non techniques |
 | IA & cybersécurité | Sensibilisation aux risques liés aux usages de l'IA en entreprise |
 | Ingénierie pédagogique | Analyse de besoins, conception de parcours, supports variés |
 
