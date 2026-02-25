@@ -20,10 +20,10 @@ J'improvise : **isoler la machine chiffrée, couper les accès, tenter une resta
 L’adrénaline monte.
 On découvre brutalement à quel point un petit cabinet comptable tient sur un fil : l’IT.
 
-Et moi, DSI multitâche, , je fais tout : **technique, communication, coordination, rassurer, décider**.
+Et moi, DSI multitâche, je fais tout : **technique, communication, coordination, rassurer, décider**.
 Tout à la fois.
 Tout seul.
-*Avec la sensation de piloter un avion en feur sans tableau de bord*.
+*Avec la sensation de piloter un avion en feu sans tableau de bord*.
 
 Le stress devient humain.
 L’erreur peut coûter cher.
