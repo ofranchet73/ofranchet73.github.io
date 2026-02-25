@@ -7,8 +7,6 @@ title: "Episode 6 - Leçons & Résilience 🔧🧩"
 ## Le jour où tout a basculé
 ### Épisode 6 – "Leçons & Résilience" 🔧🧩
 
-*Une fiction pédagogique sur les cyberattaques en PME*
-
 ---
 
 **12h47**
@@ -16,7 +14,7 @@ Le calme n’est pas revenu… mais la panique, elle, commence enfin à s’élo
 
 On a identifié l’origine de l’attaque.
 On a isolé les machines compromises.
-Et surtout : *une sauvegarde est exploitable.**
+Et surtout : *une sauvegarde est exploitable.*
 
 Je relance une partie des systèmes.
 Les équipes récupèrent leurs accès.
@@ -31,7 +29,7 @@ Avec la direction, on prépare la communication :
 Dans les bureaux, les discussions changent de tonalité :
  « Comment ça a pu arriver ? »
  « On aurait dû voir quelque chose… non ? »
- « Qu’est-ce qu’on met en place maintenant ? »*
+ « Qu’est-ce qu’on met en place maintenant ? »
 
 Je note tout : les erreurs, les manques, les coups de chance, les points qui, malgré tout, ont tenu bon.
 
@@ -49,4 +47,4 @@ Parce qu’au milieu du chaos, une évidence s’impose :
 
  ---
 
-[← Lire l'épisode 7](/episode-7) | [Retour au blog](/blog)
+[← Retour au blog](/blog.html) | [Lire l'épisode 7 →](/episode-7)
