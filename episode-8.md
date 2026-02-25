@@ -6,8 +6,6 @@ title: "Episode 8 - La culture prend racine 🌱"
 ## Le jour où tout a basculé
 ### Épisode 8 – "La culture prend racine" 🌱
 
-*Une fiction pédagogique sur les cyberattaques en PME*
-
 ---
 
 Après notre discussion avec la direction, le message est clair : **la cybersécurité n'est plus un coût, c'est un levier stratégique**.
