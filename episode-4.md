@@ -6,8 +6,6 @@ title: "Épisode 4 - L'enquête commence"
 ## Le jour où tout a basculé
 ### Épisode 4 – "L'enquête commence" 🔍💻
 
-*Une fiction pédagogique sur les cyberattaques en PME*
-
 ---
 
 **11h03**
@@ -46,4 +44,4 @@ La comprendre, c’est **la première étape pour reprendre le contrôle**.
 
  ---
 
-[← Lire l'épisode 5](/episode-5) | [Retour au blog](/blog)
+[← Retour au blog](/blog.html) | [Lire l'épisode 5 →](/episode-5)
