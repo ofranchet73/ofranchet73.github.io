@@ -6,8 +6,6 @@ title: "Épisode 1 - Tout semblait normal"
 ## Le jour où tout a basculé
 ### Épisode 1 – "Tout semblait normal"
 
-*Une fiction pédagogique sur les cyberattaques en PME*
-
 ---
 
 Je suis le DSI d’un petit cabinet comptable d’une cinquantaine de personnes. Quand je dis “DSI”, c’est un grand mot.
@@ -36,4 +34,4 @@ Les signaux faibles existent — encore faut-il savoir les lire.
 
 ---
 
-[← Retour au blog](/blog) | [Lire l'épisode 2 →](/episode-2)
+[← Retour au blog](/blog.html) | [Lire l'épisode 2 →](/episode-2)
