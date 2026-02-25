@@ -6,8 +6,6 @@ title: "Épisode 2 - Le message d'erreur"
 ## Le jour où tout a basculé
 ### Épisode 2 – "Le message d'erreur"
 
-*Une fiction pédagogique sur les cyberattaques en PME*
-
 ---
 
 Je viens à peine de poser ma tasse que le comptable repasse la tête par la porte, le visage un peu trop blanc.
@@ -37,4 +35,4 @@ La détection précoce vaut plus que tous les plans de crise réunis.
 
 ---
 
-[← Lire l'épisode 3](/episode-3) | [Retour au blog](/blog)
+[← Retour au blog](/blog.html) | [Lire l'épisode 3 →](/episode-3)
