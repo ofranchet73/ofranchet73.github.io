@@ -31,4 +31,4 @@ Elle se joue dans **les comportements, la communication et la prise de conscienc
 
  ---
 
-[Retour au blog](/blog)
+[Retour au blog](/blog.html)
