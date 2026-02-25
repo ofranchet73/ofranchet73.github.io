@@ -6,8 +6,6 @@ title: "Episode 7 - La transformation 🔥🔄"
 ## Le jour où tout a basculé
 ### Épisode 7 – "La transformation" 🔥🔄
 
-*Une fiction pédagogique sur les cyberattaques en PME*
-
 ---
 
 La crise n’est pas totalement derrière nous…
@@ -30,7 +28,7 @@ Un différenciateur.
 Une preuve de sérieux.
 Un argument commercial.
 
-**La cybersécurité, ce n'est plus seulement "pour éviter le pire". C'est pour rassurern fidéliser et gagner**.
+**La cybersécurité, ce n'est plus seulement "pour éviter le pire". C'est pour rassurer, fidéliser et gagner**.
 
 ---
 
@@ -41,4 +39,4 @@ Un argument commercial.
 
  ---
 
-[← Lire l'épisode 8](/episode-8) | [Retour au blog](/blog)
+[← Retour au blog](/blog.html) | [Lire l'épisode 8 →](/episode-8)
