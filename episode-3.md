@@ -6,8 +6,6 @@ title: "Épisode 3 - Panique et improvisation"
 ## Le jour où tout a basculé
 ### Épisode 3 - Panique et improvisation 😰📞
 
-*Une fiction pédagogique sur les cyberattaques en PME*
-
 ---
 
 **9h55**
@@ -41,4 +39,4 @@ Pas seulement des outils.
 
 ---
 
-[← Lire l'épisode 4](/episode-4) | [Retour au blog](/blog)
+[← Retour au blog](/blog.html) | [Lire l'épisode 4 →](/episode-4)
