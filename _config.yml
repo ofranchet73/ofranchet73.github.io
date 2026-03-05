@@ -4,7 +4,8 @@ markdown: kramdown
 
 header_pages:
   - index.md
+  - apropos.md
   - projets.md
   - formation.md
   - blog.md
-  - apropos.md
+  
