@@ -5,6 +5,8 @@ title: "Prestations"
 
 ## Mes prestations
 
+Mon expertise couvre trois domaines complémentaires : la sensibilisation cybersécurité, la protection des données (RGPD) et les risques liés aux usages de l'IA en entreprise.
+
 Mon intervention s'adapte à votre situation — elle peut couvrir l'ensemble du parcours ou se concentrer sur une étape spécifique.
 
 ---
