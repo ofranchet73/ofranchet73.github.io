@@ -3,7 +3,6 @@ layout: page
 title: "À propos"
 ---
 
-## À propos
 
 **Je m'appelle Odile Franchet.**
 
