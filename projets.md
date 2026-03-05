@@ -13,7 +13,7 @@ L'IA s'est installée dans le quotidien professionnel sans formation ni cadre. C
 
 Données exposées, phishing indétectable, deepfakes, hallucinations : des situations concrètes, expliquées simplement, pour des équipes non techniques.
 
-➡️ [Télécharger le guide](/pdf/5 risques IA - Guide Cybersécurité.pdf)
+➡️ [Télécharger le guide](/pdf/5%20risques%20IA%20-%20Guide%20Cybersécurité.pdf)
 
 ---
 
