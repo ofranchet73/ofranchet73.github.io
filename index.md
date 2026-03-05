@@ -5,27 +5,28 @@ title: "Odile Franchet — Consultante en Sensibilisation Cybersécurité"
 
 ## Construire une vraie culture cyber dans votre organisation
 
-80% des incidents de sécurité ont une origine humaine. Pourtant, la réponse habituelle reste le même e-learning obligatoire que personne ne retient.
+80% des incidents de sécurité ont une origine humaine.
+Pas un manque de technologie — un manque de réflexes.
 
-J'accompagne les organisations pour que la cybersécurité devienne un réflexe concret pour leurs collaborateurs — pas une contrainte subie.
-
----
-
-### Ce que je fais concrètement
-
-| Domaine | Ce que j'apporte |
-|---------|-----------------|
-| Sensibilisation cybersécurité | Programmes sur-mesure, ateliers interactifs, quiz, études de cas |
-| Protection des données | Vulgarisation RGPD pour des équipes non techniques |
-| IA & cybersécurité | Sensibilisation aux risques liés aux usages de l'IA en entreprise |
-| Ingénierie pédagogique | Analyse de besoins, conception de parcours, supports variés |
+Les outils de protection sont indispensables. Mais aucun pare-feu ne remplace une équipe qui sait identifier une tentative de phishing, protéger ses accès ou réagir face à une situation anormale.
 
 ---
 
-### Mes réalisations
-Découvrez mes projets, modules de formation et publications sur les pages
-[Projets](/projets.html), [Formations](/formation.html) et [Blog](/blog.html).
+### Vous dirigez une entreprise
+
+Vous avez probablement déjà mis en place des outils de sécurité. Peut-être même organisé une formation. Mais est-ce que vos collaborateurs ont vraiment intégré les bons réflexes au quotidien ?
+
+J'interviens pour diagnostiquer vos vulnérabilités humaines, concevoir un programme de sensibilisation adapté à vos métiers et vos contextes, et en accompagner le déploiement — pour un résultat durable, pas une obligation réglementaire cochée.
 
 ---
 
-**Certifications** : ISO 27001 Lead Implementer (RS7498) • ISO 27005 Risk Manager • CompTIA Security+
+### Vous accompagnez des entreprises
+
+Cabinets comptables, conseils en gestion, experts-comptables, courtiers en assurance : vous connaissez la réalité opérationnelle de vos clients PME. Vous savez qu'ils sont exposés — et souvent démunis face au sujet cyber.
+
+En faisant appel à mon expertise, vous leur apportez une réponse concrète et structurée, sans avoir à l'internaliser. J'interviens en complément de votre accompagnement ou en votre nom.
+
+---
+
+**Échangeons sur votre situation.**
+[ofranchet@gmail.com](mailto:ofranchet@gmail.com)
