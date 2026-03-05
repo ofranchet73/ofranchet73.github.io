@@ -1,9 +1,9 @@
 ---
-layout: default
+layout: page
 title: "Formations"
 ---
 
-## Formation — Introduction à la Cybersécurité
+## Cybersécurité : les bons réflexes pour tous vos collaborateurs
 
 **Une journée pour transformer vos collaborateurs en premier rempart contre les cybermenaces.**
 
@@ -44,8 +44,8 @@ rapport d'incident. 40 minutes pour rétablir la situation.
 
 ### Format
 
-| | |
-|---|---|
+|  |  |
+| --- | --- |
 | Durée | 1 journée (7 heures) |
 | Modalités | Présentiel ou distanciel |
 | Groupe | 6 à 12 participants |
@@ -64,5 +64,6 @@ rapport d'incident. 40 minutes pour rétablir la situation.
 
 *Ce programme peut être adapté selon vos contraintes de temps ou votre secteur d'activité.*
 
-*Contactez-moi : ofranchet@gmail.com*
-### *D'autres modules à venir prochainement*
+*Vous avez un besoin spécifique ? Je conçois des modules adaptés à votre secteur et vos contraintes.*
+
+[ofranchet@gmail.com](mailto:ofranchet@gmail.com)
