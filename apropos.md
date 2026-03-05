@@ -38,7 +38,7 @@ Je ne suis pas une formatrice qui a appris la cyber. Je suis une ingénieure pé
 - **CompTIA Security+** (2024)
 - **ISO 27002 Foundation**
 - **ITIL v3 Foundation**
-- **Prince2 Foundation**
+- **Prince 2 Foundation**
 - **Scrum Master** — Scrum.org
 
 ---
