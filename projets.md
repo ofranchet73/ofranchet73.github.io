@@ -13,7 +13,7 @@ Alex reçoit un mail urgent de son grand patron. Il fait confiance, il paie. Et 
 
 Cette BD illustre comment un collaborateur peut se faire piéger par un mail frauduleux — et pourquoi signaler immédiatement fait toute la différence.
 
-➡️ [Télécharger la BD](/pdf/NOM_DU_FICHIER.pdf)
+➡️ [Télécharger la BD](/pdf/Alex%20%E2%80%94%20BD%20Cybers%C3%A9curit%C3%A9.pdf)
 
 ---
 
