@@ -7,6 +7,16 @@ title: "Projets"
 
 ---
 
+### BD — Le mail urgent : une histoire de phishing
+
+Alex reçoit un mail urgent de son grand patron. Il fait confiance, il paie. Et puis il se tait...
+
+Cette BD illustre comment un collaborateur peut se faire piéger par un mail frauduleux — et pourquoi signaler immédiatement fait toute la différence.
+
+➡️ [Télécharger la BD](/pdf/NOM_DU_FICHIER.pdf)
+
+---
+
 ### Guide — Utiliser l'IA au travail : les risques qu'on ne vous explique jamais
 
 L'IA s'est installée dans le quotidien professionnel sans formation ni cadre. Ce guide présente les 5 risques principaux que vos collaborateurs prennent chaque jour — sans le savoir.
