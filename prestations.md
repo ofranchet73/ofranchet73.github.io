@@ -35,11 +35,19 @@ La conception ne suffit pas — c'est la mise en œuvre qui fait la différence.
 
 ---
 
+### 4. Création et structuration d'une offre de formation
+
+Vous êtes une entreprise qui souhaite devenir prestataire de formation, ou développer un catalogue interne pour vos équipes ou vos clients ? Je vous accompagne de A à Z dans la structuration de votre projet : déclaration d'activité, ingénierie de l'offre et du catalogue, positionnement commercial et mise en conformité Qualiopi.
+
+**Ce que vous obtenez** : une structure opérationnelle, une offre cohérente et différenciée, et les clés pour développer votre activité formation durablement.
+
+---
+
 ### Une offre pour les partenaires
 
-Vous accompagnez des PME — cabinet comptable, conseil en gestion, courtier en assurance — et vous souhaitez leur proposer une expertise en sensibilisation cyber sans l'internaliser ?
+Cabinets comptables, conseils en gestion, experts-comptables, courtiers en assurance : vous connaissez la réalité opérationnelle de vos clients PME. Vous savez qu'ils sont exposés — et souvent démunis face au sujet cyber.
 
-Contactez-moi pour qu'on construise ensemble une offre adaptée à votre réseau de clients.
+En faisant appel à mon expertise, vous leur apportez une réponse concrète et structurée, sans avoir à l'internaliser. J'interviens en complément de votre accompagnement ou en votre nom.
 
 ---
 
