@@ -11,5 +11,4 @@ header_pages:
   - blog.md
   
 minima:
-  skin: classic
-  date_format: "%-d %B %Y"
+  skin: dark
