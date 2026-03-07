@@ -1,3 +1,9 @@
-body {
-  background-color: orange !important;
+/* Force l'application de vos styles */
+html, body, .page-content, main, .wrapper, .home, .post-content {
+    background-color: orange !important;
+}
+
+/* Pour être vraiment sûr que tout devient orange */
+* {
+    background-color: orange !important;
 }
