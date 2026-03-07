@@ -11,12 +11,4 @@ header_pages:
   - blog.md
   
 minima:
-  skin: classic
-
-# NOUVELLES LIGNES À AJOUTER :
-defaults:
-  - scope:
-      path: ""
-    values:
-      layout: default
-      custom_head: true
+  skin: auto  # ou "dark" ou "solarized"
