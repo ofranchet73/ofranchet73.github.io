@@ -11,4 +11,4 @@ header_pages:
   - blog.md
   
 minima:
-  skin: auto  # ou "dark" ou "solarized"
+  skin: dark  # Changement ici : "dark" au lieu de "auto"
