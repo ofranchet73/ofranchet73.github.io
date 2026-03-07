@@ -3,11 +3,6 @@ layout: page
 title: "Odile Franchet — Consultante en Cybersécurité humaine"
 ---
 
-<style>
-body {
-  background-color: purple !important;
-}
-</style>
 
 ## Construire une vraie culture cyber dans votre organisation
 
