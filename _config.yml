@@ -9,6 +9,3 @@ header_pages:
   - formation.md
   - projets.md
   - blog.md
-  
-minima:
-  skin: dark
