@@ -3,12 +3,6 @@ layout: prestations
 title: "Prestations"
 ---
 
-Mon expertise couvre trois domaines complémentaires : la sensibilisation cybersécurité, la protection des données (RGPD) et les risques liés aux usages de l'IA en entreprise.
-
-Mon intervention s'adapte à votre situation — elle peut couvrir l'ensemble du parcours ou se concentrer sur une étape spécifique.
-
----
-
 ## 1. Diagnostic de vulnérabilités humaines
 
 Avant de former, il faut comprendre. J'analyse votre organisation pour identifier vos angles morts : comportements à risque, contextes exposés, ce qui existe déjà et ce qui manque réellement.
@@ -41,7 +35,7 @@ Vous souhaitez devenir prestataire de formation ou développer un catalogue inte
 
 ---
 
-## Travailler ensemble en marque blanche
+## 5. Travailler ensemble en marque blanche
 
 Vous conseillez des dirigeants de PME et vous souhaitez leur proposer une expertise cyber sans l'internaliser ? J'interviens sous votre nom, en toute discrétion, comme si j'étais votre propre expert cybersécurité.
 
