@@ -3,6 +3,11 @@ layout: page
 title: "À propos"
 ---
 
+<div class="apropos-intro">
+  <p class="apropos-accroche">Ingénieure pédagogique senior reconvertie en cybersécurité — parce que les bons réflexes s'apprennent, et que personne ne devrait se retrouver démuni face à une menace évitable.</p>
+</div>
+
+---
 
 **Je m'appelle Odile Franchet.**
 
@@ -14,33 +19,57 @@ En parallèle, je me suis formée et certifiée : ITIL v3 Foundation, Prince2 Fo
 
 ---
 
-### Pourquoi la cybersécurité
-
-La cybersécurité est un domaine en mouvement permanent — il y a toujours quelque chose à apprendre, toujours une nouvelle menace à comprendre. C'est ce qui m'attire.
-
-Mais ce qui m'a vraiment convaincue, c'est de voir des personnes se retrouver dans des situations inextricables simplement parce qu'on ne leur avait pas dit ce qu'il fallait faire, ni comment le faire. Des situations évitables, si on leur avait donné les bons réflexes au bon moment.
-
-C'est précisément ce que je veux apporter.
+<div class="encadre-pourquoi">
+  <h3>Pourquoi la cybersécurité</h3>
+  <p>La cybersécurité est un domaine en mouvement permanent — il y a toujours quelque chose à apprendre, toujours une nouvelle menace à comprendre. C'est ce qui m'attire.</p>
+  <p>Mais ce qui m'a vraiment convaincue, c'est de voir des personnes se retrouver dans des situations inextricables simplement parce qu'on ne leur avait pas dit ce qu'il fallait faire, ni comment le faire. Des situations évitables, si on leur avait donné les bons réflexes au bon moment.</p>
+  <p class="encadre-conclusion">C'est précisément ce que je veux apporter.</p>
+</div>
 
 ---
 
-### Mon approche
-
-Je ne suis pas une formatrice qui a appris la cyber. Je suis une ingénieure pédagogique senior qui comprend les organisations de l'intérieur — leurs contraintes, leurs résistances, leurs réalités de terrain — et qui sait concevoir des programmes de sensibilisation qui changent vraiment les comportements, pas des formations qu'on oublie le lendemain.
+<div class="encadre-approche">
+  <h3>Mon approche</h3>
+  <p>Je ne suis pas une formatrice qui a appris la cyber. Je suis une ingénieure pédagogique senior qui comprend les organisations de l'intérieur — leurs contraintes, leurs résistances, leurs réalités de terrain — et qui sait concevoir des programmes de sensibilisation qui changent vraiment les comportements, pas des formations qu'on oublie le lendemain.</p>
+</div>
 
 ---
 
 ### Certifications
 
-- **ISO 27001 Lead Implementer** — enregistrée au Répertoire Spécifique France Compétences
-- **ISO 27005 Risk Manager** — PECB (2025)
-- **CompTIA Security+** (2024)
-- **ISO 27002 Foundation**
-- **ITIL v3 Foundation**
-- **Prince 2 Foundation**
-- **Scrum Master** — Scrum.org
+<div class="certif-grid">
+  <div class="certif-badge principal">
+    <span class="certif-icon">🏅</span>
+    <span class="certif-nom">ISO 27001 Lead Implementer</span>
+    <span class="certif-detail">Répertoire Spécifique France Compétences</span>
+  </div>
+  <div class="certif-badge principal">
+    <span class="certif-icon">🏅</span>
+    <span class="certif-nom">ISO 27005 Risk Manager</span>
+    <span class="certif-detail">PECB · 2025</span>
+  </div>
+  <div class="certif-badge principal">
+    <span class="certif-icon">🏅</span>
+    <span class="certif-nom">CompTIA Security+</span>
+    <span class="certif-detail">2024</span>
+  </div>
+  <div class="certif-badge">
+    <span class="certif-nom">ISO 27002 Foundation</span>
+  </div>
+  <div class="certif-badge">
+    <span class="certif-nom">ITIL v3 Foundation</span>
+  </div>
+  <div class="certif-badge">
+    <span class="certif-nom">Prince2 Foundation</span>
+  </div>
+  <div class="certif-badge">
+    <span class="certif-nom">Scrum Master</span>
+    <span class="certif-detail">Scrum.org</span>
+  </div>
+</div>
 
 ---
 
 *Envie d'échanger sur un projet ?*
+
 [ofranchet@gmail.com](mailto:ofranchet@gmail.com)
