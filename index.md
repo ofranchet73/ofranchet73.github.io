@@ -38,3 +38,5 @@ Une structure opérationnelle, une offre cohérente — et les clés pour la dé
 ## Échangeons sur votre situation
 
 Chaque organisation est différente. Parlons de la vôtre.
+
+[ofranchet@gmail.com](mailto:ofranchet@gmail.com)
