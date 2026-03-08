@@ -1,13 +1,11 @@
 ---
-layout: page
-title: "Odile Franchet — Consultante en Cybersécurité humaine"
+layout: home
+title: "Accueil"
 ---
-
 
 ## Construire une vraie culture cyber dans votre organisation
 
-80% des incidents de sécurité ont une origine humaine.
-Pas un manque de technologie — un manque de réflexes.
+80% des incidents de sécurité ont une origine humaine. Pas un manque de technologie — un manque de réflexes.
 
 Les outils de protection sont indispensables. Mais aucun pare-feu ne remplace une équipe qui sait identifier une tentative de phishing, protéger ses accès ou réagir face à une situation anormale.
 
@@ -30,4 +28,5 @@ En faisant appel à mon expertise, vous leur apportez une réponse concrète et 
 ---
 
 **Échangeons sur votre situation.**
+
 [ofranchet@gmail.com](mailto:ofranchet@gmail.com)
