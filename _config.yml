@@ -1,8 +1,9 @@
 title: "Odile Franchet — Cybersécurité & Facteur humain"
 markdown: kramdown
+kramdown:
+  parse_block_html: true
 
 header_pages:
-  - index.md
   - apropos.md
   - prestations.md
   - formation.md
