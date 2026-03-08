@@ -14,7 +14,7 @@ title: "Accueil"
 <div class="stat-band">
   <div class="stat-band-inner">
     <span class="stat-number">80%</span>
-    <span class="stat-text">des incidents de sécurité ont une origine humaine — pas par un manque de technologie, mais par un manque de réflexes.</span>
+    <span class="stat-text">des incidents de sécurité ont une origine humaine — pas un manque de technologie, un manque de réflexes.</span>
   </div>
 </div>
 
@@ -23,7 +23,7 @@ title: "Accueil"
   <div class="home-section">
     <h2>Vous dirigez une entreprise</h2>
     <p>Vous avez probablement déjà mis en place des outils de sécurité. Peut-être même organisé une formation. Mais est-ce que vos collaborateurs ont vraiment intégré les bons réflexes au quotidien ?</p>
-    <p>J'interviens pour diagnostiquer vos vulnérabilités humaines, concevoir un programme de sensibilisation adapté à vos métiers et vos contextes, et en accompagner le déploiement — pour un résultat durable, pas simplement pour cocher une obligation réglementaire.</p>
+    <p>J'interviens pour diagnostiquer vos vulnérabilités humaines, concevoir un programme de sensibilisation adapté à vos métiers et vos contextes, et en accompagner le déploiement — pour un résultat durable, pas une obligation réglementaire cochée.</p>
   </div>
 
   <div class="home-section alt">
@@ -34,7 +34,7 @@ title: "Accueil"
 
   <div class="home-section">
     <h2>Vous voulez structurer une offre de formation</h2>
-    <p>Vous souhaitez proposer une offre de formation à vos clients, ou développer un catalogue interne pour vos collaborateurs ? Je vous accompagne de A à Z : déclaration d'activité, ingénierie de l'offre, positionnement commercial, mise en conformité Qualiopi.</p>
+    <p>Vous souhaitez devenir prestataire de formation, ou développer un catalogue interne pour vos collaborateurs ou vos clients ? Je vous accompagne de A à Z : déclaration d'activité, ingénierie de l'offre, positionnement commercial, mise en conformité Qualiopi.</p>
     <p>Une structure opérationnelle, une offre cohérente — et les clés pour la développer durablement.</p>
   </div>
 
