@@ -82,7 +82,7 @@ img { max-width: 100%; height: auto; }
   position: sticky;
   top: 0;
   z-index: 100;
-  text-align: center;
+  text-align: left;
 }
 
 .header-inner {
@@ -442,6 +442,52 @@ img { max-width: 100%; height: auto; }
   margin: 0;
 }
 
+/* ===== PAGE À PROPOS ===== */
+
+.apropos-hero {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-bottom: 2em;
+  padding-top: 8px;
+}
+
+.apropos-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--blue-light);
+  flex-shrink: 0;
+  box-shadow: 0 2px 12px rgba(26, 58, 143, 0.15);
+}
+
+.apropos-hero-text { flex: 1; }
+
+.apropos-accroche {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.2em;
+  color: var(--blue);
+  line-height: 1.5;
+  margin-bottom: 8px;
+  font-style: italic;
+}
+
+.apropos-tagline {
+  font-size: 0.9em;
+  color: var(--muted);
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Encadré pourquoi */
+.encadre-pourquoi {
+  background: var(--blue-light);
+  border-radius: var(--radius);
+  padding: 28px 32px;
+  margin: 0;
+}
+
 .encadre-pourquoi h3 {
   color: var(--blue);
   margin-top: 0;
@@ -454,11 +500,7 @@ img { max-width: 100%; height: auto; }
   color: var(--text);
 }
 
-.encadre-conclusion {
-  font-weight: 600;
-  color: var(--blue) !important;
-  margin-bottom: 0 !important;
-}
+.encadre-pourquoi p:last-child { margin-bottom: 0; }
 
 /* Encadré approche */
 .encadre-approche {
@@ -494,9 +536,11 @@ img { max-width: 100%; height: auto; }
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 14px 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.85em;
+  font-weight: 500;
+  color: var(--blue);
+  line-height: 1.4;
   transition: box-shadow 0.2s;
 }
 
@@ -507,27 +551,7 @@ img { max-width: 100%; height: auto; }
 .certif-badge.principal {
   background: var(--blue-light);
   border-color: var(--accent);
-}
-
-.certif-icon { font-size: 1.2em; }
-
-.certif-nom {
-  font-family: 'DM Sans', sans-serif;
   font-weight: 600;
-  font-size: 0.85em;
-  color: var(--blue);
-  line-height: 1.3;
-}
-
-.certif-detail {
-  font-size: 0.75em;
-  color: var(--muted);
-}
-
-@media (max-width: 680px) {
-  .certif-grid { grid-template-columns: 1fr 1fr; }
-  .apropos-accroche { font-size: 1.05em; }
-  .encadre-pourquoi, .encadre-approche { padding: 20px; }
 }
 .post-list {
   list-style: none;
