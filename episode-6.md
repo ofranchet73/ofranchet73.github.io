@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: episode
 title: "Episode 6 - Leçons & Résilience 🔧🧩"
 ---
 
