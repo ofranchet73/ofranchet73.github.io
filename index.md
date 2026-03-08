@@ -5,7 +5,7 @@ title: "Accueil"
 
 ## La cybersécurité commence par l'humain
 
-80% des incidents de sécurité ont une origine humaine — pas un manque de technologie, un manque de réflexes.
+80% des incidents de sécurité ont une origine humaine — pas par un manque de technologie, mais par un manque de réflexes.
 
 Les outils de protection sont indispensables. Mais aucun pare-feu ne remplace une équipe qui sait identifier une tentative de phishing, protéger ses accès ou réagir face à une situation anormale.
 
