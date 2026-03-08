@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alex — BD Cybersécurité</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600;700&family=DM+Sans:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #ede8df; font-family: 'DM Sans', sans-serif; padding: 40px 20px; }
+  .comic {
+    max-width: 900px; margin: 0 auto; background: #fafaf7;
+    border: 2.5px solid #1a1a1a; box-shadow: 7px 7px 0 #1a1a1a;
+  }
+  .comic-header { text-align: center; padding: 28px 40px 22px; border-bottom: 2px solid #1a1a1a; }
+  .comic-header h1 { font-family: 'Caveat', cursive; font-size: 2.8em; color: #1a1a1a; font-weight: 700; letter-spacing: 1px; }
+  .comic-header p { font-size: 0.85em; color: #888; margin-top: 5px; font-style: italic; }
+  .grid { display: grid; }
+  .row-2 { grid-template-columns: 1fr 1fr; }
+  .row-3 { grid-template-columns: 1fr 1fr 1fr; }
+  .panel { border: 1.5px solid #1a1a1a; background: #fafaf7; position: relative; aspect-ratio: 1 / 1.05; overflow: hidden; }
+  .panel svg { width: 100%; height: 100%; display: block; }
+  .panel-tag { position: absolute; bottom: 8px; left: 10px; font-family: 'Caveat', cursive; font-size: 0.72em; color: #bbb; letter-spacing: 1px; text-transform: uppercase; pointer-events: none; }
+  .final-message { border-top: 2.5px solid #1a1a1a; padding: 26px 36px; background: #1a1a1a; color: #fafaf7; }
+  .final-message .tag { font-family: 'Caveat', cursive; font-size: 1.1em; color: #c8a96e; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 10px; }
+  .final-message p { font-size: 0.95em; line-height: 1.75; color: #e0dcd4; }
+  .final-message strong { color: #fff; }
+  .final-message em { color: #999; font-size: 0.88em; display: block; margin-top: 10px; }
+  .signature { padding: 14px 36px; text-align: right; font-size: 0.75em; color: #aaa; font-style: italic; border-top: 1px solid #e0e0e0; }
+</style>
+</head>
+<body>
+<div class="comic">
+
+  <div class="comic-header">
+    <h1>Le mail urgent</h1>
+    <p>Une histoire de phishing · Sensibilisation cybersécurité</p>
+  </div>
+
+  <!-- Rangée 1 -->
+  <div class="grid row-2">
+
+    <!-- CASE 1 -->
+    <div class="panel">
+      <span class="panel-tag">1 — mardi matin</span>
+      <svg viewBox="0 0 300 315" xmlns="http://www.w3.org/2000/svg">
+        <line x1="0" y1="260" x2="300" y2="260" stroke="#1a1a1a" stroke-width="2"/>
+        <rect x="55" y="215" width="190" height="10" rx="2" fill="#1a1a1a"/>
+        <rect x="67" y="225" width="7" height="35" rx="2" fill="#1a1a1a"/>
+        <rect x="226" y="225" width="7" height="35" rx="2" fill="#1a1a1a"/>
+        <rect x="158" y="172" width="70" height="44" rx="3" fill="none" stroke="#1a1a1a" stroke-width="2"/>
+        <rect x="161" y="175" width="64" height="37" fill="#ddeeff"/>
+        <rect x="163" y="177" width="60" height="28" rx="2" fill="white" stroke="#1a1a1a" stroke-width="1"/>
+        <text x="167" y="188" font-family="Caveat" font-size="9" fill="#333">✉ De : P.Durand</text>
+        <text x="167" y="200" font-family="Caveat" font-size="9" fill="#e63946" font-weight="bold">URGENT !</text>
+        <rect x="188" y="216" width="12" height="5" rx="1" fill="#1a1a1a"/>
+        <rect x="180" y="221" width="28" height="4" rx="1" fill="#1a1a1a"/>
+
+        <!-- ALEX tête ronde nue -->
+        <circle cx="112" cy="145" r="22" fill="#fafaf7" stroke="#1a1a1a" stroke-width="2.2"/>
+        <circle cx="104" cy="146" r="2.5" fill="#1a1a1a"/>
+        <circle cx="120" cy="146" r="2.5" fill="#1a1a1a"/>
+        <path d="M106 157 Q112 161 118 157" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round"/>
+        <rect x="106" y="167" width="12" height="10" rx="2" fill="#fafaf7" stroke="#1a1a1a" stroke-width="2"/>
+        <path d="M90 177 L90 225 L134 225 L134 177 Q112 177 90 177 Z" fill="#fafaf7" stroke="#1a1a1a" stroke-width="2.2" stroke-linejoin="round"/>
+        <path d="M90 190 Q74 198 66 210" fill="none" stroke="#1a1a1a" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M134 190 Q150 197 160 208" fill="none" stroke="#1a1a1a" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M90 225 Q86 242 80 260" fill="none" stroke="#1a1a1a" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M134 225 Q138 242 144 260" fill="none" stroke="#1a1a1a" stroke-width="2.2" stroke-linecap="round"/>
+
+        <rect x="88" y="270" width="50" height="18" rx="3" fill="#1a1a1a"/>
+        <text x="97" y="283" font-family="Caveat" font-size="13" fill="white" font-weight="bold">Alex</text>
+
+        <!-- Bulle pensée bien au-dessus de la tête -->
+        <rect x="14" y="12" width="152" height="58" rx="10" fill="white" stroke="#1a1a1a" stroke-width="1.8" stroke-dasharray="5,3"/>
+        <circle cx="80" cy="75" r="4" fill="none" stroke="#1a1a1a" stroke-width="1.5" stroke-dasharray="4,3"/>
+        <circle cx="90" cy="86" r="2.5" fill="none" stroke="#1a1a1a" stroke-width="1.5" stroke-dasharray="3,2"/>
+        <text x="22" y="34" font-family="Caveat" font-size="13" fill="#1a1a1a">Un mail de M. Durand</text>
+        <text x="22" y="50" font-family="Caveat" font-size="13" fill="#1a1a1a">— encore urgent !</text>
+        <text x="22" y="64" font-family="Caveat" font-size="12" fill="#888" font-style="italic">Toujours pressé...</text>
+      </svg>
+    </div>
+
+    <!-- CASE 2 -->
+    <div class="panel">
+      <span class="panel-tag">2 — le mail</span>
+      <svg viewBox="0 0 300 315" xmlns="http://www.w3.org/2000/svg">
+        <rect x="18" y="18" width="264" height="210" rx="5" fill="#f0f4ff" stroke="#1a1a1a" stroke-width="2"/>
+        <rect x="18" y="18" width="264" height="28" rx="5" fill="#1a1a1a"/>
+        <text x="28" y="37" font-family="Caveat" font-size="12" fill="white">De : p.durand@entreprise-fr.co</text>
+        <text x="28" y="64" font-family="Caveat" font-size="12" fill="#333" font-weight="bold">Objet : URGENT — Plateaux CODIR ce soir</text>
+        <line x1="28" y1="70" x2="272" y2="70" stroke="#ccc" stroke-width="1"/>
+        <text x="28" y="88" font-family="Caveat" font-size="13" fill="#222">Alex,</text>
+        <text x="28" y="106" font-family="Caveat" font-size="12" fill="#444">Réunion CODIR improvisée ce soir à 19h.</text>
+        <text x="28" y="123" font-family="Caveat" font-size="12" fill="#444">Commandez 12 plateaux repas via</text>
+        <text x="28" y="140" font-family="Caveat" font-size="12" fill="#3a7aff" text-decoration="underline">ce lien</text>
+        <text x="72" y="140" font-family="Caveat" font-size="12" fill="#444"> et réglez avec la carte de la société.</text>
+        <text x="28" y="158" font-family="Caveat" font-size="12" fill="#444">Merci de votre réactivité.</text>
+        <text x="28" y="178" font-family="Caveat" font-size="12" fill="#333">P. Durand, DG</text>
+        <!-- Indice adresse suspecte -->
+        <rect x="18" y="234" width="264" height="26" rx="3" fill="#fff8e0" stroke="#f4a261" stroke-width="1.5"/>
+        <text x="26" y="251" font-family="Caveat" font-size="11" fill="#b07020">⚠ Le vrai domaine : @entreprise.fr</text>
+        <text x="28" y="278" font-family="Caveat" font-size="11" fill="#aaa" font-style="italic">L'adresse est légèrement différente... difficile à voir dans l'urgence.</text>
+      </svg>
+    </div>
+
+  </div>
+
+  <!-- Rangée 2 -->
+  <div class="grid row-3">
+
+    <!-- CASE 3 -->
+    <div class="panel">
+      <span class="panel-tag">3 — Alex paie</span>
+      <svg viewBox="0 0 220 232" xmlns="http://www.w3.org/2000/svg">
+        <line x1="0" y1="192" x2="220" y2="192" stroke="#1a1a1a" stroke-width="2"/>
+        <rect x="28" y="158" width="164" height="8" rx="2" fill="#1a1a1a"/>
+        <rect x="38" y="166" width="6" height="26" rx="2" fill="#1a1a1a"/>
+        <rect x="176" y="166" width="6" height="26" rx="2" fill="#1a1a1a"/>
+        <rect x="112" y="118" width="66" height="40" rx="3" fill="none" stroke="#1a1a1a" stroke-width="1.8"/>
+        <rect x="115" y="121" width="60" height="33" fill="#f8fff8"/>
+        <text x="118" y="132" font-family="Caveat" font-size="8" fill="#333">N° : 4••• •••• ••••</text>
+        <text x="118" y="144" font-family="Caveat" font-size="8" fill="#333">Exp : ••/••  CVV : •••</text>
+        <rect x="126" y="147" width="40" height="9" rx="2" fill="#2a9d8f"/>
+        <text x="131" y="155" font-family="Caveat" font-size="8" fill="white">VALIDER ✓</text>
+        <rect x="140" y="158" width="10" height="5" rx="1" fill="#1a1a1a"/>
+        <rect x="132" y="163" width="26" height="3" rx="1" fill="#1a1a1a"/>
+
+        <!-- ALEX tête nue -->
+        <circle cx="72" cy="75" r="18" fill="#fafaf7" stroke="#1a1a1a" stroke-width="2"/>
+        <path d="M61 73 Q65 69 69 73" fill="none" stroke="#1a1a1a" stroke-width="1.8"/>
+        <path d="M75 73 Q79 69 83 73" fill="none" stroke="#1a1a1a" stroke-width="1.8"/>
+        <circle cx="65" cy="77" r="2" fill="#1a1a1a"/>
+        <circle cx="79" cy="77" r="2" fill="#1a1a1a"/>
+        <path d="M67 85 Q72 89 77 85" fill="none" stroke="#1a1a1a" stroke-width="1.8"/>
+        <rect x="66" y="93" width="12" height="8" rx="2" fill="#fafaf7" stroke="#1a1a1a" stroke-width="2"/>
+        <path d="M54 101 L54 158 L90 158 L90 101 Q72 101 54 101 Z" fill="#fafaf7" stroke="#1a1a1a" stroke-width="2"/>
+        <path d="M54 116 Q40 124 34 138" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round"/>
+        <path d="M90 116 Q104 124 112 134" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round"/>
+        <path d="M54 158 Q50 174 44 192" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round"/>
+        <path d="M90 158 Q94 174 100 192" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round"/>
+
+        <rect x="8" y="8" width="130" height="34" rx="8" fill="white" stroke="#1a1a1a" stroke-width="1.8"/>
+        <line x1="62" y1="42" x2="65" y2="52" stroke="#1a1a1a" stroke-width="1.5"/>
+        <text x="16" y="24" font-family="Caveat" font-size="12" fill="#1a1a1a">Commande validée.</text>
+        <text x="16" y="38" font-family="Caveat" font-size="12" fill="#2a9d8f">Mission accomplie ✓</text>
+      </svg>
+    </div>
+
+    <!-- CASE 4 -->
+    <div class="panel">
+      <span class="panel-tag">4 — plus tard...</span>
+      <svg viewBox="0 0 220 232" xmlns="http://www.w3.org/2000/svg">
+        <line x1="0" y1="192" x2="220" y2="192" stroke="#1a1a1a" stroke-width="2"/>
+
+        <!-- DURAND tête nue -->
+        <circle cx="55" cy="82" r="17" fill="#fafaf7" stroke="#1a1a1a" stroke-width="2"/>
+        <circle cx="48" cy="83" r="2" fill="#1a1a1a"/>
+        <circle cx="62" cy="83" r="2" fill="#1a1a1a"/>
+        <path d="M50 91 Q55 95 60 91" fill="none" stroke="#1a1a1a" stroke-width="1.8"/>
+        <rect x="49" y="99" width="12" height="8" rx="2" fill="#fafaf7" stroke="#1a1a1a" stroke-width="2"/>
+        <path d="M38 107 L38 160 L72 160 L72 107 Q55 107 38 107 Z" fill="#fafaf7" stroke="#1a1a1a" stroke-width="2"/>
+        <path d="M55 107 L51 130 L55 144 L59 130 Z" fill="#1a1a1a"/>
+        <path d="M72 120 Q86 114 95 110" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round"/>
+        <path d="M38 120 Q24 126 16 134" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round"/>
+        <path d="M38 160 Q34 175 28 192" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round"/>
+        <path d="M72 160 Q76 175 82 192" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round"/>
+
+        <!-- ALEX tête nue — surprise -->
+        <circle cx="165" cy="82" r="17" fill="#fafaf7" stroke="#1a1a1a" stroke-width="2"/>
+        <circle cx="157" cy="82" r="3.5" fill="white" stroke="#1a1a1a" stroke-width="1.5"/>
+        <circle cx="173" cy="82" r="3.5" fill="white" stroke="#1a1a1a" stroke-width="1.5"/>
+        <circle cx="157" cy="83" r="1.8" fill="#1a1a1a"/>
+        <circle cx="173" cy="83" r="1.8" fill="#1a1a1a"/>
+        <!-- Bouche ouverte surprise, neutre -->
+        <ellipse cx="165" cy="93" rx="4" ry="3" fill="none" stroke="#1a1a1a" stroke-width="2"/>
+        <rect x="159" y="99" width="12" height="8" rx="2" fill="#fafaf7" stroke="#1a1a1a" stroke-width="2"/>
+        <path d="M148 107 L148 160 L182 160 L182 107 Q165 107 148 107 Z" fill="#fafaf7" stroke="#1a1a1a" stroke-width="2"/>
+        <path d="M148 120 Q136 114 126 110" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round"/>
+        <path d="M182 120 Q194 126 202 134" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round"/>
+        <path d="M148 160 Q144 175 138 192" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round"/>
+        <path d="M182 160 Q186 175 192 192" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round"/>
+
+        <!-- Bulle Durand — en haut à gauche -->
+        <rect x="6" y="6" width="104" height="44" rx="7" fill="white" stroke="#1a1a1a" stroke-width="1.8"/>
+        <line x1="42" y1="50" x2="44" y2="62" stroke="#1a1a1a" stroke-width="1.5"/>
+        <text x="12" y="22" font-family="Caveat" font-size="10" fill="#1a1a1a">Les dossiers pour</text>
+        <text x="12" y="35" font-family="Caveat" font-size="10" fill="#1a1a1a">le CODIR de demain,</text>
+        <text x="12" y="47" font-family="Caveat" font-size="10" fill="#1a1a1a">Alex ?</text>
+
+        <!-- Bulle pensée Alex — en haut à droite, bien au-dessus de la tête -->
+        <rect x="112" y="6" width="104" height="44" rx="7" fill="#fffff0" stroke="#1a1a1a" stroke-width="1.8" stroke-dasharray="5,3"/>
+        <circle cx="165" cy="54" r="4" fill="none" stroke="#1a1a1a" stroke-width="1.5" stroke-dasharray="4,3"/>
+        <circle cx="159" cy="63" r="2.5" fill="none" stroke="#1a1a1a" stroke-width="1.5" stroke-dasharray="3,2"/>
+        <text x="118" y="22" font-family="Caveat" font-size="10" fill="#1a1a1a">Demain ?! Mais le</text>
+        <text x="118" y="35" font-family="Caveat" font-size="10" fill="#1a1a1a">CODIR c'était</text>
+        <text x="118" y="48" font-family="Caveat" font-size="10" fill="#e63946">ce soir !!!</text>
+      </svg>
+    </div>
+
+    <!-- CASE 5 -->
+    <div class="panel">
+      <span class="panel-tag">5 — Alex se tait</span>
+      <svg viewBox="0 0 220 232" xmlns="http://www.w3.org/2000/svg">
+        <line x1="0" y1="192" x2="220" y2="192" stroke="#1a1a1a" stroke-width="2"/>
+
+        <!-- ALEX tête nue, voûté -->
+        <circle cx="110" cy="110" r="18" fill="#fafaf7" stroke="#1a1a1a" stroke-width="2"/>
+        <path d="M100 107 Q104 103 108 107" fill="none" stroke="#1a1a1a" stroke-width="2"/>
+        <path d="M112 107 Q116 103 120 107" fill="none" stroke="#1a1a1a" stroke-width="2"/>
+        <circle cx="104" cy="111" r="2" fill="#1a1a1a"/>
+        <circle cx="116" cy="111" r="2" fill="#1a1a1a"/>
+        <line x1="104" y1="120" x2="116" y2="120" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round"/>
+        <rect x="104" y="128" width="12" height="8" rx="2" fill="#fafaf7" stroke="#1a1a1a" stroke-width="2"/>
+        <path d="M92 136 L92 162 L128 162 L128 136 Q110 136 92 136 Z" fill="#fafaf7" stroke="#1a1a1a" stroke-width="2"/>
+        <!-- Bras gauche normal le long du corps -->
+        <path d="M92 140 Q80 155 78 170" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round"/>
+        <!-- Bras droit normal le long du corps -->
+        <path d="M128 140 Q140 155 142 170" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round"/>
+        <path d="M92 162 Q88 176 82 192" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round"/>
+        <path d="M128 162 Q132 176 138 192" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round"/>
+
+        <!-- Bulle pensée bien au-dessus de la tête -->
+        <rect x="10" y="8" width="200" height="58" rx="10" fill="#fffff0" stroke="#1a1a1a" stroke-width="1.8" stroke-dasharray="5,3"/>
+        <circle cx="104" cy="70" r="4" fill="none" stroke="#1a1a1a" stroke-width="1.5" stroke-dasharray="4,3"/>
+        <circle cx="97" cy="80" r="2.5" fill="none" stroke="#1a1a1a" stroke-width="1.5" stroke-dasharray="3,2"/>
+        <text x="18" y="26" font-family="Caveat" font-size="11" fill="#1a1a1a">Si je parle du mail et du</text>
+        <text x="18" y="40" font-family="Caveat" font-size="11" fill="#1a1a1a">paiement que j'ai fait...</text>
+        <text x="18" y="55" font-family="Caveat" font-size="11" fill="#e63946">on va dire que j'ai fait une bêtise.</text>
+      </svg>
+    </div>
+
+  </div>
+
+  <!-- Rangée 3 -->
+  <div class="grid row-2">
+
+    <!-- CASE 6 -->
+    <div class="panel">
+      <span class="panel-tag">6 — quelques jours plus tard</span>
+      <svg viewBox="0 0 300 315" xmlns="http://www.w3.org/2000/svg">
+        <line x1="0" y1="260" x2="300" y2="260" stroke="#1a1a1a" stroke-width="2"/>
+
+        <!-- DSI tête nue -->
+        <circle cx="72" cy="115" r="17" fill="#fafaf7" stroke="#1a1a1a" stroke-width="2"/>
+        <circle cx="65" cy="116" r="2" fill="#1a1a1a"/>
+        <circle cx="79" cy="116" r="2" fill="#1a1a1a"/>
+        <path d="M67 124 Q72 128 77 124" fill="none" stroke="#1a1a1a" stroke-width="1.8"/>
+        <rect x="66" y="132" width="12" height="8" rx="2" fill="#fafaf7" stroke="#1a1a1a" stroke-width="2"/>
+        <path d="M55 140 L55 222 L89 222 L89 140 Q72 140 55 140 Z" fill="#fafaf7" stroke="#1a1a1a" stroke-width="2"/>
+        <path d="M89 158 Q104 153 114 146" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round"/>
+        <rect x="114" y="134" width="34" height="26" rx="3" fill="none" stroke="#e63946" stroke-width="2.5"/>
+        <rect x="117" y="137" width="28" height="20" fill="#fff0f0"/>
+        <polygon points="131,140 122,155 140,155" fill="#e63946"/>
+        <text x="129" y="153" font-family="Caveat" font-size="9" fill="white" font-weight="bold">!</text>
+        <path d="M55 158 Q42 164 34 172" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round"/>
+        <path d="M55 222 Q50 240 44 260" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round"/>
+        <path d="M89 222 Q94 240 100 260" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round"/>
+
+        <!-- ALEX tête nue — choqué, sans larmes -->
+        <circle cx="218" cy="118" r="17" fill="#fafaf7" stroke="#1a1a1a" stroke-width="2"/>
+        <circle cx="210" cy="119" r="2" fill="#1a1a1a"/>
+        <circle cx="226" cy="119" r="2" fill="#1a1a1a"/>
+        <!-- Bouche neutre droite -->
+        <line x1="212" y1="128" x2="224" y2="128" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round"/>
+        <rect x="212" y="135" width="12" height="8" rx="2" fill="#fafaf7" stroke="#1a1a1a" stroke-width="2"/>
+        <path d="M201 143 L201 222 L235 222 L235 143 Q218 143 201 143 Z" fill="#fafaf7" stroke="#1a1a1a" stroke-width="2"/>
+        <path d="M201 160 Q188 154 178 148" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round"/>
+        <path d="M235 160 Q248 166 256 174" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round"/>
+        <path d="M201 222 Q196 240 190 260" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round"/>
+        <path d="M235 222 Q240 240 246 260" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round"/>
+
+        <!-- Bulle DSI -->
+        <rect x="10" y="12" width="148" height="54" rx="8" fill="white" stroke="#1a1a1a" stroke-width="1.8"/>
+        <line x1="58" y1="66" x2="56" y2="80" stroke="#1a1a1a" stroke-width="1.5"/>
+        <text x="18" y="30" font-family="Caveat" font-size="12" fill="#e63946" font-weight="bold">Alerte !</text>
+        <text x="18" y="46" font-family="Caveat" font-size="12" fill="#1a1a1a">Les coordonnées bancaires</text>
+        <text x="18" y="60" font-family="Caveat" font-size="12" fill="#1a1a1a">de la société ont fuité.</text>
+
+        <!-- Bulle pensée Alex -->
+        <rect x="150" y="12" width="140" height="54" rx="8" fill="#fffff0" stroke="#1a1a1a" stroke-width="1.8" stroke-dasharray="5,3"/>
+        <circle cx="218" cy="70" r="4" fill="none" stroke="#1a1a1a" stroke-width="1.5" stroke-dasharray="4,3"/>
+        <circle cx="212" cy="78" r="2.5" fill="none" stroke="#1a1a1a" stroke-width="1.5" stroke-dasharray="3,2"/>
+        <text x="158" y="30" font-family="Caveat" font-size="12" fill="#1a1a1a">C'était un faux mail...</text>
+        <text x="158" y="46" font-family="Caveat" font-size="12" fill="#1a1a1a">Si j'avais parlé</text>
+        <text x="158" y="60" font-family="Caveat" font-size="12" fill="#e63946">tout de suite...</text>
+      </svg>
+    </div>
+
+    <!-- CASE 7 -->
+    <div class="panel" style="border-left: 3px solid #2a9d8f;">
+      <span class="panel-tag" style="color:#2a9d8f;">✓ et si Alex avait parlé ?</span>
+      <svg viewBox="0 0 300 315" xmlns="http://www.w3.org/2000/svg">
+        <line x1="0" y1="260" x2="300" y2="260" stroke="#1a1a1a" stroke-width="2"/>
+
+        <!-- ALEX tête nue, posture ouverte -->
+        <circle cx="120" cy="120" r="18" fill="#fafaf7" stroke="#1a1a1a" stroke-width="2"/>
+        <circle cx="113" cy="121" r="2" fill="#1a1a1a"/>
+        <circle cx="127" cy="121" r="2" fill="#1a1a1a"/>
+        <path d="M115 129 Q120 133 125 129" fill="none" stroke="#1a1a1a" stroke-width="1.8"/>
+        <rect x="114" y="138" width="12" height="8" rx="2" fill="#fafaf7" stroke="#1a1a1a" stroke-width="2"/>
+        <path d="M102 146 L102 218 L138 218 L138 146 Q120 146 102 146 Z" fill="#fafaf7" stroke="#1a1a1a" stroke-width="2"/>
+        <path d="M102 162 Q86 168 76 176" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round"/>
+        <path d="M138 162 Q154 168 164 176" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round"/>
+        <path d="M102 218 Q96 238 88 260" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round"/>
+        <path d="M138 218 Q144 238 152 260" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round"/>
+
+        <!-- Bulle Alex avec texte complet -->
+        <rect x="10" y="10" width="200" height="72" rx="8" fill="white" stroke="#1a1a1a" stroke-width="1.8"/>
+        <line x1="110" y1="82" x2="108" y2="96" stroke="#1a1a1a" stroke-width="1.5"/>
+        <text x="18" y="28" font-family="Caveat" font-size="11" fill="#1a1a1a">Je pense avoir reçu un mail</text>
+        <text x="18" y="43" font-family="Caveat" font-size="11" fill="#1a1a1a">suspect et fait un paiement</text>
+        <text x="18" y="58" font-family="Caveat" font-size="11" fill="#1a1a1a">non autorisé.</text>
+        <text x="18" y="73" font-family="Caveat" font-size="11" fill="#e63946" font-weight="bold">Il faut vérifier tout de suite !</text>
+
+        <!-- Badge résultat -->
+        <rect x="190" y="120" width="100" height="80" rx="8" fill="#f0fff9" stroke="#2a9d8f" stroke-width="2.5"/>
+        <text x="198" y="142" font-family="Caveat" font-size="13" fill="#2a9d8f" font-weight="bold">Alerte rapide</text>
+        <line x1="198" y1="148" x2="282" y2="148" stroke="#2a9d8f" stroke-width="1" stroke-dasharray="3,2"/>
+        <text x="198" y="163" font-family="Caveat" font-size="12" fill="#555">Dégâts limités</text>
+        <text x="198" y="178" font-family="Caveat" font-size="12" fill="#555">Problème résolu</text>
+        <circle cx="236" cy="198" r="14" fill="#2a9d8f"/>
+        <path d="M228 198 L234 205 L248 189" stroke="white" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+  </div>
+
+  <div class="final-message">
+    <div class="tag">À retenir</div>
+    <p>
+      <strong>Une erreur peut arriver à tout le monde.</strong>
+      Les cybercriminels sont experts pour créer l'urgence et imiter des personnes de confiance.<br><br>
+      Ce qui fait la différence, c'est la <strong>réaction immédiate</strong> : signaler sans attendre permet de limiter les dégâts. Le silence, lui, les amplifie.
+      <em>En cas de doute : vérifiez par téléphone auprès de l'expéditeur, et alertez votre responsable ou votre DSI sans attendre.</em>
+    </p>
+  </div>
+
+  <div class="signature">
+   
