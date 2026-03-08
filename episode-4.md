@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: episode
 title: "Épisode 4 - L'enquête commence"
 ---
 
