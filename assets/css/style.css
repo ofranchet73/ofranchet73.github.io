@@ -604,6 +604,83 @@ img { max-width: 100%; height: auto; }
   text-decoration: none !important;
 }
 
+/* ===== ÉPISODES BLOG ===== */
+.episode-body { max-width: 680px; }
+
+.episode-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid var(--border);
+}
+
+.episode-back {
+  font-size: 0.85em;
+  font-weight: 500;
+  color: var(--muted);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.episode-back:hover { color: var(--blue); text-decoration: none; }
+
+.episode-serie {
+  font-size: 0.75em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--accent);
+}
+
+/* Encadrés pédagogiques dans les épisodes */
+.episode-body h4 {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 700;
+  font-size: 0.95em;
+  color: var(--blue);
+  background: var(--blue-light);
+  border-left: 3px solid var(--accent);
+  padding: 12px 16px;
+  margin: 2em 0 0.5em;
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+/* Navigation entre épisodes */
+.episode-body table {
+  width: 100%;
+  margin-top: 3em;
+  border-collapse: collapse;
+}
+
+.episode-body table td {
+  padding: 0;
+  border: none;
+}
+
+.episode-body table td:first-child { text-align: left; }
+.episode-body table td:last-child { text-align: right; }
+
+.episode-body table a {
+  display: inline-block;
+  background: var(--blue-light);
+  color: var(--blue);
+  padding: 10px 20px;
+  border-radius: var(--radius);
+  font-weight: 500;
+  font-size: 0.88em;
+  text-decoration: none;
+  border: 1px solid var(--border);
+  transition: background 0.2s;
+}
+
+.episode-body table a:hover {
+  background: var(--blue);
+  color: var(--white);
+  text-decoration: none;
+}
+
 /* ===== PAGE BLOG ===== */
 .serie-header {
   margin-bottom: 2em;
