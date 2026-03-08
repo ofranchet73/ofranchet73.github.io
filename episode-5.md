@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: episode
 title: "Épisode 5 - Le verdict de la direction"
 ---
 
