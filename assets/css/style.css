@@ -413,7 +413,117 @@ img { max-width: 100%; height: auto; }
   margin-top: 4px;
 }
 
-/* ===== BLOG ===== */
+/* ===== PAGE À PROPOS ===== */
+.apropos-intro {
+  margin-bottom: 2em;
+}
+
+.apropos-accroche {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.25em;
+  color: var(--blue);
+  line-height: 1.6;
+  font-style: italic;
+  border-left: 4px solid var(--accent);
+  padding-left: 20px;
+  margin: 0;
+}
+
+/* Encadré pourquoi */
+.encadre-pourquoi {
+  background: var(--blue-light);
+  border-radius: var(--radius);
+  padding: 28px 32px;
+  margin: 0;
+}
+
+.encadre-pourquoi h3 {
+  color: var(--blue);
+  margin-top: 0;
+  margin-bottom: 14px;
+  font-size: 1.05em;
+}
+
+.encadre-pourquoi p {
+  margin-bottom: 0.8em;
+  color: var(--text);
+}
+
+.encadre-conclusion {
+  font-weight: 600;
+  color: var(--blue) !important;
+  margin-bottom: 0 !important;
+}
+
+/* Encadré approche */
+.encadre-approche {
+  background: var(--blue-dark);
+  border-radius: var(--radius);
+  padding: 28px 32px;
+  margin: 0;
+}
+
+.encadre-approche h3 {
+  color: var(--white);
+  margin-top: 0;
+  margin-bottom: 14px;
+  font-size: 1.05em;
+}
+
+.encadre-approche p {
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 0;
+  line-height: 1.8;
+}
+
+/* Grille certifications */
+.certif-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.certif-badge {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: box-shadow 0.2s;
+}
+
+.certif-badge:hover {
+  box-shadow: 0 2px 12px rgba(26, 58, 143, 0.1);
+}
+
+.certif-badge.principal {
+  background: var(--blue-light);
+  border-color: var(--accent);
+}
+
+.certif-icon { font-size: 1.2em; }
+
+.certif-nom {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  font-size: 0.85em;
+  color: var(--blue);
+  line-height: 1.3;
+}
+
+.certif-detail {
+  font-size: 0.75em;
+  color: var(--muted);
+}
+
+@media (max-width: 680px) {
+  .certif-grid { grid-template-columns: 1fr 1fr; }
+  .apropos-accroche { font-size: 1.05em; }
+  .encadre-pourquoi, .encadre-approche { padding: 20px; }
+}
 .post-list {
   list-style: none;
   padding: 0;
