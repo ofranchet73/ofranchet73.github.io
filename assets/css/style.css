@@ -637,6 +637,7 @@ img { max-width: 100%; height: auto; }
   margin: 0 0 10px;
   border-bottom: none;
   padding-bottom: 0;
+  text-transform: none;
 }
 
 .projet-desc {
@@ -644,6 +645,7 @@ img { max-width: 100%; height: auto; }
   color: var(--muted);
   line-height: 1.7;
   margin-bottom: 14px;
+  text-transform: none;
 }
 
 .projet-lien {
