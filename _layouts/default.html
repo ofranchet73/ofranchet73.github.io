@@ -22,6 +22,7 @@
           <span></span><span></span><span></span>
         </label>
         <div class="nav-links">
+          <a href="{{ '/' | relative_url }}" class="nav-link">Accueil</a>
           {% for page in site.header_pages %}
             {% assign node = site.pages | where: "path", page | first %}
             <a href="{{ node.url | relative_url }}" class="nav-link">
