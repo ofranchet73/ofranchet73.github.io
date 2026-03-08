@@ -250,7 +250,7 @@ img { max-width: 100%; height: auto; }
 
 .hero h1 {
   font-family: 'DM Serif Display', serif;
-  font-size: clamp(1.9em, 3.5vw, 2.8em);
+  font-size: clamp(1.4em, 2.5vw, 2em);
   color: var(--white);
   line-height: 1.15;
   margin-bottom: 20px;
@@ -284,7 +284,7 @@ img { max-width: 100%; height: auto; }
 
 .stat-number {
   font-family: 'DM Serif Display', serif;
-  font-size: 4em;
+  font-size: 2.6em;
   color: var(--blue);
   line-height: 1;
   flex-shrink: 0;
