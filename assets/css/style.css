@@ -82,6 +82,7 @@ img { max-width: 100%; height: auto; }
   position: sticky;
   top: 0;
   z-index: 100;
+  text-align: center;
 }
 
 .header-inner {
@@ -113,6 +114,7 @@ img { max-width: 100%; height: auto; }
   padding: 0 24px;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .nav-toggle { display: none; }
@@ -232,9 +234,9 @@ img { max-width: 100%; height: auto; }
 }
 
 .hero-inner {
-  max-width: 1100px;
+  max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 48px;
+  padding: 0 24px;
   position: relative;
   z-index: 1;
 }
@@ -274,9 +276,9 @@ img { max-width: 100%; height: auto; }
 }
 
 .stat-band-inner {
-  max-width: 1100px;
+  max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 48px;
+  padding: 0 24px;
   display: flex;
   align-items: center;
   gap: 28px;
