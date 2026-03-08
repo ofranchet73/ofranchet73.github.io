@@ -1,40 +1,34 @@
 ---
-layout: page
+layout: projets
 title: "Projets"
 ---
 
-## Études de cas & Ressources
+<div class="projet-card">
+  <div class="projet-tag">Bande dessinée</div>
+  <h2 class="projet-titre">Le mail urgent</h2>
+  <p class="projet-desc">Une BD pédagogique sur le phishing par email. Alex reçoit un mail urgent de son patron, paie sans vérifier, et se tait par peur du jugement. Une histoire bienveillante sur l'erreur humaine et l'importance de signaler immédiatement.</p>
+  <a href="/bd_cyber_linea_v5.html" class="projet-lien">→ Voir la BD</a>
+</div>
 
----
+<div class="projet-card">
+  <div class="projet-tag">Jeu interactif</div>
+  <h2 class="projet-titre">Salle des suspects</h2>
+  <p class="projet-desc">Un jeu d'identification des 8 menaces cyber les plus courantes. Style dossier d'enquête : consultez les fiches des suspects, mémorisez leur mode opératoire, puis prouvez que vous saurez les reconnaître sur le terrain.</p>
+  <a href="/salle_des_suspects.html" class="projet-lien">→ Ouvrir le jeu</a>
+</div>
 
-### BD — Le mail urgent : une histoire de phishing
+<div class="projet-card">
+  <div class="projet-tag">Guide PDF</div>
+  <h2 class="projet-titre">Utiliser l'IA au travail : les risques qu'on ne vous explique jamais</h2>
+  <p class="projet-desc">L'IA s'est installée dans le quotidien professionnel sans formation ni cadre. Ce guide présente les 5 risques principaux que vos collaborateurs prennent chaque jour — sans le savoir.</p>
+  <a href="/pdf/5_risques_IA_-_Guide_Cybersécurité.pdf" class="projet-lien">↓ Télécharger le guide</a>
+</div>
 
-Alex reçoit un mail urgent de son grand patron. Il fait confiance, il paie. Et puis il se tait...
+<div class="projet-card">
+  <div class="projet-tag">Étude de cas</div>
+  <h2 class="projet-titre">Analyse de risques — Cabinet d'ophtalmologie</h2>
+  <p class="projet-desc">Application de la méthode ISO 27005 à un cabinet d'ophtalmologie : données de santé critiques, système d'information modeste mais exposé, enjeux humains, techniques et réglementaires. Identification des actifs, cartographie des menaces, élaboration de mesures.</p>
+  <a href="/pdf/OdileFranchet_EtudeCas_Analyse_Risques_Complet_Ophtalmo.pdf" class="projet-lien">↓ Télécharger l'étude de cas</a>
+</div>
 
-Cette BD illustre comment un collaborateur peut se faire piéger par un mail frauduleux — et pourquoi signaler immédiatement fait toute la différence.
-
-➡️ [Télécharger la BD](/pdf/Alex%20%E2%80%94%20BD%20Cybers%C3%A9curit%C3%A9.pdf)
-
----
-
-### Guide — Utiliser l'IA au travail : les risques qu'on ne vous explique jamais
-
-L'IA s'est installée dans le quotidien professionnel sans formation ni cadre. Ce guide présente les 5 risques principaux que vos collaborateurs prennent chaque jour — sans le savoir.
-
-Données exposées, phishing indétectable, deepfakes, hallucinations : des situations concrètes, expliquées simplement, pour des équipes non techniques.
-
-➡️ [Télécharger le guide](/pdf/5%20risques%20IA%20-%20Guide%20Cybersécurité.pdf)
-
----
-
-### Analyse de risques — Cabinet d'ophtalmologie
-
-Cette étude de cas présente une analyse de risques appliquée à un cabinet d'ophtalmologie — des données de santé critiques, un système d'information modeste mais exposé, des enjeux humains, techniques et réglementaires.
-
-Méthode ISO 27005 : identification des actifs, cartographie des menaces, élaboration de mesures.
-
-➡️ [Télécharger l'étude de cas](/pdf/OdileFranchet_EtudeCas_Analyse_Risques_Complet_Ophtalmo.pdf)
-
----
-
-*D'autres ressources à venir prochainement.*
+<p class="formation-note"><em>D'autres ressources à venir prochainement.</em></p>
