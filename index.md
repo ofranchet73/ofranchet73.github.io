@@ -5,7 +5,7 @@ title: "Accueil"
 
 ## La cybersécurité commence par l'humain
 
-80% des incidents de sécurité ont une origine humaine — pas par un manque de technologie, mais par un manque de réflexes.
+80% des incidents de sécurité ont une origine humaine — pas un manque de technologie, un manque de réflexes.
 
 Les outils de protection sont indispensables. Mais aucun pare-feu ne remplace une équipe qui sait identifier une tentative de phishing, protéger ses accès ou réagir face à une situation anormale.
 
@@ -29,7 +29,7 @@ En faisant appel à mon expertise, vous leur apportez une réponse concrète et 
 
 ## Vous voulez structurer une offre de formation
 
-Vous souhaitez proposer des formations à vos clients, ou développer un catalogue interne pour vos collaborateurs ? Je vous accompagne de A à Z : déclaration d'activité, ingénierie de l'offre, positionnement commercial, mise en conformité Qualiopi.
+Vous souhaitez devenir prestataire de formation, ou développer un catalogue interne pour vos collaborateurs ou vos clients ? Je vous accompagne de A à Z : déclaration d'activité, ingénierie de l'offre, positionnement commercial, mise en conformité Qualiopi.
 
 Une structure opérationnelle, une offre cohérente — et les clés pour la développer durablement.
 
@@ -38,5 +38,3 @@ Une structure opérationnelle, une offre cohérente — et les clés pour la dé
 ## Échangeons sur votre situation
 
 Chaque organisation est différente. Parlons de la vôtre.
-
-[ofranchet@gmail.com](mailto:ofranchet@gmail.com)
