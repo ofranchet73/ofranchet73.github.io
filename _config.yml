@@ -1,5 +1,4 @@
 title: "Odile Franchet — Cybersécurité & Facteur humain"
-remote_theme: jekyll/minima 
 markdown: kramdown
 
 header_pages:
@@ -9,6 +8,3 @@ header_pages:
   - formation.md
   - projets.md
   - blog.md
-
-minima:
-  skin: dark
