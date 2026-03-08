@@ -604,6 +604,63 @@ img { max-width: 100%; height: auto; }
   text-decoration: none !important;
 }
 
+/* ===== PAGE PROJETS ===== */
+.projet-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px 28px;
+  margin-bottom: 16px;
+  transition: box-shadow 0.2s, transform 0.15s;
+  border-left: 4px solid var(--accent);
+}
+
+.projet-card:hover {
+  box-shadow: 0 4px 16px rgba(26, 58, 143, 0.1);
+  transform: translateY(-2px);
+}
+
+.projet-tag {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.7em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.projet-titre {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.2em;
+  color: var(--blue);
+  margin: 0 0 10px;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.projet-desc {
+  font-size: 0.9em;
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+.projet-lien {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.85em;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.projet-lien:hover {
+  border-bottom-color: var(--accent);
+  text-decoration: none;
+}
+
 /* ===== PAGE FORMATION ===== */
 .format-grid {
   display: grid;
