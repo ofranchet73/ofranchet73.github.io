@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: episode
 title: "Episode 7 - La transformation 🔥🔄"
 ---
 
