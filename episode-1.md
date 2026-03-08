@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: episode
 title: "Épisode 1 - Tout semblait normal"
 ---
 
