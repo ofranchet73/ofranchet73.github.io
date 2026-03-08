@@ -604,7 +604,74 @@ img { max-width: 100%; height: auto; }
   text-decoration: none !important;
 }
 
-.post-list {
+/* ===== PAGE FORMATION ===== */
+.format-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin: 2em 0;
+}
+
+.format-bloc {
+  background: var(--blue-light);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 6px;
+}
+
+.format-icon { font-size: 1.5em; }
+
+.format-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.72em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--muted);
+}
+
+.format-val {
+  font-size: 0.88em;
+  font-weight: 500;
+  color: var(--blue);
+  line-height: 1.3;
+}
+
+.apports-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 1em 0 2em;
+}
+
+.apport-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  font-size: 0.9em;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.formation-note {
+  font-size: 0.88em;
+  color: var(--muted);
+  margin-bottom: 0.4em;
+}
+
+@media (max-width: 680px) {
+  .format-grid { grid-template-columns: 1fr 1fr; }
+  .apports-grid { grid-template-columns: 1fr; }
+}
+
+/* ===== BLOG ===== */
   list-style: none;
   padding: 0;
   margin: 0;
