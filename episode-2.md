@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: episode
 title: "Épisode 2 - Le message d'erreur"
 ---
 
