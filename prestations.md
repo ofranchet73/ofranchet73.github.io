@@ -1,9 +1,7 @@
 ---
-layout: page
+layout: prestations
 title: "Prestations"
 ---
-
-## Mes prestations
 
 Mon expertise couvre trois domaines complémentaires : la sensibilisation cybersécurité, la protection des données (RGPD) et les risques liés aux usages de l'IA en entreprise.
 
@@ -11,15 +9,15 @@ Mon intervention s'adapte à votre situation — elle peut couvrir l'ensemble du
 
 ---
 
-### 1. Diagnostic de vulnérabilités humaines
+## 1. Diagnostic de vulnérabilités humaines
 
 Avant de former, il faut comprendre. J'analyse votre organisation pour identifier vos angles morts : comportements à risque, contextes exposés, ce qui existe déjà et ce qui manque réellement.
 
-**Ce que vous obtenez** : un état des lieux clair et des recommandations concrètes, adaptés à vos métiers et à votre réalité terrain — pas un rapport générique.
+**Ce que vous obtenez** : un état des lieux clair et des recommandations concrètes, adaptées à vos métiers et à votre réalité terrain — pas un rapport générique.
 
 ---
 
-### 2. Conception de programme de sensibilisation
+## 2. Conception de programme de sensibilisation
 
 Sur la base du diagnostic — ou d'un besoin identifié — je conçois le dispositif adapté à votre organisation : formats, contenus, séquencement, outils pédagogiques. L'objectif est un programme qui ancre de vrais réflexes, pas une formation ponctuelle qu'on oublie le lendemain.
 
@@ -27,7 +25,7 @@ Sur la base du diagnostic — ou d'un besoin identifié — je conçois le dispo
 
 ---
 
-### 3. Accompagnement au déploiement
+## 3. Accompagnement au déploiement
 
 La conception ne suffit pas — c'est la mise en œuvre qui fait la différence. Je reste en appui pendant le déploiement, je coordonne les intervenants si nécessaire, j'ajuste en fonction des retours terrain et je mesure les résultats dans le temps.
 
@@ -35,21 +33,24 @@ La conception ne suffit pas — c'est la mise en œuvre qui fait la différence.
 
 ---
 
-### 4. Création et structuration d'une offre de formation
+## 4. Création et structuration d'une offre de formation
 
-Vous êtes une entreprise qui souhaite devenir prestataire de formation, ou développer un catalogue interne pour vos équipes ou vos clients ? Je vous accompagne de A à Z dans la structuration de votre projet : déclaration d'activité, ingénierie de l'offre et du catalogue, positionnement commercial et mise en conformité Qualiopi.
+Vous souhaitez devenir prestataire de formation ou développer un catalogue interne ? Je vous guide à chaque étape : obtention du numéro d'activité, ingénierie de l'offre et du catalogue, positionnement commercial. Pour la certification Qualiopi, je vous connecte aux bons interlocuteurs et vous prépare à y répondre.
 
-**Ce que vous obtenez** : une structure opérationnelle, une offre cohérente et différenciée, et les clés pour développer votre activité formation durablement.
+**Ce que vous obtenez** : une feuille de route claire, les bons contacts, et une offre structurée — sans tâtonner seul face aux démarches administratives.
 
 ---
 
-### Une offre pour les partenaires
+## Travailler ensemble en marque blanche
 
-Cabinets comptables, conseils en gestion, experts-comptables, courtiers en assurance : vous connaissez la réalité opérationnelle de vos clients PME. Vous savez qu'ils sont exposés — et souvent démunis face au sujet cyber.
+Vous conseillez des dirigeants de PME et vous souhaitez leur proposer une expertise cyber sans l'internaliser ? J'interviens sous votre nom, en toute discrétion, comme si j'étais votre propre expert cybersécurité.
 
-En faisant appel à mon expertise, vous leur apportez une réponse concrète et structurée, sans avoir à l'internaliser. J'interviens en complément de votre accompagnement ou en votre nom.
+Vos clients bénéficient d'un accompagnement structuré. Vous élargissez votre offre sans recruter. La relation client reste la vôtre.
+
+**Ce que vous obtenez** : une collaboration fluide, une intervention transparente pour vos clients, et un expert disponible quand vous en avez besoin.
 
 ---
 
 *Parlons de votre projet.*
+
 [ofranchet@gmail.com](mailto:ofranchet@gmail.com)
