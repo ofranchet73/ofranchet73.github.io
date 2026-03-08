@@ -604,6 +604,111 @@ img { max-width: 100%; height: auto; }
   text-decoration: none !important;
 }
 
+/* ===== PAGE BLOG ===== */
+.serie-header {
+  margin-bottom: 2em;
+  padding: 24px 28px;
+  background: var(--blue-light);
+  border-radius: var(--radius);
+  border-left: 4px solid var(--blue);
+}
+
+.serie-tag {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.7em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+
+.serie-titre {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.5em;
+  color: var(--blue);
+  margin: 0 0 12px;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.serie-desc {
+  font-size: 0.9em;
+  color: var(--text);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Timeline épisodes */
+.episodes-timeline {
+  position: relative;
+  margin-bottom: 2em;
+}
+
+.episodes-timeline::before {
+  content: '';
+  position: absolute;
+  left: 22px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--border);
+}
+
+.episode-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 16px 0;
+  position: relative;
+}
+
+.episode-num {
+  font-family: 'DM Serif Display', serif;
+  font-size: 0.85em;
+  font-weight: 400;
+  color: var(--white);
+  background: var(--blue);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.episode-content {
+  flex: 1;
+  padding-top: 8px;
+}
+
+.episode-titre {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 600;
+  font-size: 0.95em;
+  color: var(--blue);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.episode-titre:hover {
+  border-bottom-color: var(--accent);
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.episode-accroche {
+  font-size: 0.85em;
+  color: var(--muted);
+  margin: 4px 0 0;
+  font-style: italic;
+  line-height: 1.5;
+}
+
 /* ===== PAGE PROJETS ===== */
 .projet-card {
   background: var(--white);
