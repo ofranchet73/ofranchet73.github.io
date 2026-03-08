@@ -46,6 +46,10 @@ h2 { font-size: 1.65em; color: var(--blue); padding-bottom: 0.3em; border-bottom
 h3 { font-size: 1.1em; font-family: 'DM Sans', sans-serif; font-weight: 600; margin-top: 2em; }
 h3::before { content: '— '; color: var(--accent); }
 
+/* Pas de tiret sur l'accueil */
+.home-body h3::before,
+.page-body h3.no-dash::before { content: none; }
+
 p { margin-bottom: 1.2em; }
 p:last-child { margin-bottom: 0; }
 
@@ -101,6 +105,9 @@ img { max-width: 100%; height: auto; }
   white-space: nowrap;
   flex-shrink: 0;
   text-decoration: none;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .site-title:hover { color: var(--accent); text-decoration: none; }
