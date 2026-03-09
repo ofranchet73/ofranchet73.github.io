@@ -1,0 +1,1489 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salle des suspects — Cybersécurité</title>
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #1a1612;
+    --paper: #f2ead8;
+    --paper-dark: #e8dfc4;
+    --ink: #1a1612;
+    --red: #c0392b;
+    --stamp-red: #9b2335;
+    --muted: #7a6e5f;
+    --manila: #d4b896;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    background-image:
+      repeating-linear-gradient(0deg, transparent, transparent 28px, rgba(255,255,255,0.015) 28px, rgba(255,255,255,0.015) 29px),
+      repeating-linear-gradient(90deg, transparent, transparent 28px, rgba(255,255,255,0.015) 28px, rgba(255,255,255,0.015) 29px);
+    font-family: 'Courier Prime', monospace;
+    min-height: 100vh;
+    padding: 0;
+  }
+
+  /* ===== ÉCRAN INTRO ===== */
+  #screen-intro {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .bureau-label {
+    font-family: 'Special Elite', cursive;
+    font-size: 0.7em;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: var(--manila);
+    margin-bottom: 24px;
+  }
+
+  .intro-title {
+    font-family: 'Special Elite', cursive;
+    font-size: clamp(2.5em, 6vw, 4.5em);
+    color: var(--paper);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .intro-subtitle {
+    font-family: 'Special Elite', cursive;
+    font-size: clamp(1em, 2.5vw, 1.4em);
+    color: var(--red);
+    letter-spacing: 3px;
+    margin-bottom: 32px;
+  }
+
+  .intro-dossier {
+    background: var(--manila);
+    border: 2px solid #b8a07a;
+    border-radius: 3px;
+    padding: 28px 36px;
+    max-width: 520px;
+    margin-bottom: 36px;
+    position: relative;
+    box-shadow: 4px 4px 0 rgba(0,0,0,0.4);
+    text-align: left;
+  }
+
+  .intro-dossier::before {
+    content: 'CONFIDENTIEL';
+    position: absolute;
+    top: 12px; right: 12px;
+    font-family: 'Special Elite', cursive;
+    font-size: 0.65em;
+    color: var(--stamp-red);
+    border: 2px solid var(--stamp-red);
+    padding: 2px 8px;
+    transform: rotate(3deg);
+    letter-spacing: 3px;
+    opacity: 0.8;
+  }
+
+  .intro-dossier p {
+    font-size: 0.9em;
+    line-height: 1.8;
+    color: var(--ink);
+  }
+
+  .intro-dossier p + p { margin-top: 10px; }
+
+  .btn-primary {
+    background: var(--red);
+    color: var(--paper);
+    border: none;
+    padding: 16px 40px;
+    font-family: 'Special Elite', cursive;
+    font-size: 1em;
+    letter-spacing: 3px;
+    cursor: pointer;
+    border-radius: 2px;
+    box-shadow: 3px 3px 0 rgba(0,0,0,0.5);
+    transition: all 0.15s;
+    text-transform: uppercase;
+  }
+
+  .btn-primary:hover {
+    background: #a93226;
+    transform: translate(-1px, -1px);
+    box-shadow: 4px 4px 0 rgba(0,0,0,0.5);
+  }
+
+  /* ===== GALERIE DES SUSPECTS ===== */
+  #screen-gallery {
+    display: none;
+    min-height: 100vh;
+    padding: 32px 20px 60px;
+  }
+
+  .gallery-header {
+    text-align: center;
+    margin-bottom: 36px;
+  }
+
+  .gallery-header h2 {
+    font-family: 'Special Elite', cursive;
+    font-size: clamp(1.6em, 3vw, 2.4em);
+    color: var(--paper);
+    margin-bottom: 6px;
+  }
+
+  .gallery-header p {
+    font-size: 0.8em;
+    color: var(--manila);
+    letter-spacing: 2px;
+  }
+
+  .suspects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 960px;
+    margin: 0 auto 40px;
+  }
+
+  .suspect-thumb {
+    background: var(--manila);
+    border: 2px solid #b8a07a;
+    border-radius: 2px;
+    padding: 16px;
+    cursor: pointer;
+    box-shadow: 3px 3px 0 rgba(0,0,0,0.4);
+    transition: all 0.15s;
+    position: relative;
+    text-align: center;
+  }
+
+  .suspect-thumb:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 0 rgba(0,0,0,0.4);
+  }
+
+  .suspect-thumb.seen::after {
+    content: 'LU';
+    position: absolute;
+    top: 6px; right: 6px;
+    font-family: 'Special Elite', cursive;
+    font-size: 0.6em;
+    color: var(--stamp-red);
+    border: 1.5px solid var(--stamp-red);
+    padding: 1px 5px;
+    letter-spacing: 2px;
+    transform: rotate(5deg);
+  }
+
+  .suspect-number {
+    font-family: 'Special Elite', cursive;
+    font-size: 0.65em;
+    color: var(--muted);
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+  }
+
+  .suspect-avatar {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+    display: block;
+    filter: grayscale(30%);
+  }
+
+  .suspect-name {
+    font-family: 'Special Elite', cursive;
+    font-size: 1em;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+
+  .suspect-alias {
+    font-size: 0.72em;
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  .btn-quiz-launch {
+    display: block;
+    max-width: 360px;
+    margin: 0 auto;
+    background: transparent;
+    border: 2px solid var(--manila);
+    color: var(--manila);
+    padding: 14px 32px;
+    font-family: 'Special Elite', cursive;
+    font-size: 0.9em;
+    letter-spacing: 3px;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all 0.15s;
+    text-transform: uppercase;
+  }
+
+  .btn-quiz-launch:hover { background: var(--manila); color: var(--ink); }
+  .btn-quiz-launch:disabled { opacity: 0.3; cursor: default; }
+  .btn-quiz-launch:disabled:hover { background: transparent; color: var(--manila); }
+
+  /* ===== FICHE SUSPECT ===== */
+  #screen-fiche {
+    display: none;
+    min-height: 100vh;
+    padding: 32px 20px 60px;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .fiche-wrap {
+    max-width: 680px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .fiche-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  .btn-back {
+    background: none;
+    border: 1px solid var(--manila);
+    color: var(--manila);
+    padding: 8px 16px;
+    font-family: 'Special Elite', cursive;
+    font-size: 0.75em;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all 0.15s;
+  }
+
+  .btn-back:hover { background: var(--manila); color: var(--ink); }
+
+  .fiche-counter {
+    font-family: 'Special Elite', cursive;
+    font-size: 0.75em;
+    color: var(--muted);
+    letter-spacing: 2px;
+  }
+
+  /* La fiche elle-même */
+  .fiche {
+    background: var(--paper);
+    border-radius: 2px;
+    box-shadow: 6px 6px 0 rgba(0,0,0,0.5), 0 0 0 1px #b8a07a;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Trous de perforateur */
+  .fiche::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; bottom: 0;
+    width: 36px;
+    background: var(--paper-dark);
+    border-right: 2px dashed #c8b898;
+  }
+
+  .fiche-inner {
+    padding: 28px 28px 28px 56px;
+  }
+
+  .fiche-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--ink);
+  }
+
+  .fiche-id {
+    font-size: 0.65em;
+    color: var(--muted);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  .fiche-nom {
+    font-family: 'Special Elite', cursive;
+    font-size: clamp(1.6em, 4vw, 2.2em);
+    color: var(--ink);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .fiche-alias {
+    font-style: italic;
+    font-size: 0.85em;
+    color: var(--muted);
+  }
+
+  .fiche-avatar-block {
+    text-align: center;
+    min-width: 80px;
+  }
+
+  .fiche-emoji {
+    font-size: 3.5em;
+    display: block;
+    filter: grayscale(20%);
+    margin-bottom: 4px;
+  }
+
+  .fiche-dangerosité {
+    font-size: 0.62em;
+    letter-spacing: 2px;
+    color: var(--stamp-red);
+    font-family: 'Special Elite', cursive;
+    text-transform: uppercase;
+  }
+
+  .fiche-stamp {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    font-family: 'Special Elite', cursive;
+    font-size: 1.1em;
+    color: var(--stamp-red);
+    border: 3px solid var(--stamp-red);
+    padding: 4px 10px;
+    transform: rotate(-8deg);
+    opacity: 0.75;
+    letter-spacing: 3px;
+    pointer-events: none;
+  }
+
+  .fiche-section {
+    margin-bottom: 18px;
+  }
+
+  .fiche-section-title {
+    font-family: 'Special Elite', cursive;
+    font-size: 0.65em;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 6px;
+    border-bottom: 1px solid var(--paper-dark);
+    padding-bottom: 4px;
+  }
+
+  .fiche-section p {
+    font-size: 0.88em;
+    line-height: 1.75;
+    color: var(--ink);
+  }
+
+  .fiche-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 6px;
+  }
+
+  .fiche-tag {
+    background: var(--ink);
+    color: var(--paper);
+    font-size: 0.65em;
+    padding: 3px 10px;
+    letter-spacing: 2px;
+    font-family: 'Special Elite', cursive;
+  }
+
+  .fiche-tag.danger { background: var(--stamp-red); }
+
+  .fiche-indices {
+    background: var(--paper-dark);
+    border-left: 3px solid var(--ink);
+    padding: 12px 14px;
+    margin-top: 6px;
+  }
+
+  .fiche-indices li {
+    font-size: 0.85em;
+    line-height: 1.7;
+    color: var(--ink);
+    list-style: none;
+    padding-left: 16px;
+    position: relative;
+  }
+
+  .fiche-indices li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--red);
+  }
+
+  .fiche-defense {
+    background: #e8f5e8;
+    border-left: 3px solid #2a7a2a;
+    padding: 12px 14px;
+    margin-top: 6px;
+  }
+
+  .fiche-defense li {
+    font-size: 0.85em;
+    line-height: 1.7;
+    color: var(--ink);
+    list-style: none;
+    padding-left: 16px;
+    position: relative;
+  }
+
+  .fiche-defense li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #2a7a2a;
+    font-weight: bold;
+  }
+
+  .fiche-nav-bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 12px;
+  }
+
+  .btn-prev, .btn-next-fiche {
+    flex: 1;
+    background: none;
+    border: 1px solid var(--manila);
+    color: var(--manila);
+    padding: 12px;
+    font-family: 'Special Elite', cursive;
+    font-size: 0.78em;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all 0.15s;
+    text-transform: uppercase;
+  }
+
+  .btn-prev:hover, .btn-next-fiche:hover { background: var(--manila); color: var(--ink); }
+  .btn-prev:disabled, .btn-next-fiche:disabled { opacity: 0.2; cursor: default; }
+  .btn-prev:disabled:hover, .btn-next-fiche:disabled:hover { background: none; color: var(--manila); }
+
+  /* ===== INTERROGATOIRE ===== */
+  #screen-quiz {
+    display: none;
+    min-height: 100vh;
+    padding: 32px 20px 60px;
+  }
+
+  .quiz-wrap { max-width: 760px; margin: 0 auto; }
+
+  .quiz-header { text-align: center; margin-bottom: 28px; }
+  .quiz-header h2 {
+    font-family: 'Special Elite', cursive;
+    font-size: clamp(1.5em, 3vw, 2em);
+    color: var(--paper); margin-bottom: 6px;
+  }
+  .quiz-header p { font-size: 0.78em; color: var(--manila); letter-spacing: 2px; }
+
+  .quiz-progress {
+    display: flex; justify-content: center; gap: 8px; margin-bottom: 28px;
+  }
+  .quiz-dot {
+    width: 10px; height: 10px; border-radius: 50%;
+    background: #3a3530; border: 1px solid var(--manila); transition: all 0.2s;
+  }
+  .quiz-dot.active { background: var(--manila); }
+  .quiz-dot.correct { background: #2a7a2a; border-color: #2a7a2a; }
+  .quiz-dot.wrong { background: var(--red); border-color: var(--red); }
+
+  /* Rapport d'incident */
+  .incident-card {
+    background: var(--paper);
+    border-radius: 2px;
+    box-shadow: 5px 5px 0 rgba(0,0,0,0.4);
+    padding: 24px 28px 20px;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .incident-card::before {
+    content: 'RAPPORT D\'INCIDENT';
+    display: block;
+    font-size: 0.58em;
+    letter-spacing: 5px;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .incident-num {
+    position: absolute; top: 16px; right: 20px;
+    font-size: 0.6em; color: var(--muted); letter-spacing: 2px;
+  }
+  .incident-text {
+    font-size: 0.92em; line-height: 1.8; color: var(--ink);
+    padding-bottom: 16px; border-bottom: 1px dashed #c0b090; margin-bottom: 16px;
+  }
+  .incident-question {
+    font-family: 'Special Elite', cursive;
+    font-size: 1em; color: var(--ink);
+  }
+
+  /* Galerie des suspects cliquables */
+  .lineup {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  .lineup-card {
+    background: var(--manila);
+    border: 2px solid #b8a07a;
+    border-radius: 2px;
+    padding: 10px 8px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.15s;
+    box-shadow: 2px 2px 0 rgba(0,0,0,0.3);
+    position: relative;
+  }
+
+  .lineup-card:hover:not(.disabled) {
+    transform: translateY(-3px);
+    box-shadow: 3px 5px 0 rgba(0,0,0,0.4);
+    border-color: var(--ink);
+  }
+
+  .lineup-card.correct {
+    background: #d4edd4;
+    border-color: #2a7a2a;
+    box-shadow: 2px 2px 0 #2a7a2a;
+  }
+
+  .lineup-card.wrong {
+    background: #f0d4d4;
+    border-color: var(--red);
+    box-shadow: 2px 2px 0 var(--red);
+    opacity: 0.6;
+  }
+
+  .lineup-card.highlight {
+    background: #d4edd4;
+    border-color: #2a7a2a;
+    box-shadow: 2px 2px 0 #2a7a2a;
+  }
+
+  .lineup-card.disabled { cursor: default; }
+
+  .lineup-emoji { font-size: 2em; display: block; margin-bottom: 5px; }
+
+  .lineup-name {
+    font-family: 'Special Elite', cursive;
+    font-size: 0.68em;
+    color: var(--ink);
+    line-height: 1.2;
+    display: block;
+  }
+
+  .lineup-alias {
+    font-size: 0.58em;
+    color: var(--muted);
+    font-style: italic;
+    display: block;
+    margin-top: 2px;
+  }
+
+  .lineup-verdict {
+    position: absolute;
+    top: -8px; right: -6px;
+    font-size: 1.1em;
+  }
+
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+  .quiz-feedback {
+    background: var(--paper-dark);
+    border-left: 3px solid var(--ink);
+    padding: 14px 16px;
+    margin-bottom: 16px;
+    display: none;
+    animation: fadeIn 0.3s ease;
+  }
+  .quiz-feedback.correct { border-left-color: #2a7a2a; }
+  .quiz-feedback.wrong { border-left-color: var(--red); }
+  .quiz-feedback-title {
+    font-family: 'Special Elite', cursive;
+    font-size: 0.85em; margin-bottom: 6px; color: var(--ink);
+  }
+  .quiz-feedback p { font-size: 0.82em; line-height: 1.65; color: var(--muted); }
+
+  .btn-quiz-next {
+    display: none; width: 100%;
+    background: var(--ink); color: var(--paper); border: none;
+    padding: 14px; font-family: 'Special Elite', cursive;
+    font-size: 0.85em; letter-spacing: 3px; cursor: pointer;
+    border-radius: 2px; transition: all 0.15s; text-transform: uppercase;
+  }
+  .btn-quiz-next:hover { background: #2a2420; }
+
+  /* Carte situation légitime */
+  .legitime-card {
+    background: #f0fff9 !important;
+    border: 2px solid #2a9d8f !important;
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 16px;
+  }
+
+  .legitime-card .lineup-emoji { font-size: 1.4em; }
+  .legitime-card .lineup-name { color: #1a6b5a; font-weight: 700; font-size: 0.85em; }
+  .legitime-card .lineup-alias { color: #2a9d8f; }
+
+  @media (max-width: 500px) {
+    .suspects-grid { grid-template-columns: 1fr 1fr; }
+    .quiz-options { grid-template-columns: 1fr; }
+    .result-grid { grid-template-columns: 1fr; }
+    .btn-restart-wrap { flex-direction: column; }
+    .lineup { grid-template-columns: repeat(4, 1fr); gap: 6px; }
+    .lineup-alias { display: none; }
+  }
+
+    /* ===== RÉSULTAT ===== */
+  #screen-result {
+    display: none;
+    min-height: 100vh;
+    padding: 32px 20px 60px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .result-wrap {
+    max-width: 580px;
+    margin: 0 auto;
+  }
+
+  .result-folder {
+    background: var(--manila);
+    border: 2px solid #b8a07a;
+    box-shadow: 6px 6px 0 rgba(0,0,0,0.4);
+    padding: 36px;
+    position: relative;
+    margin-bottom: 24px;
+  }
+
+  .result-folder::before {
+    content: 'RÉSULTAT FINAL';
+    position: absolute;
+    top: -1px; left: 28px;
+    background: var(--manila);
+    border: 2px solid #b8a07a;
+    border-bottom: none;
+    padding: 4px 14px;
+    font-family: 'Special Elite', cursive;
+    font-size: 0.65em;
+    letter-spacing: 3px;
+    color: var(--muted);
+    transform: translateY(-100%);
+  }
+
+  .result-score-big {
+    font-family: 'Special Elite', cursive;
+    font-size: 5em;
+    color: var(--ink);
+    line-height: 1;
+    text-align: center;
+    margin-bottom: 4px;
+  }
+
+  .result-score-label {
+    text-align: center;
+    font-size: 0.75em;
+    color: var(--muted);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+
+  .result-message {
+    font-size: 0.9em;
+    line-height: 1.8;
+    color: var(--ink);
+    text-align: center;
+    margin-bottom: 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #c0b090;
+  }
+
+  .result-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+
+  .result-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.78em;
+    color: var(--ink);
+    font-family: 'Special Elite', cursive;
+    letter-spacing: 1px;
+  }
+
+  .result-item .dot {
+    width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0;
+  }
+
+  .result-item .dot.ok { background: #2a7a2a; }
+  .result-item .dot.ko { background: var(--red); }
+
+  .btn-restart-wrap {
+    display: flex;
+    gap: 12px;
+  }
+
+  .btn-gallery-again, .btn-quiz-again {
+    flex: 1;
+    padding: 12px;
+    font-family: 'Special Elite', cursive;
+    font-size: 0.75em;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border-radius: 2px;
+    text-transform: uppercase;
+    transition: all 0.15s;
+  }
+
+  .btn-gallery-again {
+    background: none;
+    border: 1.5px solid var(--ink);
+    color: var(--ink);
+  }
+
+  .btn-gallery-again:hover { background: var(--ink); color: var(--paper); }
+
+  .btn-quiz-again {
+    background: var(--red);
+    border: none;
+    color: var(--paper);
+    box-shadow: 2px 2px 0 rgba(0,0,0,0.3);
+  }
+
+  .btn-quiz-again:hover { background: #a93226; }
+
+  .signature {
+    text-align: center;
+    margin-top: 32px;
+    font-size: 0.7em;
+    color: #5a5040;
+    font-style: italic;
+  }
+
+  @media (max-width: 500px) {
+    .suspects-grid { grid-template-columns: 1fr 1fr; }
+    .quiz-options { grid-template-columns: 1fr; }
+    .result-grid { grid-template-columns: 1fr; }
+    .btn-restart-wrap { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== INTRO ===== -->
+<div id="screen-intro">
+  <div class="bureau-label">Bureau Central de Cybersécurité</div>
+  <h1 class="intro-title">Salle des<br>Suspects</h1>
+  <div class="intro-subtitle">Dossiers classifiés</div>
+
+  <div class="intro-dossier">
+    <p>Nous avons identifié <strong>8 individus</strong> responsables de la majorité des incidents de sécurité en entreprise.</p>
+    <p>Votre mission : consulter leurs dossiers, mémoriser leur mode opératoire, puis prouver que vous saurez les reconnaître sur le terrain.</p>
+    <p>Ne sous-estimez aucun d'eux.</p>
+  </div>
+
+  <button class="btn-primary" onclick="showGallery()">Ouvrir les dossiers</button>
+</div>
+
+<!-- ===== GALERIE ===== -->
+<div id="screen-gallery">
+  <div class="gallery-header">
+    <h2>Galerie des suspects</h2>
+    <p id="gallery-seen-count">0 / 8 dossiers consultés</p>
+  </div>
+
+  <div class="suspects-grid" id="suspects-grid"></div>
+
+  <div style="text-align:center;">
+    <button class="btn-quiz-launch" id="btn-quiz-launch" onclick="startQuiz()" disabled>
+      Passer à l'identification →
+    </button>
+    <p style="color:var(--muted);font-size:0.72em;margin-top:10px;letter-spacing:2px;" id="quiz-hint">
+      Consultez au moins 4 dossiers pour débloquer le quiz
+    </p>
+  </div>
+</div>
+
+<!-- ===== FICHE ===== -->
+<div id="screen-fiche">
+  <div class="fiche-wrap">
+    <div class="fiche-nav">
+      <button class="btn-back" onclick="showGallery()">← Retour galerie</button>
+      <span class="fiche-counter" id="fiche-counter"></span>
+    </div>
+    <div class="fiche" id="fiche-content"></div>
+    <div class="fiche-nav-bottom">
+      <button class="btn-prev" id="btn-prev" onclick="navigateFiche(-1)">← Précédent</button>
+      <button class="btn-next-fiche" id="btn-next-fiche" onclick="navigateFiche(1)">Suivant →</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== INTERROGATOIRE ===== -->
+<div id="screen-quiz">
+  <div class="quiz-wrap">
+    <div class="quiz-header">
+      <h2>Séance d'identification</h2>
+      <p>Lisez le rapport — désignez le coupable</p>
+    </div>
+    <div class="quiz-progress" id="quiz-progress"></div>
+
+    <div class="incident-card">
+      <span class="incident-num" id="incident-num"></span>
+      <p class="incident-text" id="quiz-scenario"></p>
+      <p class="incident-question">→ Quel suspect reconnaissez-vous ?</p>
+    </div>
+
+    <div class="lineup" id="quiz-options"></div>
+
+    <div class="quiz-feedback" id="quiz-feedback">
+      <div class="quiz-feedback-title" id="quiz-feedback-title"></div>
+      <p id="quiz-feedback-text"></p>
+    </div>
+    <button class="btn-quiz-next" id="btn-quiz-next" onclick="nextQuizQuestion()"></button>
+  </div>
+</div>
+
+<!-- ===== RÉSULTAT ===== -->
+<div id="screen-result">
+  <div class="result-wrap">
+    <div class="result-folder">
+      <div class="result-score-big" id="result-score"></div>
+      <div class="result-score-label">bonnes réponses sur 8</div>
+      <p class="result-message" id="result-message"></p>
+      <div class="result-grid" id="result-grid"></div>
+      <div class="btn-restart-wrap">
+        <button class="btn-gallery-again" onclick="showGallery()">Revoir les dossiers</button>
+        <button class="btn-quiz-again" onclick="startQuiz()">Refaire le test</button>
+      </div>
+    </div>
+    <div class="signature">© Odile Franchet — Consultante en Sensibilisation Cybersécurité · ofranchet73.github.io</div>
+  </div>
+</div>
+
+<script>
+const suspects = [
+  {
+    id: "S-001",
+    nom: "Le Pêcheur",
+    alias: "Phishing",
+    emoji: "🎣",
+    dangerosité: "★★★★★",
+    stamp: "TRÈS ACTIF",
+    tags: ["Email", "Usurpation", "Vol d'identifiants"],
+    profil: "Le plus prolifique de tous. Il envoie des millions d'emails en se faisant passer pour des banques, des administrations ou des collègues. Son arme : l'urgence et la ressemblance parfaite avec les vrais expéditeurs.",
+    modus: "Il imite à la perfection l'identité visuelle d'organisations connues. Il crée un sentiment d'urgence — compte bloqué, facture impayée, livraison manquée — pour vous faire agir sans réfléchir. Il dérobe vos identifiants via de faux formulaires.",
+    indices: [
+      "Adresse expéditeur légèrement différente de l'originale",
+      "Ton alarmiste, délai serré (« Dans les 24h »)",
+      "Lien qui redirige vers un site presque identique au vrai",
+      "Demande de saisie d'un mot de passe ou d'un numéro de carte"
+    ],
+    defense: [
+      "Vérifiez l'adresse email complète, pas juste le nom affiché",
+      "Ne cliquez jamais sur un lien — allez directement sur le site",
+      "En cas de doute, appelez l'expéditeur avec un numéro officiel",
+      "Activez la double authentification sur vos comptes"
+    ]
+  },
+  {
+    id: "S-002",
+    nom: "Le Pianiste",
+    alias: "Smishing",
+    emoji: "📱",
+    dangerosité: "★★★★☆",
+    stamp: "EN HAUSSE",
+    tags: ["SMS", "Mobile", "Livraison"],
+    profil: "Le cousin mobile du Pêcheur. Il opère exclusivement par SMS, exploitant notre dépendance aux notifications et notre confiance dans les messages courts. Il cible les livraisons, la CAF, les impôts, les banques.",
+    modus: "Un SMS court, un lien, un prétexte banal (colis en attente, amende, remboursement). Le montant demandé est souvent minime pour réduire la méfiance. Ce sont vos coordonnées bancaires qui l'intéressent, pas le paiement.",
+    indices: [
+      "Numéro expéditeur inconnu ou bizarre",
+      "Lien raccourci ou domaine inhabituel",
+      "Demande de paiement ou de saisie de données",
+      "Vous n'attendez rien et pourtant vous recevez une notification"
+    ],
+    defense: [
+      "N'ouvrez jamais un lien reçu par SMS sans vérifier",
+      "Allez directement sur le site officiel pour vérifier",
+      "Signalez au 33700 (numéro anti-spam SMS en France)",
+      "Aucun organisme officiel ne demande un paiement par SMS"
+    ]
+  },
+  {
+    id: "S-003",
+    nom: "Le Comédien",
+    alias: "Vishing",
+    emoji: "📞",
+    dangerosité: "★★★★☆",
+    stamp: "ACTIF",
+    tags: ["Téléphone", "Usurpation", "Prise de contrôle"],
+    profil: "Acteur, il joue le rôle du technicien informatique, de l'agent bancaire ou du collaborateur urgent. Sa voix est son outil. Il exploite la politesse naturelle et la difficulté à raccrocher au nez de quelqu'un.",
+    modus: "Il appelle, se présente avec assurance, crée un problème fictif (votre ordinateur envoie des alertes, votre compte est compromis) et propose une solution qui lui donne accès à vos systèmes ou à votre argent.",
+    indices: [
+      "Appel non sollicité d'un prétendu technicien ou conseiller",
+      "Demande d'installer un logiciel à distance",
+      "Pression pour agir vite, avant que le problème ne s'aggrave",
+      "Demande de communiquer un code reçu par SMS"
+    ],
+    defense: [
+      "Raccrochez et rappelez via le numéro officiel",
+      "Ni Microsoft, ni votre banque ne vous appellent pour ça",
+      "Ne donnez jamais un code SMS reçu à quelqu'un qui appelle",
+      "Ne laissez personne prendre le contrôle de votre ordinateur"
+    ]
+  },
+  {
+    id: "S-004",
+    nom: "L'Enchaîneur",
+    alias: "Ransomware",
+    emoji: "🔒",
+    dangerosité: "★★★★★",
+    stamp: "CRITIQUE",
+    tags: ["Chiffrement", "Rançon", "Paralysie"],
+    profil: "Le plus dévastateur. Il s'infiltre discrètement, attend le bon moment, puis prend vos données en otage. Il paralyse des hôpitaux, des entreprises, des collectivités. La rançon peut atteindre des millions d'euros.",
+    modus: "Il entre souvent via un email ou une pièce jointe, s'installe silencieusement, et chiffre tous vos fichiers. Un matin vous allumez votre ordinateur et plus rien ne fonctionne. Un message réclame une rançon en cryptomonnaie.",
+    indices: [
+      "Ordinateur soudainement très lent sans raison apparente",
+      "Fichiers avec une extension bizarre (.locked, .encrypted...)",
+      "Message de rançon qui s'affiche à l'écran",
+      "Impossible d'ouvrir ses propres documents"
+    ],
+    defense: [
+      "Sauvegardez régulièrement vos données hors du réseau",
+      "N'ouvrez pas les pièces jointes inattendues",
+      "Maintenez votre système et antivirus à jour",
+      "En cas d'attaque : déconnectez vous du réseau et alertez la DSI"
+    ]
+  },
+  {
+    id: "S-005",
+    nom: "Le Passager Clandestin",
+    alias: "Malware",
+    emoji: "🦠",
+    dangerosité: "★★★★☆",
+    stamp: "ACTIF",
+    tags: ["Logiciel malveillant", "Pièce jointe", "Clé USB"],
+    profil: "Il se cache dans les pièces jointes, les téléchargements et les supports physiques abandonnés. Une fois installé, il peut espionner, voler, détruire ou ouvrir une porte dérobée pour d'autres attaquants.",
+    modus: "Il voyage dans un fichier Word, PDF, une clé USB trouvée par terre, une application téléchargée sur un site non officiel. Il s'installe sans bruit et agit dans l'ombre pendant des semaines ou des mois.",
+    indices: [
+      "Pièce jointe reçue sans contexte ou d'un inconnu",
+      "Clé USB ou disque dur abandonné dans un lieu public",
+      "Logiciel téléchargé depuis un site suspect",
+      "Comportement étrange de l'ordinateur après une ouverture de fichier"
+    ],
+    defense: [
+      "Ne jamais brancher un support physique inconnu",
+      "Téléchargez uniquement depuis les sources officielles",
+      "Méfiez-vous des pièces jointes même de connaissances (compte piraté)",
+      "Scannez tout fichier suspect avant de l'ouvrir"
+    ]
+  },
+  {
+    id: "S-006",
+    nom: "Le Manipulateur",
+    alias: "Ingénierie sociale",
+    emoji: "🎭",
+    dangerosité: "★★★★★",
+    stamp: "INSAISISSABLE",
+    tags: ["Manipulation", "Confiance", "Information"],
+    profil: "Le plus humain de tous. Il n'utilise pas de logiciel — il exploite la politesse, la hiérarchie, la curiosité et la peur. Un simple coup de téléphone suffit pour soutirer des informations qui permettront une attaque précise.",
+    modus: "Il se renseigne sur l'organisation, apprend les noms, les procédures, les fournisseurs. Puis il appelle, se présente comme quelqu'un de légitime, et récolte des informations qui semblent anodines mais qui vont être utilisées pour construire une attaque.",
+    indices: [
+      "Demande d'informations internes par une personne que vous ne connaissez pas",
+      "Appel prétextant une urgence ou une autorité hiérarchique",
+      "Questions qui semblent anodines mais portent sur l'organisation",
+      "Sentiment de pression à répondre vite"
+    ],
+    defense: [
+      "Toute demande d'information sensible doit être vérifiée",
+      "\"Je rappelle pour confirmer\" déjoue la quasi-totalité des attaques",
+      "Si une demande vous semble inhabituelle, vérifiez avant de répondre",
+      "Il est toujours légitime de dire : je rappelle pour confirmer"
+    ]
+  },
+  {
+    id: "S-007",
+    nom: "Le Crocheteur",
+    alias: "Attaque par force brute",
+    emoji: "🔑",
+    dangerosité: "★★★☆☆",
+    stamp: "MÉTHODIQUE",
+    tags: ["Mot de passe", "Automatisation", "Accès non autorisé"],
+    profil: "Il ne cherche pas à vous tromper. Il frappe à votre porte des milliers de fois par seconde, automatiquement, jusqu'à ce qu'elle cède. Les mots de passe courts, simples ou réutilisés tombent rapidement.",
+    modus: "Des programmes testent des milliards de combinaisons de mots de passe à toute vitesse. Prénom + date de naissance, mots du dictionnaire, séquences clavier (123456, azerty) : il les essaie tous. Un mot de passe de 8 caractères simples peut être cracké en quelques minutes.",
+    indices: [
+      "Tentatives de connexion répétées sur vos comptes",
+      "Notifications d'accès depuis des pays inconnus",
+      "Compte temporairement bloqué après trop d'essais",
+      "Email de sécurité signalant une activité suspecte"
+    ],
+    defense: [
+      "Utilisez des mots de passe longs (16+ caractères) et aléatoires",
+      "Ne réutilisez jamais le même mot de passe sur deux sites",
+      "Utilisez un gestionnaire de mots de passe",
+      "Activez la double authentification partout où c'est possible"
+    ]
+  },
+  {
+    id: "S-008",
+    nom: "Le Sosie",
+    alias: "Deepfake",
+    emoji: "🤖",
+    dangerosité: "★★★★☆",
+    stamp: "ÉMERGENT",
+    tags: ["IA", "Clonage vocal", "Vidéo", "Usurpation"],
+    profil: "Le plus récent et le plus insidieux. Grâce à l'IA, il clone la voix ou le visage de n'importe qui à partir de quelques minutes d'enregistrements publics. Il vous fait entendre ou voir des choses qui n'ont jamais existé.",
+    modus: "Il clone la voix du PDG pour demander un virement urgent. Il fabrique une vidéo d'un dirigeant donnant des instructions. Il cible les décideurs financiers et les assistants de direction. Le montant moyen détourné par cette technique dépasse 100 000€.",
+    indices: [
+      "Demande financière urgente et confidentielle par un appel vocal ou vidéo",
+      "La personne semble ne pas avoir sa voix habituelle",
+      "Légers décalages, artefacts dans les appels vidéo",
+      "Refus de passer par les canaux officiels habituels"
+    ],
+    defense: [
+      "Toute demande financière urgente doit être confirmée par un second canal",
+      "Établissez un mot de passe de vérification interne pour les virements",
+      "Méfiez-vous des appels inattendus même avec une voix familière",
+      "Si quelqu'un vous demande de garder une transaction confidentielle, c'est un signal d'alarme"
+    ]
+  }
+];
+
+const quizQuestions = [
+  // PHISHING 1
+  {
+    scenario: "Léa reçoit un email de « no-reply@ameli-sante.fr » lui indiquant qu'elle a un remboursement de 87,40€ en attente. La page ressemble exactement au site Ameli. Elle attend justement un remboursement depuis sa dernière consultation.",
+    correct: "Phishing",
+    leurre: false,
+    explication: "L'email imite l'Assurance Maladie avec une fausse adresse — c'est le Pêcheur. Le contexte personnel (elle attend vraiment un remboursement) rend le piège particulièrement efficace. L'adresse « ameli-sante.fr » n'est pas le vrai domaine « ameli.fr »."
+  },
+  // PHISHING 2
+  {
+    scenario: "Paul reçoit un email de son collègue Romain, avec qui il échange régulièrement : « Salut, peux-tu jeter un œil à ce document avant la réunion de 14h ? » + un lien Google Docs. Le ton est normal, aucune urgence, aucune faute.",
+    correct: "Phishing",
+    leurre: false,
+    explication: "C'est du Phishing via compte compromis — le compte de Romain a été piraté. Le piège : aucun signal d'alarme apparent. En cas de doute, vérifiez par un autre canal (SMS, appel) avant de cliquer."
+  },
+  // SMISHING 1
+  {
+    scenario: "Sophie reçoit un SMS : « Votre colis Chronopost n°FR2847 n'a pas pu être livré. Frais de réexpédition : 1,99€ → [lien] ». Elle attend effectivement un colis commandé la veille.",
+    correct: "Smishing",
+    leurre: false,
+    explication: "SMS frauduleux avec lien piégé — c'est le Pianiste. Le faible montant et le contexte (elle attend un colis) endorment la vigilance. Le vrai Chronopost ne demande jamais de paiement par SMS."
+  },
+  // SMISHING 2
+  {
+    scenario: "Marc reçoit un SMS de son opérateur : « Votre facture de novembre est disponible. Consultez votre espace client : [lien] ». Le SMS arrive dans le même fil de conversation que les vrais SMS de son opérateur.",
+    correct: "Smishing",
+    leurre: false,
+    explication: "Smishing avancé — les attaquants peuvent injecter des SMS dans un fil existant en usurpant l'identifiant de l'expéditeur. C'est une technique réelle qui rend la détection très difficile."
+  },
+  // VISHING 1
+  {
+    scenario: "Julie reçoit un appel : « Bonjour, je suis Mathieu Blanc, responsable fraude chez votre banque. Nous avons bloqué une tentative de virement de 2 300€ depuis votre compte ce matin. Pour annuler l'opération, j'ai besoin du code que vous venez de recevoir par SMS. »",
+    correct: "Vishing",
+    leurre: false,
+    explication: "Vishing classique avec création de panique — c'est le Comédien. Le code SMS demandé est en réalité celui de la double authentification. Votre banque ne vous demandera jamais un code reçu par SMS au téléphone."
+  },
+  // VISHING 2
+  {
+    scenario: "Le standard reçoit un appel : « Bonjour, c'est Sandrine du cabinet comptable. Je prépare votre bilan annuel et j'ai besoin du nom et de l'email de votre responsable RH pour lui envoyer les documents à signer. »",
+    correct: "Vishing",
+    leurre: false,
+    explication: "Vishing discret sans urgence ni panique — c'est le Comédien en mode préparatoire. La demande semble administrative et légitime. Ces informations serviront à une attaque ciblée ultérieure."
+  },
+  // RANSOMWARE 1
+  {
+    scenario: "Mercredi matin, Nicolas allume son ordinateur. Un message s'affiche : « All your files have been encrypted. Send 0.5 BTC to recover them. » Ses collègues ont le même message. Le serveur partagé est inaccessible.",
+    correct: "Ransomware",
+    leurre: false,
+    explication: "L'Enchaîneur a frappé — Ransomware déclaré. Le vrai enjeu pédagogique : que fait-on maintenant ? Éteindre les machines, déconnecter du réseau, alerter la DSI immédiatement. Ne jamais payer sans conseil expert."
+  },
+  // RANSOMWARE 2
+  {
+    scenario: "Depuis 3 jours, l'ordinateur d'Emma est anormalement lent. Ce matin, elle ne peut plus ouvrir ses fichiers Excel — ils ont tous une extension bizarre (.locked). Elle pense à un bug et appelle le support pour « un problème technique ».",
+    correct: "Ransomware",
+    leurre: false,
+    explication: "Ransomware en cours, pas encore déclaré — l'Enchaîneur est à l'œuvre depuis plusieurs jours. Le piège : ça ressemble à une panne ordinaire. Les signaux faibles (lenteur, fichiers inaccessibles) méritent toujours une alerte immédiate."
+  },
+  // MALWARE 1
+  {
+    scenario: "En rentrant d'un salon professionnel, David trouve dans sa veste une clé USB avec le logo de l'événement et la mention « Présentations & contacts ». Il la branche sur son poste pour récupérer les supports.",
+    correct: "Malware",
+    leurre: false,
+    explication: "Baiting sophistiqué — le Passager Clandestin déguisé en objet officiel. Les clés USB distribuées lors d'événements sont une technique réelle. Ne jamais brancher un support dont on ne maîtrise pas l'origine."
+  },
+  // MALWARE 2
+  {
+    scenario: "Claire reçoit une candidature spontanée avec un CV en pièce jointe (.docx). Elle est RH, reçoit des dizaines de CV par semaine. Elle ouvre le fichier — Word lui demande d'activer les macros pour « afficher correctement le document ».",
+    correct: "Malware",
+    leurre: false,
+    explication: "Malware via macro Office — le Passager Clandestin dans un contexte parfaitement banal. Les équipes RH sont des cibles privilégiées. Une demande d'activation de macros doit toujours alerter."
+  },
+  // INGÉNIERIE SOCIALE 1
+  {
+    scenario: "Un homme en costume se présente à l'accueil avec un badge visiteur : « Je suis consultant mandaté par votre direction pour un audit de sécurité. J'aurais besoin d'accéder à la salle serveur. » L'hôtesse ne peut pas joindre la direction. Il insiste poliment.",
+    correct: "Ingénierie sociale",
+    leurre: false,
+    explication: "Ingénierie sociale physique — le Manipulateur en personne. Sans confirmation de la direction, aucun accès ne doit être accordé, quelle que soit la politesse ou l'insistance. Le badge visiteur ne suffit pas."
+  },
+  // INGÉNIERIE SOCIALE 2
+  {
+    scenario: "Trois semaines avant une cyberattaque, une personne a appelé plusieurs fois le standard en se présentant comme journaliste préparant un article sur les PME. Elle a posé des questions sur l'organisation, les outils, les projets. Tout le monde a répondu aimablement.",
+    correct: "Ingénierie sociale",
+    leurre: false,
+    explication: "Ingénierie sociale préparatoire — le Manipulateur en phase de renseignement. Aucun signal d'alarme sur le moment. Ces informations ont servi à construire une attaque ciblée. Les demandes d'information externes méritent toujours vérification."
+  },
+  // FORCE BRUTE 1
+  {
+    scenario: "Thomas reçoit plusieurs emails : « Tentative de connexion échouée à votre compte ». Il y en a eu 47 en 2 heures depuis des adresses IP inconnues. Son mot de passe est « Thomas2019! ».",
+    correct: "Attaque par force brute",
+    leurre: false,
+    explication: "Force brute visible — le Crocheteur à l'œuvre. 47 tentatives en 2 heures, c'est un programme automatisé. Le mot de passe prévisible (prénom + année) est vulnérable. Il faut changer immédiatement et activer la double authentification."
+  },
+  // FORCE BRUTE 2
+  {
+    scenario: "La DRH découvre lundi matin que son compte professionnel a été compromis pendant le week-end. Son mot de passe était le même que celui de sa messagerie personnelle, piratée 6 mois plus tôt lors d'une fuite de données d'un site e-commerce.",
+    correct: "Attaque par force brute",
+    leurre: false,
+    explication: "Credential stuffing — le Crocheteur utilise des identifiants volés ailleurs. Réutiliser le même mot de passe sur plusieurs sites est une faille majeure. Un gestionnaire de mots de passe est indispensable."
+  },
+  // DEEPFAKE 1
+  {
+    scenario: "La comptable reçoit un appel vidéo WhatsApp de son PDG en déplacement. Il lui demande de virer 65 000€ sur un compte tiers « pour boucler une acquisition ce soir ». L'image est floue « à cause du réseau ».",
+    correct: "Deepfake",
+    leurre: false,
+    explication: "Deepfake vidéo — le Sosie en action. Le flou est intentionnel pour masquer les artefacts de l'IA. Toute demande financière urgente, même avec un visage familier, doit être confirmée par un canal officiel."
+  },
+  // DEEPFAKE 2
+  {
+    scenario: "Un message vocal sur le répondeur du DAF : la voix du directeur général, ton calme et habituel, demandant de rappeler « son nouveau numéro temporaire » pour discuter d'une opération financière urgente.",
+    correct: "Deepfake",
+    leurre: false,
+    explication: "Deepfake audio sur répondeur — variante moins connue du Sosie. La voix clonée est indiscernable. Un « nouveau numéro temporaire » est un signal d'alarme fort. Vérifiez toujours via le numéro officiel connu."
+  },
+  // LEURRE 1
+  {
+    scenario: "Le service informatique envoie un email à tous les collaborateurs : « Suite à la mise à jour de sécurité de ce soir, vos identifiants réseau seront réinitialisés demain matin. Vous recevrez un SMS avec votre nouveau mot de passe temporaire. » L'email vient bien de it-support@entreprise.fr.",
+    correct: "LÉGITIME",
+    leurre: true,
+    explication: "Situation légitime — procédure normale de renouvellement de mots de passe. L'adresse expéditeur est officielle, la procédure cohérente. Attention : ne pas systématiquement voir une attaque partout est aussi une compétence."
+  },
+  // LEURRE 2
+  {
+    scenario: "Un inconnu appelle et demande à parler au responsable des achats. Il se présente comme commercial chez un fournisseur de fournitures de bureau et souhaite proposer un rendez-vous. Il demande le nom du responsable et son email direct.",
+    correct: "LÉGITIME",
+    leurre: true,
+    explication: "Démarchage commercial banal — pas une attaque. Un commercial qui demande un contact, c'est une situation quotidienne. La vigilance est utile, mais elle ne doit pas paralyser le fonctionnement normal de l'entreprise."
+  },
+  // LEURRE 3
+  {
+    scenario: "Emma reçoit un email de LinkedIn : « Vous avez 3 nouvelles invitations en attente. » Le lien pointe vers linkedin.com. Elle n'a pas de compte LinkedIn professionnel actif depuis plusieurs mois.",
+    correct: "LÉGITIME",
+    leurre: true,
+    explication: "Notification LinkedIn légitime — pas une attaque. L'URL pointe vers le vrai domaine linkedin.com. Le fait de ne pas utiliser son compte ne rend pas la notification suspecte. Analyser l'URL de destination reste toujours le bon réflexe."
+  }
+];
+
+// State
+let seenSuspects = new Set();
+let currentFicheIndex = 0;
+let quizCurrent = 0;
+let quizScore = 0;
+let quizAnswered = false;
+let quizResults = [];
+
+// ===== NAVIGATION =====
+function showScreen(id) {
+  ['screen-intro','screen-gallery','screen-fiche','screen-quiz','screen-result'].forEach(s => {
+    document.getElementById(s).style.display = 'none';
+  });
+  document.getElementById(id).style.display = 'block';
+  window.scrollTo(0, 0);
+}
+
+function showGallery() {
+  showScreen('screen-gallery');
+  renderGallery();
+}
+
+function showFiche(index) {
+  currentFicheIndex = index;
+  seenSuspects.add(index);
+  renderFiche(index);
+  showScreen('screen-fiche');
+  updateGalleryState();
+}
+
+function navigateFiche(dir) {
+  const newIndex = currentFicheIndex + dir;
+  if (newIndex >= 0 && newIndex < suspects.length) {
+    showFiche(newIndex);
+  }
+}
+
+// ===== GALERIE =====
+function renderGallery() {
+  const grid = document.getElementById('suspects-grid');
+  grid.innerHTML = '';
+  suspects.forEach((s, i) => {
+    const div = document.createElement('div');
+    div.className = `suspect-thumb${seenSuspects.has(i) ? ' seen' : ''}`;
+    div.innerHTML = `
+      <div class="suspect-number">${s.id}</div>
+      <span class="suspect-avatar">${s.emoji}</span>
+      <div class="suspect-name">${s.nom}</div>
+      <div class="suspect-alias">alias « ${s.alias} »</div>
+    `;
+    div.onclick = () => showFiche(i);
+    grid.appendChild(div);
+  });
+  updateGalleryState();
+}
+
+function updateGalleryState() {
+  const count = seenSuspects.size;
+  document.getElementById('gallery-seen-count').textContent = `${count} / 8 dossiers consultés`;
+  const btn = document.getElementById('btn-quiz-launch');
+  const hint = document.getElementById('quiz-hint');
+  if (count >= 4) {
+    btn.disabled = false;
+    hint.textContent = count === 8 ? 'Tous les dossiers consultés — vous êtes prêt !' : `${count} dossiers consultés — le test est débloqué`;
+  } else {
+    btn.disabled = true;
+    hint.textContent = `Consultez au moins 4 dossiers pour débloquer le quiz (${count}/4)`;
+  }
+}
+
+// ===== FICHE =====
+function renderFiche(index) {
+  const s = suspects[index];
+  document.getElementById('fiche-counter').textContent = `${index + 1} / ${suspects.length}`;
+
+  const html = `
+    <div class="fiche-stamp">${s.stamp}</div>
+    <div class="fiche-inner">
+      <div class="fiche-header">
+        <div>
+          <div class="fiche-id">Dossier ${s.id} — Confidentiel</div>
+          <div class="fiche-nom">${s.nom}</div>
+          <div class="fiche-alias">alias « ${s.alias} »</div>
+        </div>
+        <div class="fiche-avatar-block">
+          <span class="fiche-emoji">${s.emoji}</span>
+          <div class="fiche-dangerosité">${s.dangerosité}</div>
+        </div>
+      </div>
+
+      <div class="fiche-section">
+        <div class="fiche-section-title">Profil</div>
+        <p>${s.profil}</p>
+        <div class="fiche-tags">
+          ${s.tags.map(t => `<span class="fiche-tag">${t}</span>`).join('')}
+        </div>
+      </div>
+
+      <div class="fiche-section">
+        <div class="fiche-section-title">Mode opératoire</div>
+        <p>${s.modus}</p>
+      </div>
+
+      <div class="fiche-section">
+        <div class="fiche-section-title">Comment le reconnaître</div>
+        <ul class="fiche-indices">
+          ${s.indices.map(i => `<li>${i}</li>`).join('')}
+        </ul>
+      </div>
+
+      <div class="fiche-section">
+        <div class="fiche-section-title">Comment se défendre</div>
+        <ul class="fiche-defense">
+          ${s.defense.map(d => `<li>${d}</li>`).join('')}
+        </ul>
+      </div>
+    </div>
+  `;
+
+  document.getElementById('fiche-content').innerHTML = html;
+  document.getElementById('btn-prev').disabled = index === 0;
+  document.getElementById('btn-next-fiche').disabled = index === suspects.length - 1;
+}
+
+// ===== QUIZ =====
+let shuffledQuestions = [];
+
+function startQuiz() {
+  quizCurrent = 0;
+  quizScore = 0;
+  quizAnswered = false;
+  quizResults = [];
+  shuffledQuestions = [...quizQuestions].sort(() => Math.random() - 0.5);
+  showScreen('screen-quiz');
+  renderQuizProgress();
+  loadQuizQuestion();
+}
+
+function renderQuizProgress() {
+  const container = document.getElementById('quiz-progress');
+  container.innerHTML = '';
+  shuffledQuestions.forEach((_, i) => {
+    const dot = document.createElement('div');
+    dot.className = 'quiz-dot' + (i === quizCurrent ? ' active' : '');
+    if (quizResults[i] !== undefined) {
+      dot.className = 'quiz-dot ' + (quizResults[i] ? 'correct' : 'wrong');
+    }
+    container.appendChild(dot);
+  });
+}
+
+function loadQuizQuestion() {
+  quizAnswered = false;
+  const q = shuffledQuestions[quizCurrent];
+
+  document.getElementById('quiz-scenario').textContent = q.scenario;
+  document.getElementById('incident-num').textContent = `Incident ${String(quizCurrent + 1).padStart(2,'0')} / ${shuffledQuestions.length}`;
+  document.getElementById('quiz-feedback').style.display = 'none';
+  document.getElementById('btn-quiz-next').style.display = 'none';
+
+  const container = document.getElementById('quiz-options');
+  container.innerHTML = '';
+
+  // Toujours les 8 suspects
+  suspects.forEach((s, i) => {
+    const card = document.createElement('div');
+    card.className = 'lineup-card';
+    card.innerHTML = `
+      <span class="lineup-emoji">${s.emoji}</span>
+      <span class="lineup-name">${s.nom}</span>
+      <span class="lineup-alias">« ${s.alias} »</span>
+    `;
+    card.onclick = () => answerQuiz(s.alias, q, card, i);
+    container.appendChild(card);
+  });
+
+  // + carte "Situation légitime" toujours présente
+  const legitCard = document.createElement('div');
+  legitCard.className = 'lineup-card legitime-card';
+  legitCard.innerHTML = `
+    <span class="lineup-emoji">✅</span>
+    <span class="lineup-name">Situation légitime</span>
+    <span class="lineup-alias">pas d'attaque</span>
+  `;
+  legitCard.onclick = () => answerQuiz('LÉGITIME', q, legitCard, -1);
+  container.appendChild(legitCard);
+
+  renderQuizProgress();
+}
+
+function answerQuiz(answer, q, clickedCard, clickedIndex) {
+  if (quizAnswered) return;
+  quizAnswered = true;
+
+  const isCorrect = answer === q.correct;
+  if (isCorrect) quizScore++;
+  quizResults[quizCurrent] = isCorrect;
+
+  const correctIndex = q.leurre ? -1 : suspects.findIndex(s => s.alias === q.correct);
+
+  document.querySelectorAll('.lineup-card').forEach((card, i) => {
+    card.classList.add('disabled');
+    // Mettre en vert la bonne réponse
+    if (q.leurre && card.classList.contains('legitime-card')) {
+      card.classList.add('correct');
+      card.innerHTML += `<span class="lineup-verdict">✓</span>`;
+    } else if (!q.leurre && i === correctIndex) {
+      card.classList.add('correct');
+      card.innerHTML += `<span class="lineup-verdict">✓</span>`;
+    }
+    // Mettre en rouge la mauvaise réponse cliquée
+    if (card === clickedCard && !isCorrect) {
+      card.classList.add('wrong');
+      card.innerHTML += `<span class="lineup-verdict">✗</span>`;
+    }
+  });
+
+  const feedback = document.getElementById('quiz-feedback');
+  feedback.className = `quiz-feedback ${isCorrect ? 'correct' : 'wrong'}`;
+  document.getElementById('quiz-feedback-title').textContent = isCorrect
+    ? `✓ Bonne analyse !`
+    : q.leurre
+      ? `✗ Attention — c'était une situation légitime.`
+      : `✗ Raté — c'était ${q.correct}.`;
+  document.getElementById('quiz-feedback-text').textContent = q.explication;
+  feedback.style.display = 'block';
+
+  const btnNext = document.getElementById('btn-quiz-next');
+  btnNext.style.display = 'block';
+  btnNext.textContent = quizCurrent < shuffledQuestions.length - 1 ? 'Rapport suivant →' : 'Voir le verdict final →';
+
+  renderQuizProgress();
+}
+
+function nextQuizQuestion() {
+  quizCurrent++;
+  if (quizCurrent < shuffledQuestions.length) {
+    loadQuizQuestion();
+    window.scrollTo(0, 0);
+  } else {
+    showResult();
+  }
+}
+
+function showResult() {
+  showScreen('screen-result');
+  document.getElementById('result-score').textContent = quizScore;
+  document.querySelector('.result-label').textContent = `bonnes réponses sur ${shuffledQuestions.length}`;
+
+  let msg = '';
+  const pct = quizScore / shuffledQuestions.length;
+  if (pct >= 0.9) msg = "Excellent. Vous identifiez les menaces avec précision — y compris les situations légitimes. Votre vigilance est un vrai atout pour votre organisation.";
+  else if (pct >= 0.7) msg = "Bon travail. Vous reconnaissez la majorité des situations. Quelques menaces ou leurres vous ont échappé — revoyez les dossiers concernés.";
+  else if (pct >= 0.5) msg = "Résultat correct, mais certaines situations restent floues. La frontière entre attaque et situation légitime mérite attention.";
+  else msg = "Ces situations sont conçues pour tromper — c'est leur rôle. C'est ici qu'on apprend, pas sur le terrain. Consultez à nouveau les dossiers et refaites le test.";
+
+  document.getElementById('result-message').textContent = msg;
+
+  const grid = document.getElementById('result-grid');
+  grid.innerHTML = '';
+  shuffledQuestions.forEach((q, i) => {
+    const div = document.createElement('div');
+    div.className = 'result-item';
+    const label = q.leurre ? `Leurre — Situation légitime` : q.correct;
+    div.innerHTML = `<span class="dot ${quizResults[i] ? 'ok' : 'ko'}"></span>${label}`;
+    grid.appendChild(div);
+  });
+}
+
+// Init
+renderGallery();
+</script>
+</body>
+</html>
