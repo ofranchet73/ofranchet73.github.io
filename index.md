@@ -3,7 +3,7 @@ layout: home
 title: "Accueil"
 ---
 
-## La cybersécurité commence par l'humain
+
 
 Les outils de protection sont indispensables. Mais aucun pare-feu ne remplace une équipe qui sait identifier une tentative de phishing, protéger ses accès ou réagir face à une situation anormale.
 
