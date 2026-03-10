@@ -2,7 +2,7 @@
 layout: home
 title: "Accueil"
 ---
-Les outils de protection sont indispensables. Mais aucun pare-feu ne remplace une équipe qui sait identifier une tentative de phishing, protéger ses accès ou réagir face à une situation anormale.
+
 ---
 ## Vous dirigez une entreprise
 Vous avez probablement déjà mis en place des outils de sécurité. Peut-être même organisé une formation. Mais est-ce que vos collaborateurs ont vraiment intégré les bons réflexes au quotidien ?
