@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La journée de Camille — RGPD</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f5f0e8;
+    --surface: #fafaf7;
+    --ink: #1a1a1a;
+    --muted: #888070;
+    --border: #ddd8cc;
+    --good: #2a7a5a;
+    --good-bg: #edf7f2;
+    --bad: #c0392b;
+    --bad-bg: #fdf0ee;
+    --neutral: #c8a000;
+    --time-color: #888070;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--bg);
+    font-family: 'Lora', serif;
+    min-height: 100vh;
+    color: var(--ink);
+  }
+
+  /* ===== INTRO ===== */
+  #screen-intro {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 24px;
+    text-align: center;
+    background: var(--ink);
+  }
+
+  .intro-eyebrow {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.7em;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #666;
+    margin-bottom: 16px;
+  }
+
+  .intro-title {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(2.8em, 6vw, 4.5em);
+    font-weight: 800;
+    color: #f5f0e8;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .intro-title span { color: var(--neutral); }
+
+  .intro-subtitle {
+    font-style: italic;
+    color: #666;
+    font-size: 1em;
+    margin-bottom: 36px;
+  }
+
+  .intro-card {
+    background: #1e1e1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 28px 32px;
+    max-width: 500px;
+    margin-bottom: 36px;
+    text-align: left;
+  }
+
+  .intro-card p { color: #aaa; font-size: 0.92em; line-height: 1.8; }
+  .intro-card p + p { margin-top: 10px; }
+  .intro-card strong { color: #f5f0e8; }
+
+  .btn-start {
+    background: var(--neutral);
+    color: var(--ink);
+    border: none;
+    padding: 16px 44px;
+    font-family: 'Syne', sans-serif;
+    font-size: 0.88em;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s;
+    box-shadow: 3px 3px 0 rgba(0,0,0,0.3);
+  }
+
+  .btn-start:hover { background: #e0b800; transform: translate(-1px,-1px); }
+
+  /* ===== TIMELINE ===== */
+  #screen-timeline { display: none; padding: 0 0 80px; }
+
+  .tl-header {
+    background: var(--ink);
+    padding: 18px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .tl-header-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 1em;
+    font-weight: 700;
+    color: #f5f0e8;
+  }
+
+  .tl-header-title span { color: var(--neutral); }
+
+  .tl-score-wrap { display: flex; align-items: center; gap: 14px; }
+
+  .tl-score {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.75em;
+    color: #666;
+    letter-spacing: 2px;
+  }
+
+  .tl-score strong { color: #f5f0e8; }
+
+  .tl-dots { display: flex; gap: 5px; }
+
+  .tl-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: #333;
+    border: 1px solid #555;
+    transition: all 0.3s;
+  }
+
+  .tl-dot.good { background: var(--good); border-color: var(--good); }
+  .tl-dot.bad { background: var(--bad); border-color: var(--bad); }
+  .tl-dot.current { background: var(--neutral); border-color: var(--neutral); }
+
+  .tl-body {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 48px 24px 0;
+    position: relative;
+  }
+
+  .tl-body::before {
+    content: '';
+    position: absolute;
+    top: 48px; bottom: 0;
+    left: calc(24px + 52px);
+    width: 2px;
+    background: var(--border);
+    z-index: 0;
+  }
+
+  .moment {
+    display: flex;
+    gap: 22px;
+    margin-bottom: 40px;
+    position: relative;
+    opacity: 0.3;
+    transition: opacity 0.4s;
+    pointer-events: none;
+  }
+
+  .moment.active { opacity: 1; pointer-events: all; }
+  .moment.done { opacity: 0.85; pointer-events: none; }
+  .moment.done .btn-continue { pointer-events: all; }
+
+  .moment-time-col {
+    width: 52px;
+    flex-shrink: 0;
+    text-align: right;
+    padding-top: 16px;
+  }
+
+  .moment-time {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.7em;
+    font-weight: 700;
+    color: var(--time-color);
+    letter-spacing: 1px;
+  }
+
+  .moment-node {
+    position: absolute;
+    left: calc(52px + 10px);
+    top: 16px;
+    width: 16px; height: 16px;
+    border-radius: 50%;
+    background: var(--border);
+    border: 2px solid #ccc;
+    z-index: 2;
+    transition: all 0.3s;
+    flex-shrink: 0;
+  }
+
+  .moment.active .moment-node {
+    background: var(--neutral);
+    border-color: var(--neutral);
+    box-shadow: 0 0 0 4px rgba(200,160,0,0.18);
+  }
+
+  .moment.done-good .moment-node { background: var(--good); border-color: var(--good); }
+  .moment.done-bad .moment-node { background: var(--bad); border-color: var(--bad); }
+
+  .moment-card {
+    flex: 1;
+    background: var(--surface);
+    border: 1.5px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 2px 2px 0 rgba(0,0,0,0.04);
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+
+  .moment.active .moment-card {
+    border-color: var(--ink);
+    box-shadow: 4px 4px 0 rgba(0,0,0,0.1);
+  }
+
+  .moment.done-good .moment-card { border-color: var(--good); }
+  .moment.done-bad .moment-card { border-color: var(--bad); }
+
+  .moment-scene { padding: 20px 22px 16px; }
+
+  .moment-label {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.6em;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+
+  .moment-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 1em;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 10px;
+  }
+
+  .moment-text {
+    font-size: 0.9em;
+    line-height: 1.75;
+    color: #444;
+  }
+
+  .moment-choices {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-top: 1.5px solid var(--border);
+  }
+
+  .choice-btn {
+    padding: 14px 10px;
+    background: none;
+    border: none;
+    font-family: 'Syne', sans-serif;
+    font-size: 0.78em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.15s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+
+  .choice-btn:first-child { border-right: 1px solid var(--border); }
+  .choice-btn.good-btn { color: var(--good); }
+  .choice-btn.bad-btn { color: var(--bad); }
+  .choice-btn:hover.good-btn { background: var(--good-bg); }
+  .choice-btn:hover.bad-btn { background: var(--bad-bg); }
+  .choice-btn:disabled { cursor: default; opacity: 0.35; }
+
+  .moment-feedback {
+    display: none;
+    padding: 16px 22px;
+    border-top: 1.5px solid var(--border);
+    animation: slideDown 0.3s ease;
+  }
+
+  @keyframes slideDown {
+    from { opacity: 0; transform: translateY(-6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .moment-feedback.good { background: var(--good-bg); border-top-color: var(--good); }
+  .moment-feedback.bad { background: var(--bad-bg); border-top-color: var(--bad); }
+
+  .feedback-verdict {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.72em;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  .moment-feedback.good .feedback-verdict { color: var(--good); }
+  .moment-feedback.bad .feedback-verdict { color: var(--bad); }
+
+  .feedback-body {
+    font-size: 0.86em;
+    line-height: 1.72;
+    color: #444;
+  }
+
+  .feedback-body strong { color: var(--ink); }
+
+  .btn-continue {
+    display: none;
+    margin: 0 22px 18px;
+    background: var(--ink);
+    color: var(--surface);
+    border: none;
+    padding: 12px;
+    width: calc(100% - 44px);
+    font-family: 'Syne', sans-serif;
+    font-size: 0.75em;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.15s;
+    margin-top: 14px;
+  }
+
+  .btn-continue:hover { background: #333; }
+
+  /* ===== RÉSULTAT ===== */
+  #screen-result {
+    display: none;
+    min-height: 100vh;
+    background: var(--ink);
+    padding: 60px 24px 80px;
+  }
+
+  .result-wrap { max-width: 560px; margin: 0 auto; text-align: center; }
+
+  .result-eyebrow {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.68em;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #555;
+    margin-bottom: 16px;
+  }
+
+  .result-score {
+    font-family: 'Syne', sans-serif;
+    font-size: 6em;
+    font-weight: 800;
+    color: var(--neutral);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .result-total {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.75em;
+    color: #555;
+    letter-spacing: 3px;
+    margin-bottom: 28px;
+  }
+
+  .result-message {
+    font-style: italic;
+    color: #999;
+    font-size: 0.92em;
+    line-height: 1.78;
+    margin-bottom: 36px;
+    padding: 0 8px;
+  }
+
+  .result-recap {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    margin-bottom: 36px;
+    text-align: left;
+  }
+
+  .recap-item {
+    background: #1e1e1a;
+    border-radius: 5px;
+    padding: 11px 14px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    border-left: 3px solid transparent;
+  }
+
+  .recap-item.good { border-left-color: var(--good); }
+  .recap-item.bad { border-left-color: var(--bad); }
+
+  .recap-icon { font-size: 1em; flex-shrink: 0; margin-top: 2px; }
+
+  .recap-time {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.6em;
+    color: #555;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .recap-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 0.8em;
+    font-weight: 600;
+    color: #ccc;
+    margin-top: 2px;
+  }
+
+  .recap-verdict {
+    font-size: 0.73em;
+    color: #666;
+    margin-top: 2px;
+    font-style: italic;
+  }
+
+  .btn-restart {
+    background: none;
+    border: 1.5px solid var(--neutral);
+    color: var(--neutral);
+    padding: 14px 36px;
+    font-family: 'Syne', sans-serif;
+    font-size: 0.82em;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s;
+  }
+
+  .btn-restart:hover { background: var(--neutral); color: var(--ink); }
+
+  .signature {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.72em;
+    color: #444;
+    font-style: italic;
+  }
+
+  @media (max-width: 480px) {
+    .tl-header { padding: 12px 16px; }
+    .tl-body { padding: 36px 14px 0; }
+    .tl-body::before { left: calc(14px + 52px); }
+    .moment-node { left: calc(52px + 2px); }
+  }
+</style>
+</head>
+<body>
+
+<!-- INTRO -->
+<div id="screen-intro">
+  <div class="intro-eyebrow">Protection des données · RGPD</div>
+  <h1 class="intro-title">La journée<br>de <span>Camille</span></h1>
+  <p class="intro-subtitle">Open space · Mardi ordinaire</p>
+  <div class="intro-card">
+    <p>Camille est assistante de direction dans une PME de 80 personnes. Elle gère des dossiers clients, des données RH et travaille en open space.</p>
+    <p>Aujourd'hui, comme tous les jours, elle prend des décisions en apparence anodines qui ont des <strong>conséquences directes sur la protection des données</strong>.</p>
+    <p>À chaque moment : dites-moi si c'est une <strong>bonne pratique</strong> ou une <strong>erreur</strong>.</p>
+  </div>
+  <button class="btn-start" onclick="startTimeline()">Suivre Camille →</button>
+</div>
+
+<!-- TIMELINE -->
+<div id="screen-timeline" style="display:none">
+  <div class="tl-header">
+    <div class="tl-header-title">La journée de <span>Camille</span></div>
+    <div class="tl-score-wrap">
+      <div class="tl-score">Score : <strong id="score-display">0</strong> / 11</div>
+      <div class="tl-dots" id="tl-dots"></div>
+    </div>
+  </div>
+  <div class="tl-body" id="timeline-body"></div>
+</div>
+
+<!-- RÉSULTAT -->
+<div id="screen-result">
+  <div class="result-wrap">
+    <div class="result-eyebrow">Bilan de la journée</div>
+    <div class="result-score" id="result-score"></div>
+    <div class="result-total">bonnes réponses sur 11</div>
+    <p class="result-message" id="result-message"></p>
+    <div class="result-recap" id="result-recap"></div>
+    <button class="btn-restart" onclick="restart()">Recommencer</button>
+    <div class="signature">© Odile Franchet — Consultante en Sensibilisation Cybersécurité · ofranchet73.github.io</div>
+  </div>
+</div>
+
+<script>
+const moments = [
+  {
+    time: "8h30",
+    label: "Arrivée au bureau",
+    title: "L'écran sans surveillance",
+    scene: "Camille arrive en avance. Elle allume son ordinateur, ouvre ses dossiers clients et part chercher un café en cuisine. Elle laisse son poste déverrouillé — « je reviens dans deux minutes ».",
+    correct: "bad",
+    feedback_good: "Ce serait la bonne décision — mais ce n'est pas ce que fait Camille. Elle laisse son poste ouvert. En open space, deux minutes suffisent pour qu'un regard indiscret, ou une personne mal intentionnée, accède à des données confidentielles.",
+    feedback_bad: "Exact. Laisser un poste déverrouillé, même quelques instants, expose les données visibles à toute personne qui passe. <strong>Le réflexe : Win + L (Windows) ou Cmd + Ctrl + Q (Mac)</strong> avant de quitter son bureau, même brièvement.",
+    is_error: true
+  },
+  {
+    time: "9h00",
+    label: "Demande client",
+    title: "« Envoyez-moi tout ce que vous avez sur moi »",
+    scene: "Un client appelle. Il demande à exercer son droit d'accès : il veut recevoir toutes les données que l'entreprise détient sur lui. Camille trouve sa fiche, son historique de commandes et ses échanges email. Elle lui envoie tout immédiatement par email, sans autre vérification.",
+    correct: "bad",
+    feedback_good: "L'intention est bonne — le droit d'accès est réel et légitime. Mais Camille a sauté une étape essentielle : vérifier l'identité du demandeur. N'importe qui peut appeler en se faisant passer pour un client. <strong>Sans vérification d'identité, transmettre des données personnelles à une tierce personne constitue une violation du RGPD.</strong>",
+    feedback_bad: "Bien vu, même si ça peut sembler contre-intuitif : le droit d'accès est un droit légitime, mais il ne dispense pas de vérifier l'identité du demandeur. <strong>Avant toute transmission, il faut confirmer l'identité — par email depuis l'adresse connue, ou par un justificatif — et impliquer le DPO ou le référent RGPD si besoin.</strong>",
+    is_error: true
+  },
+  {
+    time: "9h45",
+    label: "Réunion en open space",
+    title: "La conversation qui porte",
+    scene: "Camille est au téléphone avec un candidat pour un poste. Elle évoque son salaire actuel, ses raisons de quitter son employeur, et ses références. Ses collègues travaillent à deux mètres.",
+    correct: "bad",
+    feedback_good: "Ce serait effectivement la bonne approche — mais Camille ne prend pas cette précaution. Elle traite des données personnelles sensibles (salaire, situation professionnelle) à voix haute dans un espace partagé.",
+    feedback_bad: "Juste. Les données de recrutement sont des données personnelles au sens du RGPD. <strong>Les traiter à voix haute en open space constitue une violation de confidentialité.</strong> Une salle fermée s'impose pour ce type d'appel.",
+    is_error: true
+  },
+  {
+    time: "10h30",
+    label: "Impression",
+    title: "Le contrat oublié sur l'imprimante",
+    scene: "Camille imprime un contrat client contenant des coordonnées bancaires et données personnelles. L'imprimante est partagée. Un collègue la rappelle avant qu'elle aille récupérer ses documents. Le contrat attend sur le bac pendant 20 minutes.",
+    correct: "bad",
+    feedback_good: "Idéalement oui — mais Camille ne récupère pas ses documents immédiatement. Des données sensibles sur une imprimante partagée sont exposées à toute personne qui passe, prestataires compris.",
+    feedback_bad: "Bien vu. <strong>Toute impression de données personnelles doit être récupérée immédiatement.</strong> L'impression avec code PIN est la meilleure protection. Sinon : on n'imprime que ce qu'on va chercher tout de suite.",
+    is_error: true
+  },
+  {
+    time: "11h30",
+    label: "Transmission interne",
+    title: "Le fichier anonymisé… et l'original conservé",
+    scene: "Camille doit transmettre des données clients à un prestataire externe pour une étude. Elle prend soin d'anonymiser le fichier avant de l'envoyer — noms et emails remplacés par des codes. Mais elle conserve aussi l'original sur son poste « au cas où on aurait besoin de recontacter les clients ».",
+    correct: "bad",
+    feedback_good: "L'anonymisation avant envoi est un bon réflexe — mais Camille annule ses efforts en conservant l'original non anonymisé sur son poste sans justification documentée. Si ce fichier n'est plus nécessaire, le conserver revient à maintenir une exposition inutile des données personnelles.",
+    feedback_bad: "Bien identifié, même si le raisonnement de Camille semble prudent. <strong>Conserver un fichier contenant des données personnelles « au cas où » sans base légale documentée viole le principe de minimisation du RGPD.</strong> Si l'original n'est plus nécessaire à la finalité initiale, il doit être supprimé — ou son maintien doit être formellement justifié.",
+    is_error: true
+  },
+  {
+    time: "12h30",
+    label: "Pause déjeuner",
+    title: "Le bureau avant de partir",
+    scene: "Avant de partir déjeuner, Camille range tous ses dossiers papier dans son tiroir, le ferme à clé, et verrouille son ordinateur. Elle prend deux minutes pour tout mettre en ordre avant de quitter son poste.",
+    correct: "good",
+    feedback_good: "<strong>Exactement le bon réflexe.</strong> Bureau propre, tiroir fermé, poste verrouillé : ces trois gestes protègent concrètement les données personnelles contre les accès non autorisés pendant l'absence. Simple, rapide, efficace.",
+    feedback_bad: "Attention — cette fois Camille fait les choses bien. <strong>La politique du bureau propre (clean desk) est une exigence de base en protection des données.</strong> Ranger et verrouiller avant de quitter son poste, même pour une heure, est exactement la bonne pratique.",
+    is_error: false
+  },
+  {
+    time: "14h00",
+    label: "Demande d'un collègue",
+    title: "« Tu peux juste vérifier pour moi ? »",
+    scene: "Le collègue de Camille est absent et un client rappelle en urgence. Son manager lui demande oralement d'accéder au dossier du collègue pour retrouver une information client. Camille refuse, expliquant qu'elle n'a pas les droits sur ce dossier et qu'il faut une autorisation formelle.",
+    correct: "good",
+    feedback_good: "<strong>Bonne décision, même si elle peut sembler rigide dans l'urgence.</strong> Les droits d'accès aux données personnelles sont nominatifs. Accéder au dossier d'un collègue sans habilitation formelle — même sur demande orale d'un supérieur — constitue un accès non autorisé au sens du RGPD. Camille a raison de demander une autorisation écrite.",
+    feedback_bad: "Ce refus peut sembler excessif face à une urgence — mais il est tout à fait justifié. <strong>Les droits d'accès sont nominatifs et ne se délèguent pas verbalement.</strong> Accéder au dossier d'un collègue sans habilitation formelle, même pour rendre service, constitue un accès non autorisé aux données personnelles.",
+    is_error: false
+  },
+  {
+    time: "15h15",
+    label: "Suppression de fichiers",
+    title: "L'ancienne liste clients dans la corbeille",
+    scene: "Camille met à jour sa base clients. Elle supprime l'ancien fichier Excel en le glissant dans la corbeille Windows, sans la vider. Le fichier reste accessible à quiconque ouvre la corbeille.",
+    correct: "bad",
+    feedback_good: "Ce serait la bonne pratique — mais Camille se contente de glisser le fichier dans la corbeille. Un fichier dans la corbeille est toujours accessible. Ce n'est pas une suppression au sens du RGPD.",
+    feedback_bad: "Bien identifié. <strong>Supprimer un fichier, c'est vider la corbeille — et pour les données sensibles, utiliser un outil de suppression sécurisée.</strong> Le RGPD impose de ne pas conserver des données au-delà de leur durée d'utilité.",
+    is_error: true
+  },
+  {
+    time: "16h00",
+    label: "Email",
+    title: "La pièce jointe envoyée trop large",
+    scene: "Camille doit transmettre le tableau des évaluations annuelles à la DRH. Elle répond à un email groupé et envoie le fichier en copie à toute la liste, dont plusieurs managers non concernés.",
+    correct: "bad",
+    feedback_good: "Ce serait la bonne pratique — mais Camille envoie le fichier à une liste trop large. Les évaluations annuelles sont des données personnelles sensibles. Les partager au-delà des destinataires légitimes viole le principe de minimisation.",
+    feedback_bad: "Correct. <strong>Le RGPD impose de ne partager des données personnelles qu'avec ceux qui en ont strictement besoin.</strong> Un email envoyé à la mauvaise liste peut constituer une violation à notifier à la CNIL.",
+    is_error: true
+  },
+  {
+    time: "16h45",
+    label: "Partage de fichiers",
+    title: "Le lien Drive avec date d'expiration",
+    scene: "Camille doit partager un tableau de suivi RH avec un prestataire externe pour une mission ponctuelle d'une semaine. Elle configure un lien Drive avec accès restreint aux personnes désignées, en lecture seule, avec expiration automatique dans 7 jours.",
+    correct: "good",
+    feedback_good: "<strong>Très bonne pratique.</strong> Accès nominatif, droits limités à la lecture, durée restreinte à la mission : Camille applique exactement les principes de minimisation et de limitation de la conservation. Le partage externe n'est pas interdit — il doit simplement être encadré.",
+    feedback_bad: "Attention — ici Camille fait les choses correctement, et c'est important de le reconnaître. <strong>Un partage externe bien paramétré (accès nominatif, lecture seule, expiration automatique) est parfaitement conforme au RGPD.</strong> Ce n'est pas le partage externe qui pose problème, c'est le partage non maîtrisé.",
+    is_error: false
+  },
+  {
+    time: "17h45",
+    label: "Départ",
+    title: "L'email supprimé… mais pas vraiment",
+    scene: "Un client a exercé son droit à l'effacement. Camille supprime sa fiche dans le CRM et efface les emails reçus de lui dans sa boîte de réception. Elle considère sa demande traitée et informe le client que ses données ont été supprimées.",
+    correct: "bad",
+    feedback_good: "L'intention est bonne — mais la suppression est incomplète. Camille a oublié les copies dans ses « Éléments envoyés », les éventuelles pièces jointes téléchargées, et les exports ou sauvegardes locaux. <strong>Le droit à l'effacement impose une suppression exhaustive sur tous les supports, pas seulement dans la boîte de réception.</strong>",
+    feedback_bad: "Bien vu. Le droit à l'effacement est souvent mal appliqué, justement parce qu'on croit avoir supprimé alors que des copies subsistent. <strong>Une suppression conforme au RGPD couvre tous les emplacements : boîte reçue ET éléments envoyés, pièces jointes, fichiers locaux, sauvegardes.</strong> Informer le client avant d'avoir vérifié tous ces points est prématuré.",
+    is_error: true
+  }
+];
+
+let currentMoment = 0;
+let score = 0;
+let results = [];
+
+function startTimeline() {
+  document.getElementById('screen-intro').style.display = 'none';
+  document.getElementById('screen-timeline').style.display = 'block';
+  buildTimeline();
+}
+
+function buildTimeline() {
+  const body = document.getElementById('timeline-body');
+  body.innerHTML = '';
+
+  moments.forEach((m, i) => {
+    const div = document.createElement('div');
+    div.className = `moment${i === 0 ? ' active' : ''}`;
+    div.id = `moment-${i}`;
+    div.innerHTML = `
+      <div class="moment-time-col"><div class="moment-time">${m.time}</div></div>
+      <div class="moment-node"></div>
+      <div class="moment-card">
+        <div class="moment-scene">
+          <div class="moment-label">${m.label}</div>
+          <div class="moment-title">${m.title}</div>
+          <p class="moment-text">${m.scene}</p>
+        </div>
+        <div class="moment-choices">
+          <button class="choice-btn good-btn" onclick="answer(${i},'good')" id="btn-good-${i}">✓ Bonne pratique</button>
+          <button class="choice-btn bad-btn"  onclick="answer(${i},'bad')"  id="btn-bad-${i}">✗ Erreur</button>
+        </div>
+        <div class="moment-feedback" id="feedback-${i}">
+          <div class="feedback-verdict" id="verdict-${i}"></div>
+          <div class="feedback-body"   id="fbtext-${i}"></div>
+        </div>
+        <button class="btn-continue" id="continue-${i}" onclick="nextMoment(${i})">
+          ${i < moments.length - 1 ? 'Moment suivant →' : 'Voir le bilan →'}
+        </button>
+      </div>
+    `;
+    body.appendChild(div);
+  });
+
+  renderDots();
+}
+
+function answer(index, choice) {
+  const m = moments[index];
+  const isCorrect = (choice === m.correct);
+  if (isCorrect) score++;
+  results[index] = { correct: isCorrect, moment: m };
+
+  document.getElementById(`btn-good-${index}`).disabled = true;
+  document.getElementById(`btn-bad-${index}`).disabled = true;
+
+  const fb = document.getElementById(`feedback-${index}`);
+  fb.className = `moment-feedback ${isCorrect ? 'good' : 'bad'}`;
+  document.getElementById(`verdict-${index}`).textContent = isCorrect ? '✓ Bonne réponse' : '✗ Pas tout à fait';
+  document.getElementById(`fbtext-${index}`).innerHTML = choice === 'good' ? m.feedback_good : m.feedback_bad;
+  fb.style.display = 'block';
+
+  const el = document.getElementById(`moment-${index}`);
+  el.className = `moment done ${isCorrect ? 'done-good' : 'done-bad'}`;
+
+  document.getElementById(`continue-${index}`).style.display = 'block';
+  document.getElementById('score-display').textContent = score;
+  renderDots();
+
+  setTimeout(() => fb.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 120);
+}
+
+function nextMoment(current) {
+  const next = current + 1;
+  if (next < moments.length) {
+    const el = document.getElementById(`moment-${next}`);
+    el.classList.add('active');
+    currentMoment = next;
+    renderDots();
+    setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }), 120);
+  } else {
+    showResult();
+  }
+}
+
+function renderDots() {
+  const container = document.getElementById('tl-dots');
+  container.innerHTML = '';
+  moments.forEach((_, i) => {
+    const d = document.createElement('div');
+    if (results[i] !== undefined) {
+      d.className = `tl-dot ${results[i].correct ? 'good' : 'bad'}`;
+    } else if (i === currentMoment) {
+      d.className = 'tl-dot current';
+    } else {
+      d.className = 'tl-dot';
+    }
+    container.appendChild(d);
+  });
+}
+
+function showResult() {
+  document.getElementById('screen-timeline').style.display = 'none';
+  document.getElementById('screen-result').style.display = 'block';
+  document.getElementById('result-score').textContent = score;
+
+  const msgs = [
+    "La protection des données commence par les gestes du quotidien. Ces situations semblent anodines — c'est précisément pourquoi elles sont dangereuses.",
+    "Des bases solides, mais plusieurs situations à risque sont passées inaperçues. En entreprise, ces petits gestes sont la première ligne de défense — ou la première faille.",
+    "Très bon résultat. Vous repérez la plupart des erreurs courantes. Quelques situations méritent d'être revues — elles sont souvent les plus fréquentes.",
+    "Impeccable. Vous identifiez les erreurs et les bonnes pratiques avec la même acuité — c'est exactement ce que le RGPD attend de chaque collaborateur."
+  ];
+  const idx = score <= 4 ? 0 : score <= 7 ? 1 : score <= 9 ? 2 : 3;
+  document.getElementById('result-message').textContent = msgs[idx];
+
+  const recap = document.getElementById('result-recap');
+  recap.innerHTML = '';
+  results.forEach((r, i) => {
+    const m = moments[i];
+    const div = document.createElement('div');
+    div.className = `recap-item ${r.correct ? 'good' : 'bad'}`;
+    div.innerHTML = `
+      <div class="recap-icon">${r.correct ? '✓' : '✗'}</div>
+      <div>
+        <div class="recap-time">${m.time} — ${m.label}</div>
+        <div class="recap-title">${m.title}</div>
+        <div class="recap-verdict">${r.correct ? 'Bien identifié' : m.is_error ? 'Erreur non détectée' : 'Bonne pratique non reconnue'}</div>
+      </div>
+    `;
+    recap.appendChild(div);
+  });
+
+  window.scrollTo(0, 0);
+}
+
+function restart() {
+  currentMoment = 0; score = 0; results = [];
+  document.getElementById('screen-result').style.display = 'none';
+  document.getElementById('screen-timeline').style.display = 'block';
+  document.getElementById('score-display').textContent = '0';
+  buildTimeline();
+  window.scrollTo(0, 0);
+}
+</script>
+</body>
+</html>
