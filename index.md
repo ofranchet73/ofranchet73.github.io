@@ -12,7 +12,7 @@ J'interviens pour diagnostiquer vos vulnérabilités humaines, concevoir un prog
 Cabinets comptables, conseils en gestion, experts-comptables, courtiers en assurance : vous connaissez la réalité opérationnelle de vos clients PME. Vous savez qu'ils sont exposés — et souvent démunis face au sujet cyber.
 En faisant appel à mon expertise, vous leur apportez une réponse concrète et structurée, sans avoir à l'internaliser. J'interviens en complément de votre accompagnement ou en votre nom.
 ---
-## Vous êtes consultant ou cabinet en cybersécurité
+## Vous êtes consultant ou un cabinet en cybersécurité
 Vous maîtrisez les aspects techniques et organisationnels — mais vos clients ont aussi besoin de sensibilisation, de formation et d'accompagnement humain. Ce n'est pas votre cœur de métier, et ça ne devrait pas l'être.
 J'interviens en complément de votre expertise : conception de programmes de sensibilisation, formation des collaborateurs, accompagnement RGPD — en sous-traitance ou en co-construction, selon vos besoins.
 ---
