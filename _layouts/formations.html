@@ -8,29 +8,24 @@ layout: default
       <p>Des formations conçues pour les non-experts — pour comprendre les risques, ancrer de vrais réflexes et agir avec méthode.</p>
     </div>
 
-    <!-- ===== DISPONIBLES ===== -->
     <h2>Disponible maintenant</h2>
 
     <div class="formation-catalogue-card">
-      <div class="formation-catalogue-header">
-        <span class="formation-tag">Formation — 1 journée</span>
-        <h3 class="formation-catalogue-titre">Introduction à la Cybersécurité</h3>
-        <p class="formation-catalogue-desc">Une journée pour transformer vos collaborateurs en premier rempart contre les cybermenaces. Mises en situation, quiz et escape game final.</p>
-      </div>
+      <span class="formation-tag">Formation — 1 journée</span>
+      <h3 class="formation-catalogue-titre">Introduction à la Cybersécurité</h3>
+      <p class="formation-catalogue-desc">Une journée pour transformer vos collaborateurs en premier rempart contre les cybermenaces. Mises en situation, quiz et escape game final.</p>
       <div class="formation-catalogue-meta">
         <span>🕐 1 journée (7h)</span>
         <span>💻 Présentiel ou distanciel</span>
         <span>👥 6 à 12 participants</span>
       </div>
-      <a href="/formation-cyber.html" class="formation-catalogue-lien">Voir le programme →</a>
+      <a href="/formation.html" class="formation-catalogue-lien">Voir le programme →</a>
     </div>
 
     <div class="formation-catalogue-card">
-      <div class="formation-catalogue-header">
-        <span class="formation-tag">Webinaire — 1 heure</span>
-        <h3 class="formation-catalogue-titre">IA générative : ce que c'est vraiment — et ce qu'elle fait courir comme risques</h3>
-        <p class="formation-catalogue-desc">Comprendre ce qu'est vraiment l'IA générative, comment elle fonctionne, et les 5 risques concrets qu'elle introduit dans votre entreprise — avec démonstrations en live.</p>
-      </div>
+      <span class="formation-tag">Webinaire — 1 heure</span>
+      <h3 class="formation-catalogue-titre">IA générative : ce que c'est vraiment — et ce qu'elle fait courir comme risques</h3>
+      <p class="formation-catalogue-desc">Comprendre ce qu'est vraiment l'IA générative, comment elle fonctionne, et les 5 risques concrets qu'elle introduit dans votre entreprise — avec démonstrations en live.</p>
       <div class="formation-catalogue-meta">
         <span>🕐 1 heure</span>
         <span>💻 Distanciel</span>
@@ -39,7 +34,6 @@ layout: default
       <a href="/formation-ia.html" class="formation-catalogue-lien">Voir le programme →</a>
     </div>
 
-    <!-- ===== À VENIR ===== -->
     <h2>Prochainement</h2>
 
     <div class="formation-catalogue-card formation-catalogue-card--soon">
@@ -54,7 +48,6 @@ layout: default
       <p class="formation-catalogue-desc">Comment embarquer son équipe dans une vraie culture de cybersécurité — sans être expert technique.</p>
     </div>
 
-    <!-- ===== ENCART SUR MESURE ===== -->
     <div class="formation-sur-mesure">
       <p class="formation-sur-mesure-titre">Vous ne trouvez pas ce que vous cherchez ?</p>
       <p>Contactez-moi — je vous dirai si je suis en mesure de répondre à votre besoin.</p>
@@ -76,23 +69,19 @@ layout: default
   margin-bottom: 16px;
   transition: box-shadow 0.2s, transform 0.15s;
 }
-
 .formation-catalogue-card:hover {
   box-shadow: 0 4px 16px rgba(26, 58, 143, 0.1);
   transform: translateY(-2px);
 }
-
 .formation-catalogue-card--soon {
   border-left-color: var(--border);
   background: var(--bg);
   opacity: 0.75;
 }
-
 .formation-catalogue-card--soon:hover {
   transform: none;
   box-shadow: none;
 }
-
 .formation-tag {
   font-family: 'DM Sans', sans-serif;
   font-size: 0.7em;
@@ -103,11 +92,7 @@ layout: default
   display: block;
   margin-bottom: 8px;
 }
-
-.formation-tag--soon {
-  color: var(--muted);
-}
-
+.formation-tag--soon { color: var(--muted); }
 .formation-catalogue-titre {
   font-family: 'DM Serif Display', serif;
   font-size: 1.2em;
@@ -117,14 +102,12 @@ layout: default
   padding-bottom: 0;
   margin-top: 0;
 }
-
 .formation-catalogue-desc {
   font-size: 0.9em;
   color: var(--muted);
   line-height: 1.7;
   margin-bottom: 14px;
 }
-
 .formation-catalogue-meta {
   display: flex;
   gap: 20px;
@@ -133,7 +116,6 @@ layout: default
   color: var(--muted);
   margin-bottom: 16px;
 }
-
 .formation-catalogue-lien {
   font-family: 'DM Sans', sans-serif;
   font-size: 0.85em;
@@ -143,19 +125,16 @@ layout: default
   border-bottom: 1px solid transparent;
   transition: border-color 0.2s;
 }
-
 .formation-catalogue-lien:hover {
   border-bottom-color: var(--accent);
   text-decoration: none;
 }
-
 .formation-sur-mesure {
   background: var(--blue-light);
   border-radius: var(--radius);
   padding: 28px 32px;
   margin-top: 2.5em;
 }
-
 .formation-sur-mesure-titre {
   font-family: 'DM Serif Display', serif;
   font-size: 1.1em;
@@ -163,7 +142,6 @@ layout: default
   margin-bottom: 8px;
   font-weight: 400;
 }
-
 .formation-sur-mesure p {
   font-size: 0.95em;
   color: var(--text);
