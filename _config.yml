@@ -6,6 +6,6 @@ kramdown:
 header_pages:
   - apropos.md
   - prestations.md
-  - formation.md
+  - formations.md
   - projets.md
   - blog.md
