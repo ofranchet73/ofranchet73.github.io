@@ -1,8 +1,7 @@
 ---
 layout: formation
-title: "Formations"
+title: "Formation — Introduction à la Cybersécurité"
 ---
-
 ## Formation — Introduction à la Cybersécurité
 
 ---
