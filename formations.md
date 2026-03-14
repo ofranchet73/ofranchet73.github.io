@@ -1,0 +1,4 @@
+---
+layout: formations
+title: "Formations"
+---
