@@ -1,5 +1,5 @@
 ---
-layout: formation-ia
+layout: formationia
 title: "Webinaire — IA générative"
 ---
 ## Webinaire — IA générative : ce que c'est vraiment — et ce qu'elle fait courir comme risques
