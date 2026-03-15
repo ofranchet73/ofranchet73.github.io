@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Les 10 réflexes cybersécurité — Odile Franchet</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: #0f2060;
+    min-height: 100vh;
+    padding: 0;
+  }
+
+  .page {
+    max-width: 860px;
+    margin: 0 auto;
+    background: #0f2060;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Header */
+  .header {
+    background: #070e30;
+    padding: 22px 28px 18px;
+    border-bottom: 3px solid #2a5bd7;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .header-icon {
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    background: #2a5bd7;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header-text h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.5em;
+    font-weight: 400;
+    color: #ffffff;
+    line-height: 1.2;
+  }
+
+  .header-text p {
+    font-size: 0.78em;
+    color: #8899cc;
+    margin-top: 3px;
+    letter-spacing: 0.3px;
+  }
+
+  /* Grille */
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 14px;
+    flex: 1;
+  }
+
+  .card {
+    background: #f0f4ff;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    min-height: 56px;
+  }
+
+  .card:nth-child(4n+1) .card-header,
+  .card:nth-child(4n+4) .card-header { background: #1a3a8f; }
+
+  .card:nth-child(4n+2) .card-header,
+  .card:nth-child(4n+3) .card-header { background: #2a5bd7; }
+
+  .card-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.1em;
+    color: rgba(255,255,255,0.5);
+    line-height: 1;
+    min-width: 28px;
+  }
+
+  .card-title {
+    font-size: 0.88em;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.3;
+  }
+
+  .card-body {
+    padding: 12px 14px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  .card-body p {
+    font-size: 0.85em;
+    color: #2a3a6a;
+    line-height: 1.6;
+  }
+
+  /* Footer */
+  .footer {
+    background: #070e30;
+    border-top: 1px solid #1a2a5a;
+    padding: 10px 28px;
+    text-align: center;
+    font-size: 0.72em;
+    color: #4a6a98;
+  }
+
+  @media print {
+    body { background: #0f2060; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .page { min-height: 100vh; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="header">
+    <div class="header-icon">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2L20 6V12C20 16.4 16.4 20.4 12 22C7.6 20.4 4 16.4 4 12V6L12 2Z" fill="none" stroke="white" stroke-width="1.8" stroke-linejoin="round"/>
+        <circle cx="12" cy="10" r="2.5" fill="none" stroke="white" stroke-width="1.5"/>
+        <path d="M7 18C7 15 17 15 17 18" fill="none" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+    </div>
+    <div class="header-text">
+      <h1>Les 10 réflexes cybersécurité</h1>
+      <p>Odile Franchet · Consultante Cybersécurité &amp; Facteur humain · ofranchet73.github.io</p>
+    </div>
+  </div>
+
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-header">
+        <span class="card-num">01</span>
+        <span class="card-title">Protégez vos mots de passe</span>
+      </div>
+      <div class="card-body">
+        <p>Utilisez des mots de passe uniques, longs, et évitez les infos personnelles. Un gestionnaire de mots de passe aide à les retenir.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <span class="card-num">02</span>
+        <span class="card-title">Activez la double authentification (2FA)</span>
+      </div>
+      <div class="card-body">
+        <p>Un code temporaire en plus du mot de passe bloque beaucoup d'attaques, même si le mot de passe est compromis.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <span class="card-num">03</span>
+        <span class="card-title">Méfiez-vous des messages suspects</span>
+      </div>
+      <div class="card-body">
+        <p>Ne cliquez pas sur des liens ou pièces jointes douteux, même si l'expéditeur semble connu. En cas de doute, vérifiez autrement.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <span class="card-num">04</span>
+        <span class="card-title">Vérifiez les adresses d'expéditeur</span>
+      </div>
+      <div class="card-body">
+        <p>Une petite différence dans l'adresse email peut cacher une grosse arnaque. Prenez deux secondes pour vérifier avant de répondre.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <span class="card-num">05</span>
+        <span class="card-title">Sauvegardez vos données</span>
+      </div>
+      <div class="card-body">
+        <p>Régulièrement, et dans un endroit sécurisé — cloud fiable ou disque externe déconnecté. Une sauvegarde non testée n'est pas une sauvegarde.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <span class="card-num">06</span>
+        <span class="card-title">Verrouillez vos appareils</span>
+      </div>
+      <div class="card-body">
+        <p>Ordinateur, smartphone, tablette — même pour une courte absence. Win+L (Windows) ou Cmd+Ctrl+Q (Mac) en une seconde.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <span class="card-num">07</span>
+        <span class="card-title">Séparez usages pro et perso</span>
+      </div>
+      <div class="card-body">
+        <p>Évitez de mélanger fichiers, comptes et équipements professionnels et personnels. Ce qui arrive d'un côté peut contaminer l'autre.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <span class="card-num">08</span>
+        <span class="card-title">Mettez à jour vos logiciels</span>
+      </div>
+      <div class="card-body">
+        <p>Les correctifs de sécurité ferment la porte aux cybercriminels. Ne reportez pas les mises à jour indéfiniment — elles protègent.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <span class="card-num">09</span>
+        <span class="card-title">Attention au Wi-Fi public</span>
+      </div>
+      <div class="card-body">
+        <p>Évitez de transmettre des données sensibles sur un réseau non sécurisé. Utilisez un VPN ou le partage de connexion de votre mobile.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <span class="card-num">10</span>
+        <span class="card-title">Signalez tout incident immédiatement</span>
+      </div>
+      <div class="card-body">
+        <p>Un doute = un appel ou un mail au service informatique. Plus vite on agit, moins ça coûte. Signaler n'est pas trahir — c'est protéger.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    © Odile Franchet — Consultante Cybersécurité &amp; Facteur humain · ofranchet73.github.io · ofranchet@gmail.com
+  </div>
+
+</div>
+</body>
+</html>
