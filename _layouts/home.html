@@ -34,6 +34,150 @@ layout: default
   </div>
 </div>
 
-<div class="home-sections">
-  {{ content }}
+<div class="home-cibles">
+  <div class="home-cibles-inner">
+
+    <div class="home-cible">
+      <div class="home-cible-icon">
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" width="32" height="32">
+          <rect x="6" y="16" width="28" height="20" rx="2" fill="none" stroke="#2a5bd7" stroke-width="2"/>
+          <path d="M12 16 V10 C12 6 28 6 28 10 V16" fill="none" stroke="#2a5bd7" stroke-width="2" stroke-linejoin="round"/>
+          <rect x="16" y="24" width="8" height="8" rx="1" fill="none" stroke="#2a5bd7" stroke-width="1.8"/>
+        </svg>
+      </div>
+      <div class="home-cible-text">
+        <h2>Vous dirigez une entreprise</h2>
+        <p>Vos outils de sécurité sont en place — mais vos collaborateurs ont-ils vraiment intégré les bons réflexes ? J'interviens pour diagnostiquer, concevoir et déployer un programme adapté à vos réalités terrain.</p>
+        <a href="/prestations.html" class="home-cible-lien">Voir mes prestations →</a>
+      </div>
+    </div>
+
+    <div class="home-cible">
+      <div class="home-cible-icon">
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" width="32" height="32">
+          <circle cx="14" cy="15" r="6" fill="none" stroke="#2a5bd7" stroke-width="2"/>
+          <circle cx="26" cy="15" r="6" fill="none" stroke="#2a5bd7" stroke-width="2"/>
+          <path d="M4 34 C4 24 24 24 24 34" fill="none" stroke="#2a5bd7" stroke-width="2" stroke-linecap="round"/>
+          <path d="M22 26 C24 21 36 21 36 34" fill="none" stroke="#2a5bd7" stroke-width="1.8" stroke-linecap="round" stroke-dasharray="3,2"/>
+        </svg>
+      </div>
+      <div class="home-cible-text">
+        <h2>Vous accompagnez des entreprises</h2>
+        <p>Experts-comptables, courtiers, conseils en gestion : vous connaissez la réalité de vos clients PME. En faisant appel à mon expertise, vous leur apportez une réponse cyber concrète — sans avoir à l'internaliser.</p>
+        <a href="/prestations.html" class="home-cible-lien">Voir mes prestations →</a>
+      </div>
+    </div>
+
+    <div class="home-cible">
+      <div class="home-cible-icon">
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" width="32" height="32">
+          <path d="M20 4 L34 10 V20 C34 28 27 34 20 37 C13 34 6 28 6 20 V10 Z" fill="none" stroke="#2a5bd7" stroke-width="2" stroke-linejoin="round"/>
+          <polyline points="13,20 18,25 27,15" fill="none" stroke="#2a5bd7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="home-cible-text">
+        <h2>Vous êtes consultant ou cabinet en cybersécurité</h2>
+        <p>Vous maîtrisez le technique — mais la sensibilisation et la pédagogie ne sont pas votre cœur de métier. J'interviens en complément : programmes sur-mesure, formation collaborateurs, accompagnement RGPD.</p>
+        <a href="/prestations.html" class="home-cible-lien">Voir mes prestations →</a>
+      </div>
+    </div>
+
+    <div class="home-cible">
+      <div class="home-cible-icon">
+        <svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" width="32" height="32">
+          <rect x="7" y="5" width="26" height="32" rx="3" fill="none" stroke="#2a5bd7" stroke-width="2"/>
+          <line x1="13" y1="14" x2="27" y2="14" stroke="#2a5bd7" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="13" y1="19" x2="27" y2="19" stroke="#2a5bd7" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="13" y1="24" x2="22" y2="24" stroke="#2a5bd7" stroke-width="1.8" stroke-linecap="round"/>
+          <circle cx="28" cy="31" r="6" fill="#e8edf8" stroke="#2a5bd7" stroke-width="1.8"/>
+          <line x1="26" y1="31" x2="30" y2="31" stroke="#2a5bd7" stroke-width="1.8" stroke-linecap="round"/>
+          <line x1="28" y1="29" x2="28" y2="33" stroke="#2a5bd7" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="home-cible-text">
+        <h2>Vous voulez structurer une offre de formation</h2>
+        <p>Devenir prestataire de formation ou développer un catalogue interne ? Je vous accompagne de A à Z : agrément, ingénierie de l'offre, Qualiopi, positionnement commercial.</p>
+        <a href="/prestations.html" class="home-cible-lien">Voir mes prestations →</a>
+      </div>
+    </div>
+
+    <div class="home-cible home-cible--cta">
+      <p>Chaque organisation est différente. Parlons de la vôtre.</p>
+      <a href="mailto:ofranchet@gmail.com" class="btn-email">ofranchet@gmail.com</a>
+    </div>
+
+  </div>
 </div>
+
+<style>
+.home-cibles {
+  background: var(--bg);
+  padding: 0 0 60px;
+}
+.home-cibles-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+.home-cible {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--border);
+}
+.home-cible--cta {
+  padding-top: 36px;
+  border-bottom: none;
+  flex-direction: column;
+  gap: 12px;
+}
+.home-cible--cta p {
+  font-style: italic;
+  color: var(--muted);
+  margin: 0;
+}
+.home-cible-icon {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  background: var(--blue-light);
+  border-radius: var(--radius);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 4px;
+}
+.home-cible-text { flex: 1; }
+.home-cible-text h2 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.15em;
+  color: var(--blue);
+  margin: 0 0 8px;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+.home-cible-text p {
+  font-size: 0.92em;
+  color: var(--muted);
+  line-height: 1.75;
+  margin-bottom: 10px;
+}
+.home-cible-lien {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.83em;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s;
+}
+.home-cible-lien:hover {
+  border-bottom-color: var(--accent);
+  text-decoration: none;
+}
+@media (max-width: 680px) {
+  .home-cible { flex-direction: column; gap: 12px; }
+  .home-cible-icon { width: 44px; height: 44px; }
+}
+</style>
