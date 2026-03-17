@@ -34,12 +34,14 @@ layout: default
   </div>
 </div>
 
-<div class="home-cyberreflexes">
+<div class="home-cyberreflexes-wrap">
   <div class="home-cyberreflexes-inner">
-    <div class="home-cyberreflexes-tag">Nouveau</div>
-    <h2 class="home-cyberreflexes-titre">CyberRéflexes — Le programme annuel de sensibilisation conforme NIS2</h2>
-    <p class="home-cyberreflexes-texte">90% des cyberattaques impliquent un facteur humain. NIS2 vous oblige à agir. CyberRéflexes vous donne les moyens de le faire vraiment — avec un programme annuel documenté, mesurable et efficace.</p>
-    <a href="/cyberreflexes.html" class="home-cyberreflexes-lien">Découvrir le programme →</a>
+    <div class="home-cyberreflexes-card">
+      <div class="home-cyberreflexes-tag">Nouveau</div>
+      <h2 class="home-cyberreflexes-titre">CyberRéflexes — Le programme annuel de sensibilisation conforme NIS2</h2>
+      <p class="home-cyberreflexes-texte">90% des cyberattaques impliquent un facteur humain. NIS2 vous oblige à agir. CyberRéflexes vous donne les moyens de le faire vraiment — avec un programme annuel documenté, mesurable et efficace.</p>
+      <a href="/cyberreflexes.html" class="home-cyberreflexes-lien">Découvrir le programme →</a>
+    </div>
   </div>
 </div>
 
@@ -119,14 +121,25 @@ layout: default
 </div>
 
 <style>
-.home-cyberreflexes {
-  background: var(--blue-dark);
-  padding: 36px 0;
+.home-cyberreflexes-wrap {
+  background: var(--bg);
+  padding: 24px 0 8px;
 }
 .home-cyberreflexes-inner {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 24px;
+}
+.home-cyberreflexes-card {
+  background: var(--blue-dark);
+  border-radius: var(--radius);
+  padding: 28px 32px;
+  border-left: 4px solid var(--accent);
+  transition: box-shadow 0.2s, transform 0.15s;
+}
+.home-cyberreflexes-card:hover {
+  box-shadow: 0 4px 16px rgba(26, 58, 143, 0.2);
+  transform: translateY(-2px);
 }
 .home-cyberreflexes-tag {
   font-family: 'DM Sans', sans-serif;
