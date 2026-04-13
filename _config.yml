@@ -1,10 +1,13 @@
-title: "Eveïs Consulting"
-description: "Accompagnement formation et sensibilisation cybersécurité — Odile Franchet"
+Config.yml
+
+title: "Odile Franchet — Cybersécurité & Facteur humain"
 markdown: kramdown
 kramdown:
   parse_block_html: true
+
 header_pages:
-  - formation.md
-  - cyber.md
-  - projets.md
   - apropos.md
+  - prestations.md
+  - formations.md
+  - projets.md
+  - blog.md
